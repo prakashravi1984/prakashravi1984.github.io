@@ -265,7 +265,275 @@
 		
 				
 </section>		
-<section class="container">
+<section class="container" style"padding:20px;">
+
+<div class="col-md-3" style="padding-right:0px;">
+			
+			<div class="leftcol" style="margin-left:-15px; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);">
+				
+				<div class="panel panel-primary" style="border:#ccc thin solid;">
+
+					<div class="panel-heading">
+						<h3 class="panel-title"><center>Customize Search Result</center></h3>
+					</div>
+					
+					<div class="panel-body">
+						<div class="accordion" id="accordion2">
+						
+															<div class="accordion-group">
+									<div class="accordion-heading panel-heading">
+										<a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse_estimated_premium">
+											Estimated Premium<i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" style="color:#0CF;background:none;"></i> 
+										</a>
+									</div>
+									
+									<div style="height: 0px;" aria-expanded="false" id="collapse_estimated_premium" class="accordion-body collapse">
+										
+										<div class="accordion-inner">
+											
+											<ul>
+											
+																										<li>
+															<span id="estimated_premium_amount_disp">$0 - $11632</span>
+															<br>
+															<input value="0_11632" name="estimated_premium" id="estimated_premium_amount" readonly="" style="border:0;" type="hidden">
+															<div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="estimated_premium_slider_range" style="width: 230px; margin-left: -25px !important; "><div style="left: 0%; width: 58.16%;" class="ui-slider-range ui-widget-header ui-corner-all"></div><span style="left: 0%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span><span style="left: 58.16%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span></div>
+														</li>
+																								</ul>
+										</div>
+									</div>
+								</div>
+															<div class="accordion-group">
+									<div class="accordion-heading panel-heading ">
+										<a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse_plan_type">
+											Plan Type<i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" style="color:#0CF;background:none;"></i> 
+										</a>
+									</div>
+									
+									<div aria-expanded="false" id="collapse_plan_type" class="accordion-body collapse ">
+										
+										<div class="accordion-inner">
+											
+											<ul>
+											
+																										<li>
+															<div class="checkbox  checkbox-primary">
+															<input class="pfilter" data-filtertype="or" data-filtervalue="" data-filtername="plan_type" name="plan_type" id="plan_typePPO" value="PPO" type="checkbox">
+															<label for="plan_typePPO">
+															   PPO 
+															</label>
+															</div>                   
+														</li>
+																											<li>
+															<div class="checkbox  checkbox-primary">
+															<input class="pfilter" data-filtertype="or" data-filtervalue="" data-filtername="plan_type" name="plan_type" id="plan_typeHMO" value="HMO" type="checkbox">
+															<label for="plan_typeHMO">
+															   HMO 
+															</label>
+															</div>                   
+														</li>
+																								</ul>
+										</div>
+									</div>
+								</div>
+															<div class="accordion-group">
+									<div class="accordion-heading panel-heading ">
+										<a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse_deductibles_individual">
+											Deductibles-Individual<i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" style="color:#0CF;background:none;"></i> 
+										</a>
+									</div>
+									
+									<div aria-expanded="false" id="collapse_deductibles_individual" class="accordion-body collapse ">
+										
+										<div class="accordion-inner">
+											
+											<ul>
+											
+																										<li>
+															<span id="deductibles_individual_amount_disp">$0 - $20000</span>
+															<br>
+															<input name="deductibles_individual" id="deductibles_individual_amount" readonly="" style="border:0;" type="hidden">
+															<div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="deductibles_individual_slider_range" style="width: 230px; margin-left: -25px !important; "><div style="left: 0%; width: 100%;" class="ui-slider-range ui-widget-header ui-corner-all"></div><span style="left: 0%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span><span style="left: 100%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span></div>
+														</li>
+																								</ul>
+										</div>
+									</div>
+								</div>
+															<div class="accordion-group">
+									<div class="accordion-heading panel-heading ">
+										<a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse_deductibles_family">
+											Deductibles-Family<i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" style="color:#0CF;background:none;"></i> 
+										</a>
+									</div>
+									
+									<div aria-expanded="false" id="collapse_deductibles_family" class="accordion-body collapse ">
+										
+										<div class="accordion-inner">
+											
+											<ul>
+											
+																										<li>
+															<span id="deductibles_family_amount_disp">$0 - $20000</span>
+															<br>
+															<input name="deductibles_family" id="deductibles_family_amount" readonly="" style="border:0;" type="hidden">
+															<div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="deductibles_family_slider_range" style="width: 230px; margin-left: -25px !important; "><div style="left: 0%; width: 100%;" class="ui-slider-range ui-widget-header ui-corner-all"></div><span style="left: 0%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span><span style="left: 100%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span></div>
+														</li>
+																								</ul>
+										</div>
+									</div>
+								</div>
+															<div class="accordion-group">
+									<div class="accordion-heading panel-heading ">
+										<a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse_maximum_out_of_pocket_individual">
+											Maximum Out-of-Pocket-Individual<i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" style="color:#0CF;background:none;"></i> 
+										</a>
+									</div>
+									
+									<div aria-expanded="false" id="collapse_maximum_out_of_pocket_individual" class="accordion-body collapse ">
+										
+										<div class="accordion-inner">
+											
+											<ul>
+											
+																										<li>
+															<span id="maximum_out_of_pocket_individual_amount_disp">$0 - $20000</span>
+															<br>
+															<input name="maximum_out_of_pocket_individual" id="maximum_out_of_pocket_individual_amount" readonly="" style="border:0;" type="hidden">
+															<div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="maximum_out_of_pocket_individual_slider_range" style="width: 230px; margin-left: -25px !important; "><div style="left: 0%; width: 100%;" class="ui-slider-range ui-widget-header ui-corner-all"></div><span style="left: 0%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span><span style="left: 100%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span></div>
+														</li>
+																								</ul>
+										</div>
+									</div>
+								</div>
+															<div class="accordion-group">
+									<div class="accordion-heading panel-heading ">
+										<a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse_maximum_out_of_pocket_family">
+											Maximum Out-of-Pocket-Family<i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" style="color:#0CF;background:none;"></i> 
+										</a>
+									</div>
+									
+									<div aria-expanded="false" id="collapse_maximum_out_of_pocket_family" class="accordion-body collapse ">
+										
+										<div class="accordion-inner">
+											
+											<ul>
+											
+																										<li>
+															<span id="maximum_out_of_pocket_family_amount_disp">$0 - $20000</span>
+															<br>
+															<input name="maximum_out_of_pocket_family" id="maximum_out_of_pocket_family_amount" readonly="" style="border:0;" type="hidden">
+															<div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="maximum_out_of_pocket_family_slider_range" style="width: 230px; margin-left: -25px !important; "><div style="left: 0%; width: 100%;" class="ui-slider-range ui-widget-header ui-corner-all"></div><span style="left: 0%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span><span style="left: 100%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span></div>
+														</li>
+																								</ul>
+										</div>
+									</div>
+								</div>
+															<div class="accordion-group">
+									<div class="accordion-heading panel-heading ">
+										<a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse_plan_level">
+											Plan Level<i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" style="color:#0CF;background:none;"></i> 
+										</a>
+									</div>
+									
+									<div aria-expanded="false" id="collapse_plan_level" class="accordion-body collapse ">
+										
+										<div class="accordion-inner">
+											
+											<ul>
+											
+																										<li>
+															<div class="checkbox  checkbox-primary">
+															<input class="pfilter" data-filtertype="or" data-filtervalue="" data-filtername="plan_level" name="plan_level" id="plan_levelGold" value="Gold" type="checkbox">
+															<label for="plan_levelGold">
+															   Gold 
+															</label>
+															</div>                   
+														</li>
+																											<li>
+															<div class="checkbox  checkbox-primary">
+															<input class="pfilter" data-filtertype="or" data-filtervalue="" data-filtername="plan_level" name="plan_level" id="plan_levelSilver" value="Silver" type="checkbox">
+															<label for="plan_levelSilver">
+															   Silver 
+															</label>
+															</div>                   
+														</li>
+																											<li>
+															<div class="checkbox  checkbox-primary">
+															<input class="pfilter" data-filtertype="or" data-filtervalue="" data-filtername="plan_level" name="plan_level" id="plan_levelBronze" value="Bronze" type="checkbox">
+															<label for="plan_levelBronze">
+															   Bronze 
+															</label>
+															</div>                   
+														</li>
+																											<li>
+															<div class="checkbox  checkbox-primary">
+															<input class="pfilter" data-filtertype="or" data-filtervalue="" data-filtername="plan_level" name="plan_level" id="plan_levelCatastrophic" value="Catastrophic" type="checkbox">
+															<label for="plan_levelCatastrophic">
+															   Catastrophic 
+															</label>
+															</div>                   
+														</li>
+																											<li>
+															<div class="checkbox  checkbox-primary">
+															<input class="pfilter" data-filtertype="or" data-filtervalue="" data-filtername="plan_level" name="plan_level" id="plan_levelHigh" value="High" type="checkbox">
+															<label for="plan_levelHigh">
+															   High 
+															</label>
+															</div>                   
+														</li>
+																											<li>
+															<div class="checkbox  checkbox-primary">
+															<input class="pfilter" data-filtertype="or" data-filtervalue="" data-filtername="plan_level" name="plan_level" id="plan_levelLow" value="Low" type="checkbox">
+															<label for="plan_levelLow">
+															   Low 
+															</label>
+															</div>                   
+														</li>
+																											<li>
+															<div class="checkbox  checkbox-primary">
+															<input class="pfilter" data-filtertype="or" data-filtervalue="" data-filtername="plan_level" name="plan_level" id="plan_levelPlatinum" value="Platinum" type="checkbox">
+															<label for="plan_levelPlatinum">
+															   Platinum 
+															</label>
+															</div>                   
+														</li>
+																								</ul>
+										</div>
+									</div>
+								</div>
+														
+						</div>
+						
+						<!-- <div class="accordion-group">
+							<div class="accordion-heading panel-heading">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_plan_name">
+									Plan Name<i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" style="color:#0CF;background:none;"></i> 
+								</a>
+							</div>
+							<div id="collapse_plan_name"  class="accordion-body collapse">
+								<div class="accordion-inner">
+									<ul>
+										<li>
+											<div class="form-group">
+												<input type="text" class="form-control pfilter" name="plan_name" id="plan_name" />
+												<script>
+													searchCriteriaArr.push({'type': 'textbox', 'name': 'plan_name', 'resName': 'Plan_Name'});
+												</script>
+											</div>
+											<br/>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div> -->
+				  
+					</div>
+
+				</div>
+				
+			</div>
+             			
+        </div>
 
 <div id="slider-2"></div>
 
