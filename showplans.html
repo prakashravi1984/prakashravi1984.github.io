@@ -178,51 +178,8 @@
 									</thead>
 									
 								
-									  <tr>
-										<td><div class="col-md-3"><label>Deductibles</label>
-										<ul class="list-unstyled">
-										 <li><label class="listlabel"  style="width:60px">Individual </label> <label>{{=Deductibles_Individual=}}</label></li>
-											<li><label class="listlabel" style="width:60px">Family </label> <label>{{=Deductibles_Family=}}</label></li>
-										</ul>
-										</div> 
-										<div class="col-md-3"><label>Maximum Out-of-Pocket</label>
-										<ul class="list-unstyled">
-											<li><label class="listlabel"  style="width:60px">Individual </label> <label>{{=Outofpocket_Individual=}}</label></li>
-											<li><label class="listlabel" style="width:60px">Family </label> <label>{{=Outofpocket_Family=}}</label></li>
-										</ul>
-										</div>
-										<div class="col-md-3">
-										</div>
-										   <div class="col-md-2" style="color:#063;">
-										   <label class='estmatedpremium'>${{=Premium=}}</label><br /><label class="listlabel">(Monthly Cost)</label>
-										   </div>
-										 </td>
-									  </tr>
-									  <tr>
-										<td><div class="col-md-3 pull-left">
-											  <div class="checkbox checkbox-success" style="margin-top: 0px; margin-bottom: 5px;">
-												<input id="planaddtocartcheckbox_{{=Plan_Variant_Id=}}" type="checkbox"  onclick="addPlanToCompare(this)" value="{{=Plan_Variant_Id=}}" />
-												<label for="planaddtocartcheckbox_{{=Plan_Variant_Id=}}" style="font-weight:500; color:blue">
-												   Compare
-												</label>
-												<input type="hidden" id="planaddtocarthidden_{{=Plan_Variant_Id=}}"  value="{{=Plan_Name=}}" />
-											</div>
-									   </div>
-										<div class="col-md-3 pull-right">
-											<button type="button" id="enrolbutton_{{=Plan_Variant_Id=}}" class="btn btn-info btn-xs enroll"  onclick= "doenrollment(this)" required="required"><i class="fa fa-check-square-o"></i> Enroll</button>&nbsp;&nbsp;&nbsp;&nbsp;
-											<button type="button" id="detailsbutton_{{=Plan_Variant_Id=}}" class="btn btn-info btn-xs plandetail"  onclick= "fetchplandetail(this)" required="required"><i class="fa fa-check-square-o"></i> Details</button>
-										</div> 
-										</td>
-									  </tr>
-									  <tr id="filter_{{=Plan_Variant_Id=}}" style="display: none;"><!-- section for filters -->
-										<td><p class="plan_id_filter">{{=Plan_Id=}}</p></td>
-										<td><p class="estimatedpremium_filter">{{=Premium=}}</p></td>
-										<td><p class="deductable_individual_filter">{{=Deductibles_Individual=}}</p></td>
-										<td><p class="plan_type_filter">{{=Plan_Type=}}</p></td>
-										<td><p class="outofpocket_individual_filter">{{=Outofpocket_Individual=}}</p></td>
-										<td><p class="metal_level_filter">{{=Outofpocket_Individual=}}</p></td>
-									  </tr>
-									  </tbody>
+									 
+									
 								</table>
 							</div>
 						</div>
