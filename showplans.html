@@ -1,0 +1,1885 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Sutherland : Home of health care</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/icon" href="assets/images/favicon.ico"/>
+    <!-- Font Awesome -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Slick slider -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css"/> 
+    <!-- Fancybox slider -->
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.css" type="text/css" media="screen" /> 
+    <!-- Animate css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css"/>  
+     <!-- Theme color -->
+    <link id="switcher" href="assets/css/theme-color/default.css" rel="stylesheet">
+
+    <!-- Main Style -->
+    <link href="style.css" rel="stylesheet">
+<link href="assets/css/responsive-menu.css" rel="stylesheet"/>
+    <!-- Fonts -->
+    <!-- Open Sans for body font -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- Raleway for Title -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <!-- Pacifico for 404 page   -->
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<!-- Lato for searchplan box -->
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>	
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+  <!-- BEGAIN PRELOADER -->
+  <div id="preloader">
+    <div class="loader">&nbsp;</div>
+  </div>
+  <!-- END PRELOADER -->
+
+  <!-- SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
+  <!-- END SCROLL TOP BUTTON -->
+
+  
+
+  <!-- Start menu section -->
+  <section id="menu-area">
+    <nav class="navbar navbar-default main-navbar" role="navigation">  
+      <div class="container">
+        <div class="navbar-header">
+          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+          
+          <!-- LOGO -->                                               
+           <a class="navbar-brand logo" href="index.html"><img class="" src="assets/images/logo_small.png" alt="logo"></a>                      
+        </div>
+		  </div>  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+
+       <!-- START Responsive Menu HTML -->
+    <div class="rm-container">
+        <a class="rm-toggle rm-button rm-nojs" href="#">Menu</a>
+
+        <nav class="rm-nav rm-nojs rm-lighten" style="">
+            <ul>
+			 <li><a href="#"></a></li>
+                <li style=""><a href="#">Find Plans <b class="caret"></b> </a>
+                    <ul>
+                        <li><a href="#">Individuals & Families</a></li>
+                        <li><a href="#">Dental Plans</a></li>
+                        <li><a href="#">Medical Plans</a>
+                           </li>
+                       
+                    </ul></li>
+                <li><a href="#">Broker</a>
+                   </li>
+                       
+                  
+                <li><a href="#">Provider</a></li>
+                <li><a href="#">Employer</a>
+                    </li>
+                <li><a href="#">Member <b class="caret"></b> </a>
+                    <ul>
+                       <li> <a href="login.html"> login </a> </li>
+            </ul>
+        </nav>
+    </div><!-- .rm-container -->
+    <!-- End Responsive Menu HTML -->
+       <div class="search-area">
+         <!-- <form action="">
+            <input id="search" name="search" type="text" placeholder="What're you looking for ?">
+            <input id="search_submit" value="Rechercher" type="submit">
+          </form> -->
+        </div>         
+            
+    </nav> 
+  </section>
+  <!-- End menu section -->
+  
+  
+  <!-- start search section -->
+  
+<div class="inner_cont">
+	
+					<section class="container" style="padding:20px 10px 0px 0px;">
+						<!--	<div class="click_stream_right">
+					  		 
+					</div> -->
+					</section>
+			
+		<style type="text/css">
+.modal.modal-wide .modal-dialog {
+  width: 25%;
+}
+.modal-footer {
+    border: 0px;
+    left: 0;
+    position: absolute;
+    top: 20%;
+    text-align: center;
+    width: 100%;
+}
+</style>
+<script type="text/javascript">
+$(document).on('show','.accordion', function (e) {
+	 //$('.accordion-heading i').toggleClass(' ');
+	 $(e.target).prev('.accordion-heading').addClass('accordion-opened');
+});
+
+$(document).on('hide','.accordion', function (e) {
+	$(this).find('.accordion-heading').not($(e.target)).removeClass('accordion-opened');
+	//$('.accordion-heading i').toggleClass('fa-chevron-right fa-chevron-down');
+});
+
+$(document).ready(function() {
+
+     $(document).on('click', '.close_modal', function() {
+          document.getElementById('shortModal').style.display = "none";
+     })
+		
+	// Initialize the date picker for the original due date field
+	invokeDOBDatePicker();
+	
+	var max_fields      = '5'; //maximum input boxes allowed
+	var wrapper         = $(".deprowdummy"); //Fields wrapper
+	var add_button      = $(".add_dependent_button"); //Add button ID
+	
+	var x =0; //initlal text box count
+	$(add_button).click(function(e){ //on add input button click
+	
+		e.preventDefault();
+					
+		$(".deptablex").show();
+		if(x < max_fields){ //max input box allowed
+			
+			//add input box
+			$('.deptablex tr:last').after('<tr class="deprow"><td><input style="padding: 4px; font-size: 12px;" type="text" class="form-control" name="DEPENDENTS['+x+'][LASTNAME]"/></td><td><select style="padding: 4px; font-size: 12px;" name="DEPENDENTS['+x+'][Relation]" id="deprelation_'+x+'" class="deprelation_'+x+' required form-control"></select></td><td><select style="padding: 4px; font-size: 12px;" name="DEPENDENTS['+x+'][Gender]" id="depgender_'+x+'" class="required form-control"><option value="">-  Select -</option><option value="Female">Female</option><option value="Male">Male</option><option value="Unknown">Unknown</option><option value="Unspecified">Unspecified</option></select></td></td><td><input style="padding: 4px; font-size: 12px;" class="datePicker required form-control" readonly="readonly" type="text" required="required" name="DEPENDENTS['+x+'][DOB]" ></td><td><select style="padding: 4px; font-size: 12px;" name="DEPENDENTS['+x+'][tobacco]" id="tobacco_'+x+'" class="form-control"><option value="">-  Select -</option><option value="Yes">Yes</option><option value="No">No</option><option value="No Preference">No Preference</option></select></td><td style="text-align: center"><button class="btn btn-info btn-xs remove_field" type="button">Remove</button></td></tr>'); 
+			assignOptionVals('deprelation_'+x);
+			invokeDOBDatePicker();
+		 x++;
+		}
+		 if(x==max_fields)
+		{
+			showErrorDialog("Error", 'You can not add more than '+max_fields+' dependent.');
+		}		
+	});
+	
+  
+	$('.deptablex').on("click",".remove_field", function(e){ //user click on remove text
+		e.preventDefault(); 
+		$(this).closest('tr').remove();
+		//$(this).parentsUntil('.deprow').remove(); 
+		x--;
+		
+		if(x <= 0) {
+			
+			$(".deptablex").hide();
+		}
+	});
+});
+
+var searchPlanList = JSON.parse('[{"Plan_Type":"PPO","Outofpocket_Family":"$12,700","Member_Tobacco":"","Member_Individual_Relationship_Code":"","Tenant_Logo":"https:\/\/sbs-al.naic.org\/Lion-Web\/images\/ExtBanner-AL-logo.jpg","Metal_Level":"Bronze","Outofpocket_Individual":"$6,350","Member_Last_Name":"","Member_Zipcode":"","Plan_Name":"Blue Saver Bronze","Premium":"112.19","Member_County_Code":"","Csr_Variation_Type":"Standard Bronze Off Exchange Plan","Deductibles_Individual":"$6,350","DEPENDENTS":"","Plan_Variant_Id":"46944AL0460001-00","Member_Identifier":"member_does_not_existing","Member_Birth_Date":"","Plan_Id":"46944AL0460001","Payer_Name":"Alabama","Organization_Id":"","Member_Gender_Code":"","Payer_Id":"46944","Deductibles_Family":"$12,700"},{"Plan_Type":"PPO","Outofpocket_Family":"$12,000","Member_Tobacco":"","Member_Individual_Relationship_Code":"","Tenant_Logo":"https:\/\/sbs-al.naic.org\/Lion-Web\/images\/ExtBanner-AL-logo.jpg","Metal_Level":"Silver","Outofpocket_Individual":"$6,000","Member_Last_Name":"","Member_Zipcode":"","Plan_Name":"Blue Saver Silver","Premium":"147.49","Member_County_Code":"","Csr_Variation_Type":"Standard Silver Off Exchange Plan","Deductibles_Individual":"$3,000","DEPENDENTS":"","Plan_Variant_Id":"46944AL0420001-00","Member_Identifier":"member_does_not_existing","Member_Birth_Date":"","Plan_Id":"46944AL0420001","Payer_Name":"Alabama","Organization_Id":"","Member_Gender_Code":"","Payer_Id":"46944","Deductibles_Family":"$6,000"},{"Plan_Type":"PPO","Outofpocket_Family":"$10,000","Member_Tobacco":"","Member_Individual_Relationship_Code":"","Tenant_Logo":"https:\/\/sbs-al.naic.org\/Lion-Web\/images\/ExtBanner-AL-logo.jpg","Metal_Level":"Gold","Outofpocket_Individual":"$5,000","Member_Last_Name":"","Member_Zipcode":"","Plan_Name":"Blue Value Gold","Premium":"179.98","Member_County_Code":"","Csr_Variation_Type":"Standard Gold Off Exchange Plan","Deductibles_Individual":"$600","DEPENDENTS":"","Plan_Variant_Id":"46944AL0370001-00","Member_Identifier":"member_does_not_existing","Member_Birth_Date":"","Plan_Id":"46944AL0370001","Payer_Name":"Alabama","Organization_Id":"","Member_Gender_Code":"","Payer_Id":"46944","Deductibles_Family":"$1,200"},{"Plan_Type":"PPO","Outofpocket_Family":"$10,000","Member_Tobacco":"","Member_Individual_Relationship_Code":"","Tenant_Logo":"https:\/\/sbs-al.naic.org\/Lion-Web\/images\/ExtBanner-AL-logo.jpg","Metal_Level":"Gold","Outofpocket_Individual":"$5,000","Member_Last_Name":"","Member_Zipcode":"","Plan_Name":"Blue Access Gold","Premium":"181.06","Member_County_Code":"","Csr_Variation_Type":"Standard Gold Off Exchange Plan","Deductibles_Individual":"$500","DEPENDENTS":"","Plan_Variant_Id":"46944AL0360001-00","Member_Identifier":"member_does_not_existing","Member_Birth_Date":"","Plan_Id":"46944AL0360001","Payer_Name":"Alabama","Organization_Id":"","Member_Gender_Code":"","Payer_Id":"46944","Deductibles_Family":"$1,000"},{"Plan_Type":"PPO","Outofpocket_Family":"$8,000","Member_Tobacco":"","Member_Individual_Relationship_Code":"","Tenant_Logo":"https:\/\/sbs-al.naic.org\/Lion-Web\/images\/ExtBanner-AL-logo.jpg","Metal_Level":"Platinum","Outofpocket_Individual":"$4,000","Member_Last_Name":"","Member_Zipcode":"","Plan_Name":"Blue Choice Platinum","Premium":"216.58","Member_County_Code":"","Csr_Variation_Type":"Standard Platinum Off Exchange Plan","Deductibles_Individual":"$100","DEPENDENTS":"","Plan_Variant_Id":"46944AL0300001-00","Member_Identifier":"member_does_not_existing","Member_Birth_Date":"","Plan_Id":"46944AL0300001","Payer_Name":"Alabama","Organization_Id":"","Member_Gender_Code":"","Payer_Id":"46944","Deductibles_Family":"$200"},{"Plan_Type":"PPO","Outofpocket_Family":"$12,000","Member_Tobacco":"","Member_Individual_Relationship_Code":"","Tenant_Logo":"https:\/\/sbs-al.naic.org\/Lion-Web\/images\/ExtBanner-AL-logo.jpg","Metal_Level":"Bronze","Outofpocket_Individual":"$6,000","Member_Last_Name":"","Member_Zipcode":"","Plan_Name":"Blue HSA Bronze","Premium":"114.14","Member_County_Code":"","Csr_Variation_Type":"Standard Bronze Off Exchange Plan","Deductibles_Individual":"$6,000","DEPENDENTS":"","Plan_Variant_Id":"46944AL0560001-00","Member_Identifier":"member_does_not_existing","Member_Birth_Date":"","Plan_Id":"46944AL0560001","Payer_Name":"Alabama","Organization_Id":"","Member_Gender_Code":"","Payer_Id":"46944","Deductibles_Family":"$12,000"},{"Plan_Type":"PPO","Outofpocket_Family":"$13,200","Member_Tobacco":"","Member_Individual_Relationship_Code":"","Tenant_Logo":"https:\/\/sbs-al.naic.org\/Lion-Web\/images\/ExtBanner-AL-logo.jpg","Metal_Level":"Catastrophic","Outofpocket_Individual":"$6,600","Member_Last_Name":"","Member_Zipcode":"","Plan_Name":"Blue Protect","Premium":"97.03","Member_County_Code":"","Csr_Variation_Type":"Standard Catastrophic Off Exchange Plan","Deductibles_Individual":"$6,600","DEPENDENTS":"","Plan_Variant_Id":"46944AL0470001-00","Member_Identifier":"member_does_not_existing","Member_Birth_Date":"","Plan_Id":"46944AL0470001","Payer_Name":"Alabama","Organization_Id":"","Member_Gender_Code":"","Payer_Id":"46944","Deductibles_Family":"$13,200"},{"Plan_Type":"PPO","Outofpocket_Family":"$12,700","Member_Tobacco":"","Member_Individual_Relationship_Code":"","Tenant_Logo":"https:\/\/sbs-al.naic.org\/Lion-Web\/images\/ExtBanner-AL-logo.jpg","Metal_Level":"Silver","Outofpocket_Individual":"$6,350","Member_Last_Name":"","Member_Zipcode":"","Plan_Name":"Blue Value Silver","Premium":"139.04","Member_County_Code":"","Csr_Variation_Type":"Standard Silver Off Exchange Plan","Deductibles_Individual":"$2,400","DEPENDENTS":"","Plan_Variant_Id":"46944AL0410001-00","Member_Identifier":"member_does_not_existing","Member_Birth_Date":"","Plan_Id":"46944AL0410001","Payer_Name":"Alabama","Organization_Id":"","Member_Gender_Code":"","Payer_Id":"46944","Deductibles_Family":"$4,800"}]');
+var comparePlanJson = JSON.parse('[]');
+
+if( searchPlanList == null){
+	searchPlanList = [];
+}
+var itemsPerPage = 0;
+var currentItemsForPage = searchPlanList.length;
+var noOfVisibleLinks = 0;
+var curPageNum = 0;
+
+$(document).ready(function() {
+	// populate the search plan list from json data to UI...
+	if(searchPlanList.length > 0){
+		$("#nothingtodisplay").hide();
+		waitingDialog.show();
+		// individual item is #list-item{id}, and all items will be inside .list-item
+		var list_item_clone = $("div#list-item0").clone();
+		// jquery template is used to populate the json data into HTML...
+		populateTheTemplate(searchPlanList);
+		waitingDialog.hide();
+		$("#planlist").show();
+		
+		constructAndApplyPagination(1);
+		
+		// mark the compare items from session...
+		$.each(comparePlanJson, function(i, n){ // array loop
+			var planVariantId = n.PLANVARIANTID;
+			if($("tr#filter_"+planVariantId).length > 0){ // item exists in the current search result...
+				var planRef = $("#planaddtocartcheckbox_"+planVariantId);
+				addPlanToCompareCallBack(planRef, planVariantId);
+				planRef.attr("checked", true);
+			}
+		});
+		// enable or disable the compare button...
+		if($(".btn-for-plan-compare").length <= 1){
+			$("#compareItemsButtonId").addClass("disabled");
+		}
+		
+	} else {
+		$("#nothingtodisplay").show();
+		$("#planlist").hide();
+		$("#compareItemsButtonId").hide();
+	}
+	
+	// left hand side filter logic...
+	$('.pfilter').on("click", filterFunc).on("keyup", filterFunc);
+	
+	//make the county, gender & relation attribute readonly based on zipcode readonly attribute
+	if($("#vzipcode").attr("readonly") == true || $("#vzipcode").attr("readonly") == 'readonly') {
+		
+		$('#vCountyCode option:not(:selected)').prop('disabled', true);
+		$('#vsex option:not(:selected)').prop('disabled', true);
+		$('#vrelation option:not(:selected)').prop('disabled', true);
+	}
+	
+	$(document).on('blur','#vzipcode',function(){
+		var txt = $(this).val();
+		if(txt!= '') {
+			
+			var options = '';
+			$.getJSON("http://52.9.26.136/ramyam_demo/alabama/plans/country_detail/"+txt, function(result) {
+				
+				var countyCode = '';
+				for (var i = 0; i < result.length; i++) {
+					
+					if(i == 0) {
+						
+						countyCode = result[i].COUNTYCODE;
+					}
+					options += '<option value="' + result[i].COUNTYCODE + '">'+result[i].COUNTYNAME+'</option>';
+				}
+				$("#vCountyCode").append(options);
+				$("#vCountyCode").val(countyCode);
+				$('#vCountyCodeHid').val(countyCode);
+				if(result.length > 1) {
+					
+					$("#vCountyCode").prop("disabled", false);
+				}
+			});
+		}       
+	});
+	
+});
+
+var filterFunc = function(){
+	// filter is applied directly on the right side...
+	//waitingDialog.show();
+	
+	var tempSearchPlanList = searchPlanList;
+	$.each(searchCriteriaArr, function(i, d){
+		var filterResName = d['resName'];
+		if(d['type'] == 'slider'){
+			var filterValue = $("input[name="+d['name']+"]").val();
+			tempSearchPlanList = tempSearchPlanList.filter(function (item,index){
+				if(filterValue == 0 || filterValue == undefined || filterValue == "") return true;
+				var filterValue_split = filterValue.split("_");
+				var curVal = Number(item[filterResName].replace(/[^0-9\.]+/g,""));
+				return (curVal >= filterValue_split[0] && curVal <= filterValue_split[1]);
+			});
+		} else if(d['type'] == 'checkbox'){
+			var filterValueArray = new Array();
+			$("input:checkbox[name="+d['name']+"]:checked").each(function () {
+				filterValueArray.push($(this).val());
+			});
+			tempSearchPlanList = tempSearchPlanList.filter(function (item,index){
+				if(filterValueArray.length == 0) return true;
+				return ($.inArray(item[filterResName], filterValueArray) > -1);
+			});;
+		} else if(d['type'] == 'textbox'){
+			var filterValue = $("input[name="+d['name']+"]").val();
+			tempSearchPlanList = tempSearchPlanList.filter(function (item,index){
+				if(filterValue == 0 || filterValue == undefined || filterValue == "") return true;
+				return (item[filterResName].toLowerCase().indexOf(filterValue.toLowerCase()) > -1);
+			});
+		}
+	});
+	
+	// update the total items...
+	currentItemsForPage = tempSearchPlanList.length;
+	curPageNum = 0;
+	
+	// display the items...
+	populateTheTemplate(tempSearchPlanList);
+	
+	// apply the pagination to the updated UI...
+	constructAndApplyPagination(2);
+	
+	//waitingDialog.hide();
+};
+	
+function populateTheTemplate(templateList){
+	var template = $("#list-item-template").html();
+	var uiComponent = "";
+	// construct the UI from template with the JSON data...
+	$.each(templateList, function(i, n){ // array loop
+		var tempTemplate = template;
+		tempTemplate = tempTemplate.replace("{{=ITEM_ID_FOR_PAGINATION=}}", (i+1));
+		$.each(n, function(k, v){ // object loop
+			var regex = new RegExp("{{="+k+"=}}", "ig");
+			tempTemplate = tempTemplate.replace(regex, v);
+		});
+		uiComponent += tempTemplate;
+	});
+	$("div.list-item-container").html(uiComponent);
+	if(templateList.length == 0){
+		$("#nothingtodisplay").show();
+		$("#planlist").hide();
+	} else {
+		$("#nothingtodisplay").hide();
+		$("#planlist").show();
+	}
+}
+
+function constructAndApplyPagination(mode){
+	// mode : 1 --> onload, 2 --> onchange. 
+	// items per page option by default...
+	if(mode == 1){
+		var dropDownMenuItemsOptionRef = $("ul.dropdown-menu.items_per_page > li >a[data-default='true']");
+		itemsPerPage = dropDownMenuItemsOptionRef.attr("data-number");
+		noOfVisibleLinks = $("ul.pagination_links").attr("data-range");
+		$("button#dropdown-menu-1 > span[data-type='selected-text']").html(dropDownMenuItemsOptionRef.html());
+		
+		// onclick of the drop down, change the items per page value...
+		$(".dropdown-menu.items_per_page").on("click", "li", function(event){
+			var itemLinkRef = $(this).children("a");
+			itemsPerPage = itemLinkRef.attr("data-number");
+			$("button#dropdown-menu-1 > span[data-type='selected-text']").html(itemLinkRef.html());
+			curPageNum = 0;
+			constructAndApplyPaginationLinks();
+			showPageSpecificData();
+		});
+		
+		// on click of pagination number links...
+		$("ul.pagination_links").on("click", "li.jplist-page", function(event){
+			curPageNum = parseInt($(this).attr("data-number"));
+			constructAndApplyPaginationLinks();
+			showPageSpecificData();
+		});
+		
+		// on click of pagination first link...
+		$("ul.pagination_links").on("click", "li.jplist-first, li.jplist-prev, li.jplist-next, li.jplist-last", function(event){
+			if(!$(this).hasClass("disabled")){
+				curPageNum = parseInt($(this).attr("data-number"));
+				constructAndApplyPaginationLinks();
+				showPageSpecificData();
+			}
+		});
+		
+	}
+	
+	// construct and apply the pagination with links...
+	constructAndApplyPaginationLinks();
+	showPageSpecificData();
+
+}
+
+function constructAndApplyPaginationLinks(){
+	if(itemsPerPage == "all"){
+		itemsPerPage = currentItemsForPage;
+	}
+	var noOfPaginationLinks = Math.ceil(currentItemsForPage/itemsPerPage);
+	
+	// pagination logic...
+	var curPage = curPageNum;
+	var totalPage = (noOfPaginationLinks-1);
+	var startPage = (curPage < noOfVisibleLinks)? 0 : curPage - (noOfVisibleLinks-1);
+	var endPage = (noOfVisibleLinks-1) + startPage;
+	endPage = (totalPage < endPage) ? totalPage : endPage;
+	var diff = startPage - endPage + (noOfVisibleLinks-1);
+	startPage -= (startPage - diff > 0) ? diff : 0;
+	
+	// construct the links...
+	var li_first_disabled = (startPage > 0)?'':'disabled';
+	var li_first = '<li class="jplist-first '+li_first_disabled+'" data-number="0" data-type="first">'+
+						'<a href="#"><span aria-hidden="true">«</span><span class="sr-only">First</span></a>'+
+					'</li>';
+	var li_prev_disabled = (curPageNum == 0)?'disabled':'';
+	var li_prev = '<li class="jplist-prev '+li_prev_disabled+'" data-type="prev" data-number="'+(curPageNum-1)+'">'+
+						'<a href="#"><span aria-hidden="true">‹</span><span class="sr-only">Previous</span></a>'+
+					'</li>';
+					
+	var li_mid_links = "";
+	for(var i=startPage; i<=endPage; i++){
+		var li_mid_links_active = (i == curPageNum)?'active':'';
+		li_mid_links += '<li data-type="page" class=" jplist-page '+li_mid_links_active+'" data-number="'+(i)+'">'+
+							'<a href="#">'+(i+1)+'</a>'+
+						'</li>';
+	}
+
+	var li_next_disabled = (curPageNum == noOfPaginationLinks-1)?'disabled':'';
+	var li_next = '<li class="jplist-next '+li_next_disabled+'" data-type="next" data-number="'+(curPageNum+1)+'">'+
+						'<a href="#"><span aria-hidden="true">›</span><span class="sr-only">Next</span></a>'+
+					'</li>';
+	var li_last_disabled = (endPage < totalPage)?'':'disabled';
+	var li_last = '<li class="jplist-last '+li_last_disabled+'" data-type="last" data-number="'+(noOfPaginationLinks-1)+'">'+
+					'<a href="#"><span aria-hidden="true">»</span><span class="sr-only">Last</span></a>'+
+				'</li>';
+	$("ul.pagination_links").html(li_first+li_prev+li_mid_links+li_next+li_last);
+}
+
+function showPageSpecificData(){
+	// find the starting number for the selected page...
+	var curPageItemStartNum = (curPageNum*itemsPerPage)+1;
+	$("div[class*='list_item_']").hide();
+	for(var i = 0; i < itemsPerPage; i++){
+		$("div.list_item_"+(curPageItemStartNum+i)).show();
+	}
+}
+
+function addRemoveItemCompareAjax(planRef, planVariantId, action, callBack){
+	waitingDialog.show();
+	var planId = $("tr#filter_"+planVariantId+" p.plan_id_filter").html();
+	// ajax request to save the item in session,
+	$.ajax({
+		url: "http://52.9.26.136/ramyam_demo/alabama/modify-storage-compare-item/"+action+"/"+planVariantId+"/"+planId,
+		type: 'get',
+		success: function(json) {
+			waitingDialog.hide();
+			if (json['result'] == true) {
+				callBack(planRef, planVariantId);
+			} else {
+				showErrorDialog("Error", "Problem adding item to compare.");
+			}
+		},
+		error: function(){
+			waitingDialog.hide();
+			showErrorDialog("Error", "Problem adding item to compare.");
+		}
+	});
+}
+
+function addPlanToCompare(planRef){
+	var planVariantId = $(planRef).val();
+	if($("input#data_for_compare_hid_"+planVariantId).length > 0){
+		removePlanFromCompare(planVariantId);
+	} else {
+		if($(".btn-for-plan-compare").length == 3){
+			$(planRef).attr("checked", false);
+			showErrorDialog("Message", "Already 3 Plans added.");
+			return false;
+		} else {
+			addRemoveItemCompareAjax(planRef, planVariantId, "ADD", addPlanToCompareCallBack);
+		}
+	}
+}
+
+function addPlanToCompareCallBack(planRef, planVariantId){
+	var planNameDesc = $("#planaddtocarthidden_"+planVariantId).val();
+	var planNameShort = planNameDesc.substring(0, 12)+"...";
+	$(".compare_btn_group").append(
+			'<a title="'+planNameDesc+'" class="btn btn-default btn-xs btn-for-plan-compare" id="btn_compare_'+planVariantId+'" title="'+planNameDesc+'" style="margin-right: 3px; padding: 6px;">'+planNameShort+' <i class="fa fa-times" onclick="removePlanFromCompare(\''+planVariantId+'\')">&nbsp;</i></a>'+
+			'<input type="hidden" id="data_for_compare_hid_'+planVariantId+'" value="'+planVariantId+'" />'
+		);
+	//$(planRef).attr("disabled", true);
+	if($(".btn-for-plan-compare").length > 1){
+		$("#compareItemsButtonId").removeClass("disabled");
+	}
+}
+
+function removePlanFromCompare(planVariantId){
+	if($(".btn-for-plan-compare").length > 0){
+		addRemoveItemCompareAjax(undefined, planVariantId, "REMOVE", removePlanFromCompareCallBack);
+	}
+}
+
+function removePlanFromCompareCallBack(planRef, planVariantId){ // planRef -> undefined for this method...
+	$("#btn_compare_"+planVariantId).remove();
+	$("#data_for_compare_hid_"+planVariantId).remove();
+	//$("#planaddtocartcheckbox_"+planVariantId).attr("disabled", false);
+	$("#planaddtocartcheckbox_"+planVariantId).attr("checked", false);
+	if($(".btn-for-plan-compare").length <= 1){
+		$("#compareItemsButtonId").addClass("disabled");
+	}
+}
+
+function compareThePlans(){
+	if($(".btn-for-plan-compare").length == 0){
+		showErrorDialog("Error", "No Plan selected.");
+		return false;
+	} else {
+		// submit the form to compare page...
+		location.href = "http://52.9.26.136/ramyam_demo/alabama/compare-plans";
+	}
+}
+
+function doenrollment(planRef){
+	var buttonRef = $(planRef).attr("id");
+	var plan_variant_id = buttonRef.replace("enrolbutton_", "");
+	var plan_id = $("tr#filter_"+plan_variant_id+" p.plan_id_filter").html();
+	location.href = "http://52.9.26.136/ramyam_demo/alabama/plans-enroll/"+plan_variant_id+"/"+plan_id;
+}
+
+function fetchplandetail(planRef){
+	var buttonRef = $(planRef).attr("id");
+	var plan_variant_id = buttonRef.replace("detailsbutton_", "");
+	var plan_id = $("tr#filter_"+plan_variant_id+" p.plan_id_filter").html();
+	location.href = "http://52.9.26.136/ramyam_demo/alabama/plan-details/"+plan_variant_id+"/"+plan_id;
+}
+
+$(document).on('click', '.panel-heading span.clickable', function(e){
+    var $this = $(this);
+	collapseSearchSection();
+});
+
+function collapseSearchSection(obj) {
+	
+	var obj = $('.panel-heading span.clickable');
+	if(!obj.hasClass('panel-collapsed')) {
+		obj.parents('.panel').find('.panel-body').slideUp();
+		obj.addClass('panel-collapsed');
+		obj.find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+	} else {
+		obj.parents('.panel').find('.panel-body').slideDown();
+		obj.removeClass('panel-collapsed');
+		obj.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+	}
+}
+
+function assignOptionVals(objId) {
+		
+	var options = $('#temp_relation option').clone();
+	$('#'+objId).append(options);
+}
+	
+function invokeDOBDatePicker(){
+	$('.datePicker').datepicker({
+
+		dateFormat : 'mm/dd/yy',
+		yearRange : "-100:+0",
+		changeYear: true,
+		changeMonth: true,
+		maxDate : "0"
+	});
+}
+
+var searchCriteriaArr = [];
+
+searchCriteriaArr.push({'type': 'slider', 'name': 'estimated_premium', 'resName': 'Premium'});searchCriteriaArr.push({'type': 'checkbox', 'name': 'plan_type', 'resName': 'Plan_Type'});searchCriteriaArr.push({'type': 'slider', 'name': 'deductibles_individual', 'resName': 'Deductibles_Individual'});searchCriteriaArr.push({'type': 'slider', 'name': 'deductibles_family', 'resName': 'Deductibles_Family'});searchCriteriaArr.push({'type': 'slider', 'name': 'maximum_out_of_pocket_individual', 'resName': 'Outofpocket_Individual'});searchCriteriaArr.push({'type': 'slider', 'name': 'maximum_out_of_pocket_family', 'resName': 'Outofpocket_Family'});searchCriteriaArr.push({'type': 'checkbox', 'name': 'plan_level', 'resName': 'Metal_Level'});searchCriteriaArr.push({'type': 'textbox', 'name': 'plan_name', 'resName': 'Plan_Name'});
+$(document).ready(function() {
+	$.each(searchCriteriaArr, function(i, d){
+		var k = d['name']
+		if(d['type'] == 'slider'){
+			$( "#"+k+"_slider_range" ).slider({
+				range: true,
+				min: 0,
+				max: 20000,
+				values: [ 0, 20000 ],
+				slide: function( event, ui ) {
+					$( "#"+k+"_amount_disp" ).html( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+					$( "#"+k+"_amount" ).val( ui.values[ 0 ] + "_" + ui.values[ 1 ] );
+					// trigger event for applying the filter...
+					filterFunc();
+				}
+			});
+			$( "#"+k+"_amount_disp" ).html( "$" + $( "#"+k+"_slider_range" ).slider( "values", 0 ) + " - $" + $( "#"+k+"_slider_range" ).slider( "values", 1 ) );
+		}
+	});
+
+});
+
+function validateMemberForm() {
+	
+	if($("#popupform").valid()) {
+		
+		return true;
+	}
+	return false;
+}
+
+function showSearchForm() {
+	
+	$("#errorMessageMember").hide();
+	$("#search_form").show();
+}
+
+function closeDialog() {
+	
+	$("#shortModal").hide();
+}
+</script>
+
+<section class="container" style="padding:20px;">
+        
+	<ul class="breadcrumb">
+		<li><a href="http://52.9.26.136/ramyam_demo/alabama/">Home</a></li>
+		<li><a href="http://52.9.26.136/ramyam_demo/alabama/plans">Search</a></li>
+		<li class="active">Suggested Plans</li>
+	</ul>
+		
+	<div id="notification"></div>
+        
+		<div class="col-md-3" style="padding-right:0px;">
+			
+			<div class="leftcol" style="margin-left:-15px; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);">
+				
+				<div class="panel panel-primary" style="border:#ccc thin solid;">
+
+					<div class="panel-heading">
+						<h3 class="panel-title"><center>Customize Search Result</center></h3>
+					</div>
+					
+					<div class="panel-body">
+						<div class="accordion" id="accordion2">
+						
+															<div class="accordion-group">
+									<div class="accordion-heading panel-heading active">
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_estimated_premium">
+											Estimated Premium<i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" style="color:#0CF;background:none;"></i> 
+										</a>
+									</div>
+									
+									<div id="collapse_estimated_premium" class="accordion-body collapse in">
+										
+										<div class="accordion-inner">
+											
+											<ul>
+											
+																										<li>
+															<span id="estimated_premium_amount_disp">$0 - $20000</span>
+															<br>
+															<input name="estimated_premium" id="estimated_premium_amount" readonly="" style="border:0;" type="hidden">
+															<div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="estimated_premium_slider_range" style="width: 230px; margin-left: -25px !important; "><div style="left: 0%; width: 100%;" class="ui-slider-range ui-widget-header ui-corner-all"></div><span style="left: 0%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span><span style="left: 100%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span></div>
+														</li>
+																								</ul>
+										</div>
+									</div>
+								</div>
+															<div class="accordion-group">
+									<div class="accordion-heading panel-heading ">
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_plan_type">
+											Plan Type<i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" style="color:#0CF;background:none;"></i> 
+										</a>
+									</div>
+									
+									<div id="collapse_plan_type" class="accordion-body collapse ">
+										
+										<div class="accordion-inner">
+											
+											<ul>
+											
+																										<li>
+															<div class="checkbox  checkbox-primary">
+															<input class="pfilter" data-filtertype="or" data-filtervalue="" data-filtername="plan_type" name="plan_type" id="plan_typePPO" value="PPO" type="checkbox">
+															<label for="plan_typePPO">
+															   PPO 
+															</label>
+															</div>                   
+														</li>
+																											<li>
+															<div class="checkbox  checkbox-primary">
+															<input class="pfilter" data-filtertype="or" data-filtervalue="" data-filtername="plan_type" name="plan_type" id="plan_typeHMO" value="HMO" type="checkbox">
+															<label for="plan_typeHMO">
+															   HMO 
+															</label>
+															</div>                   
+														</li>
+																								</ul>
+										</div>
+									</div>
+								</div>
+															<div class="accordion-group">
+									<div class="accordion-heading panel-heading ">
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_deductibles_individual">
+											Deductibles-Individual<i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" style="color:#0CF;background:none;"></i> 
+										</a>
+									</div>
+									
+									<div id="collapse_deductibles_individual" class="accordion-body collapse ">
+										
+										<div class="accordion-inner">
+											
+											<ul>
+											
+																										<li>
+															<span id="deductibles_individual_amount_disp">$0 - $20000</span>
+															<br>
+															<input name="deductibles_individual" id="deductibles_individual_amount" readonly="" style="border:0;" type="hidden">
+															<div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="deductibles_individual_slider_range" style="width: 230px; margin-left: -25px !important; "><div style="left: 0%; width: 100%;" class="ui-slider-range ui-widget-header ui-corner-all"></div><span style="left: 0%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span><span style="left: 100%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span></div>
+														</li>
+																								</ul>
+										</div>
+									</div>
+								</div>
+															<div class="accordion-group">
+									<div class="accordion-heading panel-heading ">
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_deductibles_family">
+											Deductibles-Family<i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" style="color:#0CF;background:none;"></i> 
+										</a>
+									</div>
+									
+									<div id="collapse_deductibles_family" class="accordion-body collapse ">
+										
+										<div class="accordion-inner">
+											
+											<ul>
+											
+																										<li>
+															<span id="deductibles_family_amount_disp">$0 - $20000</span>
+															<br>
+															<input name="deductibles_family" id="deductibles_family_amount" readonly="" style="border:0;" type="hidden">
+															<div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="deductibles_family_slider_range" style="width: 230px; margin-left: -25px !important; "><div style="left: 0%; width: 100%;" class="ui-slider-range ui-widget-header ui-corner-all"></div><span style="left: 0%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span><span style="left: 100%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span></div>
+														</li>
+																								</ul>
+										</div>
+									</div>
+								</div>
+															<div class="accordion-group">
+									<div class="accordion-heading panel-heading ">
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_maximum_out_of_pocket_individual">
+											Maximum Out-of-Pocket-Individual<i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" style="color:#0CF;background:none;"></i> 
+										</a>
+									</div>
+									
+									<div id="collapse_maximum_out_of_pocket_individual" class="accordion-body collapse ">
+										
+										<div class="accordion-inner">
+											
+											<ul>
+											
+																										<li>
+															<span id="maximum_out_of_pocket_individual_amount_disp">$0 - $20000</span>
+															<br>
+															<input name="maximum_out_of_pocket_individual" id="maximum_out_of_pocket_individual_amount" readonly="" style="border:0;" type="hidden">
+															<div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="maximum_out_of_pocket_individual_slider_range" style="width: 230px; margin-left: -25px !important; "><div style="left: 0%; width: 100%;" class="ui-slider-range ui-widget-header ui-corner-all"></div><span style="left: 0%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span><span style="left: 100%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span></div>
+														</li>
+																								</ul>
+										</div>
+									</div>
+								</div>
+															<div class="accordion-group">
+									<div class="accordion-heading panel-heading ">
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_maximum_out_of_pocket_family">
+											Maximum Out-of-Pocket-Family<i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" style="color:#0CF;background:none;"></i> 
+										</a>
+									</div>
+									
+									<div id="collapse_maximum_out_of_pocket_family" class="accordion-body collapse ">
+										
+										<div class="accordion-inner">
+											
+											<ul>
+											
+																										<li>
+															<span id="maximum_out_of_pocket_family_amount_disp">$0 - $20000</span>
+															<br>
+															<input name="maximum_out_of_pocket_family" id="maximum_out_of_pocket_family_amount" readonly="" style="border:0;" type="hidden">
+															<div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="maximum_out_of_pocket_family_slider_range" style="width: 230px; margin-left: -25px !important; "><div style="left: 0%; width: 100%;" class="ui-slider-range ui-widget-header ui-corner-all"></div><span style="left: 0%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span><span style="left: 100%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span></div>
+														</li>
+																								</ul>
+										</div>
+									</div>
+								</div>
+															<div class="accordion-group">
+									<div class="accordion-heading panel-heading ">
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_plan_level">
+											Plan Level<i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" style="color:#0CF;background:none;"></i> 
+										</a>
+									</div>
+									
+									<div id="collapse_plan_level" class="accordion-body collapse ">
+										
+										<div class="accordion-inner">
+											
+											<ul>
+											
+																										<li>
+															<div class="checkbox  checkbox-primary">
+															<input class="pfilter" data-filtertype="or" data-filtervalue="" data-filtername="plan_level" name="plan_level" id="plan_levelGold" value="Gold" type="checkbox">
+															<label for="plan_levelGold">
+															   Gold 
+															</label>
+															</div>                   
+														</li>
+																											<li>
+															<div class="checkbox  checkbox-primary">
+															<input class="pfilter" data-filtertype="or" data-filtervalue="" data-filtername="plan_level" name="plan_level" id="plan_levelSilver" value="Silver" type="checkbox">
+															<label for="plan_levelSilver">
+															   Silver 
+															</label>
+															</div>                   
+														</li>
+																											<li>
+															<div class="checkbox  checkbox-primary">
+															<input class="pfilter" data-filtertype="or" data-filtervalue="" data-filtername="plan_level" name="plan_level" id="plan_levelBronze" value="Bronze" type="checkbox">
+															<label for="plan_levelBronze">
+															   Bronze 
+															</label>
+															</div>                   
+														</li>
+																											<li>
+															<div class="checkbox  checkbox-primary">
+															<input class="pfilter" data-filtertype="or" data-filtervalue="" data-filtername="plan_level" name="plan_level" id="plan_levelCatastrophic" value="Catastrophic" type="checkbox">
+															<label for="plan_levelCatastrophic">
+															   Catastrophic 
+															</label>
+															</div>                   
+														</li>
+																											<li>
+															<div class="checkbox  checkbox-primary">
+															<input class="pfilter" data-filtertype="or" data-filtervalue="" data-filtername="plan_level" name="plan_level" id="plan_levelHigh" value="High" type="checkbox">
+															<label for="plan_levelHigh">
+															   High 
+															</label>
+															</div>                   
+														</li>
+																											<li>
+															<div class="checkbox  checkbox-primary">
+															<input class="pfilter" data-filtertype="or" data-filtervalue="" data-filtername="plan_level" name="plan_level" id="plan_levelLow" value="Low" type="checkbox">
+															<label for="plan_levelLow">
+															   Low 
+															</label>
+															</div>                   
+														</li>
+																											<li>
+															<div class="checkbox  checkbox-primary">
+															<input class="pfilter" data-filtertype="or" data-filtervalue="" data-filtername="plan_level" name="plan_level" id="plan_levelPlatinum" value="Platinum" type="checkbox">
+															<label for="plan_levelPlatinum">
+															   Platinum 
+															</label>
+															</div>                   
+														</li>
+																								</ul>
+										</div>
+									</div>
+								</div>
+														
+						</div>
+						
+						<!-- <div class="accordion-group">
+							<div class="accordion-heading panel-heading">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_plan_name">
+									Plan Name<i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" style="color:#0CF;background:none;"></i> 
+								</a>
+							</div>
+							<div id="collapse_plan_name"  class="accordion-body collapse">
+								<div class="accordion-inner">
+									<ul>
+										<li>
+											<div class="form-group">
+												<input type="text" class="form-control pfilter" name="plan_name" id="plan_name" />
+												<script>
+													searchCriteriaArr.push({'type': 'textbox', 'name': 'plan_name', 'resName': 'Plan_Name'});
+												</script>
+											</div>
+											<br/>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div> -->
+				  
+					</div>
+
+				</div>
+				
+			</div>
+             			
+        </div>
+        
+				
+		<div class="col-md-9" id="searchPlanContainerId" style="box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);">
+		
+						
+			<div class="panel-heading clearfix" style="margin-left:-15px;  margin-right: -15px;border: 1px solid #ccc;border-bottom: none;">				
+				<h3 class="panel-title col-md-4 pull-left"><center>List of Plans</center></h3>
+				
+				<div class="btn-group col-md-7 compare_btn_group"></div>
+				<div class="btn-group text-center">
+					<button id="compareItemsButtonId" class="btn btn-info btn-xs disabled" onclick="compareThePlans()">Compare</button>
+				</div>
+				
+				<!--<div class="form-group pull-right" style="width: 60%; ">
+                  <div class="tokenfield form-control">
+					<div class="token"><span class="token-label" style="max-width: 15%;">red</span><a href="#" class="close" tabindex="-1">×</a></div>
+					<div class="token"><span class="token-label" style="max-width: 15%;">green</span><a href="#" class="close" tabindex="-1">×</a></div>
+					<div class="token"><span class="token-label" style="max-width: 15%;">blue</span><a href="#" class="close" tabindex="-1">×</a></div>
+				</div>
+                </div>-->
+				
+			</div>
+			<div class="nothingtodisplay" id="nothingtodisplay" style="margin-left:-15px; margin-right: -15px;border: 1px solid #ccc;display: none;">
+				<br>
+				<div class="alert alert-warning">No Records found, Please refine your search</div> 
+			</div>
+						
+			<div class="row" id="planlist" style="padding: 15px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 1px solid rgb(204, 204, 204);"> 
+				<!-- Pagination Logic -->
+				<div style=" margin: 10px 0; height: 30px; float: right;">
+					<!-- Pagination Links -->
+					<div style="float: left; margin: 0 10px 0 0;"><ul class="pagination pull-left pagination_links" data-range="4"><li class="jplist-first disabled" data-number="0" data-type="first"><a href="#"><span aria-hidden="true">«</span><span class="sr-only">First</span></a></li><li class="jplist-prev disabled" data-type="prev" data-number="-1"><a href="#"><span aria-hidden="true">‹</span><span class="sr-only">Previous</span></a></li><li data-type="page" class=" jplist-page active" data-number="0"><a href="#">1</a></li><li data-type="page" class=" jplist-page " data-number="1"><a href="#">2</a></li><li class="jplist-next " data-type="next" data-number="1"><a href="#"><span aria-hidden="true">›</span><span class="sr-only">Next</span></a></li><li class="jplist-last disabled" data-type="last" data-number="1"><a href="#"><span aria-hidden="true">»</span><span class="sr-only">Last</span></a></li></ul></div>
+				
+					<!-- items per page dropdown -->
+					<div class="dropdown pull-right jplist-items-per-page" data-control-type="boot-items-per-page-dropdown" data-control-name="paging" data-control-action="paging" style="float: left;">
+
+						 <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" id="dropdown-menu-1" aria-expanded="true">					
+							<span data-type="selected-text">5 per page</span>
+							<span class="caret"></span>						
+						 </button>
+
+						 <ul class="dropdown-menu items_per_page" role="menu" aria-labelledby="dropdown-menu-1">
+
+							<li role="presentation">
+							   <a role="menuitem" tabindex="-1" href="#" data-number="3">3 per page</a>
+							</li>
+
+							<li role="presentation">
+							   <a role="menuitem" tabindex="-1" href="#" data-number="5" data-default="true">5 per page</a>
+							</li>
+							
+							<li role="presentation">
+							   <a role="menuitem" tabindex="-1" href="#" data-number="10">10 per page</a>
+							</li>
+
+							<li role="presentation" class="divider"></li>
+
+							<li role="presentation">
+							   <a role="menuitem" tabindex="-1" href="#" data-number="all">View All</a>
+							</li>
+						</ul>						  
+					</div>
+				</div>
+				
+				<!-- panel -->   				
+				<!-- HTML data -->   
+				<div class="list">         
+					<!-- ITERATING OVER THE PLAN DETAILS -->
+					<div class="list-item-container">
+						<div style="display: block;" class="list-item list_item_1" id="list_item_46944AL0460001-00">
+							<div class="col-md-12" style="border: #5BC0DE thin solid; margin-bottom:15px">
+								<table class="table" style="margin-bottom: 5px;">
+									<thead>
+									  <tr>
+										<th>
+											<div style="clear: both; widht: 100%;">
+												<div class="col-md-9">
+													<span><label class="listlabel">Plan Name</label> : Blue Saver Bronze </span>
+													
+													<span style="margin: -4px 0 0 20px;"><img src="https://sbs-al.naic.org/Lion-Web/images/ExtBanner-AL-logo.jpg" class="planlogo_bdr" alt="Blue Saver Bronze" border="0"></span>
+													
+												</div> 
+												
+												<div class="col-md-3">
+													<span><label class="listlabel">Plan Type</label> : PPO</span>
+												</div> 
+												
+											</div>
+											
+											<div style="clear: both; widht: 100%;">
+											
+												<div class="col-md-9">
+																									</div>
+												 
+												<div class="col-md-3">
+													<label class="listlabel">Plan Level</label> : Bronze
+												</div>
+											</div>
+										</th>
+									  </tr>
+									</thead>
+									
+									<tbody>
+									  <tr>
+										<td><div class="col-md-3"><label>Deductibles</label>
+										<ul class="list-unstyled">
+										 <li><label class="listlabel" style="width:60px">Individual </label> <label>$6,350</label></li>
+											<li><label class="listlabel" style="width:60px">Family </label> <label>$12,700</label></li>
+										</ul>
+										</div> 
+										<div class="col-md-3"><label>Maximum Out-of-Pocket</label>
+										<ul class="list-unstyled">
+											<li><label class="listlabel" style="width:60px">Individual </label> <label>$6,350</label></li>
+											<li><label class="listlabel" style="width:60px">Family </label> <label>$12,700</label></li>
+										</ul>
+										</div>
+										<div class="col-md-3">
+										</div>
+										   <div class="col-md-2" style="color:#063;">
+										   <label class="estmatedpremium">$112.19</label><br><label class="listlabel">(Monthly Cost)</label>
+										   </div>
+										 </td>
+									  </tr>
+									  <tr>
+										<td><div class="col-md-3 pull-left">
+											  <div class="checkbox checkbox-success" style="margin-top: 0px; margin-bottom: 5px;">
+												<input id="planaddtocartcheckbox_46944AL0460001-00" onclick="addPlanToCompare(this)" value="46944AL0460001-00" type="checkbox">
+												<label for="planaddtocartcheckbox_46944AL0460001-00" style="font-weight:500; color:blue">
+												   Compare
+												</label>
+												<input id="planaddtocarthidden_46944AL0460001-00" value="Blue Saver Bronze" type="hidden">
+											</div>
+									   </div>
+										<div class="col-md-3 pull-right">
+											<button type="button" id="enrolbutton_46944AL0460001-00" class="btn btn-info btn-xs enroll" onclick="doenrollment(this)" required="required"><i class="fa fa-check-square-o"></i> Enroll</button>&nbsp;&nbsp;&nbsp;&nbsp;
+											<button type="button" id="detailsbutton_46944AL0460001-00" class="btn btn-info btn-xs plandetail" onclick="fetchplandetail(this)" required="required"><i class="fa fa-check-square-o"></i> Details</button>
+										</div> 
+										</td>
+									  </tr>
+									  <tr id="filter_46944AL0460001-00" style="display: none;"><!-- section for filters -->
+										<td><p class="plan_id_filter">46944AL0460001</p></td>
+										<td><p class="estimatedpremium_filter">112.19</p></td>
+										<td><p class="deductable_individual_filter">$6,350</p></td>
+										<td><p class="plan_type_filter">PPO</p></td>
+										<td><p class="outofpocket_individual_filter">$6,350</p></td>
+										<td><p class="metal_level_filter">$6,350</p></td>
+									  </tr>
+									  </tbody>
+								</table>
+							</div>
+						</div>
+					
+						<div style="display: block;" class="list-item list_item_2" id="list_item_46944AL0420001-00">
+							<div class="col-md-12" style="border: #5BC0DE thin solid; margin-bottom:15px">
+								<table class="table" style="margin-bottom: 5px;">
+									<thead>
+									  <tr>
+										<th>
+											<div style="clear: both; widht: 100%;">
+												<div class="col-md-9">
+													<span><label class="listlabel">Plan Name</label> : Blue Saver Silver </span>
+													
+													<span style="margin: -4px 0 0 20px;"><img src="https://sbs-al.naic.org/Lion-Web/images/ExtBanner-AL-logo.jpg" class="planlogo_bdr" alt="Blue Saver Silver" border="0"></span>
+													
+												</div> 
+												
+												<div class="col-md-3">
+													<span><label class="listlabel">Plan Type</label> : PPO</span>
+												</div> 
+												
+											</div>
+											
+											<div style="clear: both; widht: 100%;">
+											
+												<div class="col-md-9">
+																									</div>
+												 
+												<div class="col-md-3">
+													<label class="listlabel">Plan Level</label> : Silver
+												</div>
+											</div>
+										</th>
+									  </tr>
+									</thead>
+									
+									<tbody>
+									  <tr>
+										<td><div class="col-md-3"><label>Deductibles</label>
+										<ul class="list-unstyled">
+										 <li><label class="listlabel" style="width:60px">Individual </label> <label>$3,000</label></li>
+											<li><label class="listlabel" style="width:60px">Family </label> <label>$6,000</label></li>
+										</ul>
+										</div> 
+										<div class="col-md-3"><label>Maximum Out-of-Pocket</label>
+										<ul class="list-unstyled">
+											<li><label class="listlabel" style="width:60px">Individual </label> <label>$6,000</label></li>
+											<li><label class="listlabel" style="width:60px">Family </label> <label>$12,000</label></li>
+										</ul>
+										</div>
+										<div class="col-md-3">
+										</div>
+										   <div class="col-md-2" style="color:#063;">
+										   <label class="estmatedpremium">$147.49</label><br><label class="listlabel">(Monthly Cost)</label>
+										   </div>
+										 </td>
+									  </tr>
+									  <tr>
+										<td><div class="col-md-3 pull-left">
+											  <div class="checkbox checkbox-success" style="margin-top: 0px; margin-bottom: 5px;">
+												<input id="planaddtocartcheckbox_46944AL0420001-00" onclick="addPlanToCompare(this)" value="46944AL0420001-00" type="checkbox">
+												<label for="planaddtocartcheckbox_46944AL0420001-00" style="font-weight:500; color:blue">
+												   Compare
+												</label>
+												<input id="planaddtocarthidden_46944AL0420001-00" value="Blue Saver Silver" type="hidden">
+											</div>
+									   </div>
+										<div class="col-md-3 pull-right">
+											<button type="button" id="enrolbutton_46944AL0420001-00" class="btn btn-info btn-xs enroll" onclick="doenrollment(this)" required="required"><i class="fa fa-check-square-o"></i> Enroll</button>&nbsp;&nbsp;&nbsp;&nbsp;
+											<button type="button" id="detailsbutton_46944AL0420001-00" class="btn btn-info btn-xs plandetail" onclick="fetchplandetail(this)" required="required"><i class="fa fa-check-square-o"></i> Details</button>
+										</div> 
+										</td>
+									  </tr>
+									  <tr id="filter_46944AL0420001-00" style="display: none;"><!-- section for filters -->
+										<td><p class="plan_id_filter">46944AL0420001</p></td>
+										<td><p class="estimatedpremium_filter">147.49</p></td>
+										<td><p class="deductable_individual_filter">$3,000</p></td>
+										<td><p class="plan_type_filter">PPO</p></td>
+										<td><p class="outofpocket_individual_filter">$6,000</p></td>
+										<td><p class="metal_level_filter">$6,000</p></td>
+									  </tr>
+									  </tbody>
+								</table>
+							</div>
+						</div>
+					
+						<div style="display: block;" class="list-item list_item_3" id="list_item_46944AL0370001-00">
+							<div class="col-md-12" style="border: #5BC0DE thin solid; margin-bottom:15px">
+								<table class="table" style="margin-bottom: 5px;">
+									<thead>
+									  <tr>
+										<th>
+											<div style="clear: both; widht: 100%;">
+												<div class="col-md-9">
+													<span><label class="listlabel">Plan Name</label> : Blue Value Gold </span>
+													
+													<span style="margin: -4px 0 0 20px;"><img src="https://sbs-al.naic.org/Lion-Web/images/ExtBanner-AL-logo.jpg" class="planlogo_bdr" alt="Blue Value Gold" border="0"></span>
+													
+												</div> 
+												
+												<div class="col-md-3">
+													<span><label class="listlabel">Plan Type</label> : PPO</span>
+												</div> 
+												
+											</div>
+											
+											<div style="clear: both; widht: 100%;">
+											
+												<div class="col-md-9">
+																									</div>
+												 
+												<div class="col-md-3">
+													<label class="listlabel">Plan Level</label> : Gold
+												</div>
+											</div>
+										</th>
+									  </tr>
+									</thead>
+									
+									<tbody>
+									  <tr>
+										<td><div class="col-md-3"><label>Deductibles</label>
+										<ul class="list-unstyled">
+										 <li><label class="listlabel" style="width:60px">Individual </label> <label>$600</label></li>
+											<li><label class="listlabel" style="width:60px">Family </label> <label>$1,200</label></li>
+										</ul>
+										</div> 
+										<div class="col-md-3"><label>Maximum Out-of-Pocket</label>
+										<ul class="list-unstyled">
+											<li><label class="listlabel" style="width:60px">Individual </label> <label>$5,000</label></li>
+											<li><label class="listlabel" style="width:60px">Family </label> <label>$10,000</label></li>
+										</ul>
+										</div>
+										<div class="col-md-3">
+										</div>
+										   <div class="col-md-2" style="color:#063;">
+										   <label class="estmatedpremium">$179.98</label><br><label class="listlabel">(Monthly Cost)</label>
+										   </div>
+										 </td>
+									  </tr>
+									  <tr>
+										<td><div class="col-md-3 pull-left">
+											  <div class="checkbox checkbox-success" style="margin-top: 0px; margin-bottom: 5px;">
+												<input id="planaddtocartcheckbox_46944AL0370001-00" onclick="addPlanToCompare(this)" value="46944AL0370001-00" type="checkbox">
+												<label for="planaddtocartcheckbox_46944AL0370001-00" style="font-weight:500; color:blue">
+												   Compare
+												</label>
+												<input id="planaddtocarthidden_46944AL0370001-00" value="Blue Value Gold" type="hidden">
+											</div>
+									   </div>
+										<div class="col-md-3 pull-right">
+											<button type="button" id="enrolbutton_46944AL0370001-00" class="btn btn-info btn-xs enroll" onclick="doenrollment(this)" required="required"><i class="fa fa-check-square-o"></i> Enroll</button>&nbsp;&nbsp;&nbsp;&nbsp;
+											<button type="button" id="detailsbutton_46944AL0370001-00" class="btn btn-info btn-xs plandetail" onclick="fetchplandetail(this)" required="required"><i class="fa fa-check-square-o"></i> Details</button>
+										</div> 
+										</td>
+									  </tr>
+									  <tr id="filter_46944AL0370001-00" style="display: none;"><!-- section for filters -->
+										<td><p class="plan_id_filter">46944AL0370001</p></td>
+										<td><p class="estimatedpremium_filter">179.98</p></td>
+										<td><p class="deductable_individual_filter">$600</p></td>
+										<td><p class="plan_type_filter">PPO</p></td>
+										<td><p class="outofpocket_individual_filter">$5,000</p></td>
+										<td><p class="metal_level_filter">$5,000</p></td>
+									  </tr>
+									  </tbody>
+								</table>
+							</div>
+						</div>
+					
+						<div style="display: block;" class="list-item list_item_4" id="list_item_46944AL0360001-00">
+							<div class="col-md-12" style="border: #5BC0DE thin solid; margin-bottom:15px">
+								<table class="table" style="margin-bottom: 5px;">
+									<thead>
+									  <tr>
+										<th>
+											<div style="clear: both; widht: 100%;">
+												<div class="col-md-9">
+													<span><label class="listlabel">Plan Name</label> : Blue Access Gold </span>
+													
+													<span style="margin: -4px 0 0 20px;"><img src="https://sbs-al.naic.org/Lion-Web/images/ExtBanner-AL-logo.jpg" class="planlogo_bdr" alt="Blue Access Gold" border="0"></span>
+													
+												</div> 
+												
+												<div class="col-md-3">
+													<span><label class="listlabel">Plan Type</label> : PPO</span>
+												</div> 
+												
+											</div>
+											
+											<div style="clear: both; widht: 100%;">
+											
+												<div class="col-md-9">
+																									</div>
+												 
+												<div class="col-md-3">
+													<label class="listlabel">Plan Level</label> : Gold
+												</div>
+											</div>
+										</th>
+									  </tr>
+									</thead>
+									
+									<tbody>
+									  <tr>
+										<td><div class="col-md-3"><label>Deductibles</label>
+										<ul class="list-unstyled">
+										 <li><label class="listlabel" style="width:60px">Individual </label> <label>$500</label></li>
+											<li><label class="listlabel" style="width:60px">Family </label> <label>$1,000</label></li>
+										</ul>
+										</div> 
+										<div class="col-md-3"><label>Maximum Out-of-Pocket</label>
+										<ul class="list-unstyled">
+											<li><label class="listlabel" style="width:60px">Individual </label> <label>$5,000</label></li>
+											<li><label class="listlabel" style="width:60px">Family </label> <label>$10,000</label></li>
+										</ul>
+										</div>
+										<div class="col-md-3">
+										</div>
+										   <div class="col-md-2" style="color:#063;">
+										   <label class="estmatedpremium">$181.06</label><br><label class="listlabel">(Monthly Cost)</label>
+										   </div>
+										 </td>
+									  </tr>
+									  <tr>
+										<td><div class="col-md-3 pull-left">
+											  <div class="checkbox checkbox-success" style="margin-top: 0px; margin-bottom: 5px;">
+												<input id="planaddtocartcheckbox_46944AL0360001-00" onclick="addPlanToCompare(this)" value="46944AL0360001-00" type="checkbox">
+												<label for="planaddtocartcheckbox_46944AL0360001-00" style="font-weight:500; color:blue">
+												   Compare
+												</label>
+												<input id="planaddtocarthidden_46944AL0360001-00" value="Blue Access Gold" type="hidden">
+											</div>
+									   </div>
+										<div class="col-md-3 pull-right">
+											<button type="button" id="enrolbutton_46944AL0360001-00" class="btn btn-info btn-xs enroll" onclick="doenrollment(this)" required="required"><i class="fa fa-check-square-o"></i> Enroll</button>&nbsp;&nbsp;&nbsp;&nbsp;
+											<button type="button" id="detailsbutton_46944AL0360001-00" class="btn btn-info btn-xs plandetail" onclick="fetchplandetail(this)" required="required"><i class="fa fa-check-square-o"></i> Details</button>
+										</div> 
+										</td>
+									  </tr>
+									  <tr id="filter_46944AL0360001-00" style="display: none;"><!-- section for filters -->
+										<td><p class="plan_id_filter">46944AL0360001</p></td>
+										<td><p class="estimatedpremium_filter">181.06</p></td>
+										<td><p class="deductable_individual_filter">$500</p></td>
+										<td><p class="plan_type_filter">PPO</p></td>
+										<td><p class="outofpocket_individual_filter">$5,000</p></td>
+										<td><p class="metal_level_filter">$5,000</p></td>
+									  </tr>
+									  </tbody>
+								</table>
+							</div>
+						</div>
+					
+						<div style="display: block;" class="list-item list_item_5" id="list_item_46944AL0300001-00">
+							<div class="col-md-12" style="border: #5BC0DE thin solid; margin-bottom:15px">
+								<table class="table" style="margin-bottom: 5px;">
+									<thead>
+									  <tr>
+										<th>
+											<div style="clear: both; widht: 100%;">
+												<div class="col-md-9">
+													<span><label class="listlabel">Plan Name</label> : Blue Choice Platinum </span>
+													
+													<span style="margin: -4px 0 0 20px;"><img src="https://sbs-al.naic.org/Lion-Web/images/ExtBanner-AL-logo.jpg" class="planlogo_bdr" alt="Blue Choice Platinum" border="0"></span>
+													
+												</div> 
+												
+												<div class="col-md-3">
+													<span><label class="listlabel">Plan Type</label> : PPO</span>
+												</div> 
+												
+											</div>
+											
+											<div style="clear: both; widht: 100%;">
+											
+												<div class="col-md-9">
+																									</div>
+												 
+												<div class="col-md-3">
+													<label class="listlabel">Plan Level</label> : Platinum
+												</div>
+											</div>
+										</th>
+									  </tr>
+									</thead>
+									
+									<tbody>
+									  <tr>
+										<td><div class="col-md-3"><label>Deductibles</label>
+										<ul class="list-unstyled">
+										 <li><label class="listlabel" style="width:60px">Individual </label> <label>$100</label></li>
+											<li><label class="listlabel" style="width:60px">Family </label> <label>$200</label></li>
+										</ul>
+										</div> 
+										<div class="col-md-3"><label>Maximum Out-of-Pocket</label>
+										<ul class="list-unstyled">
+											<li><label class="listlabel" style="width:60px">Individual </label> <label>$4,000</label></li>
+											<li><label class="listlabel" style="width:60px">Family </label> <label>$8,000</label></li>
+										</ul>
+										</div>
+										<div class="col-md-3">
+										</div>
+										   <div class="col-md-2" style="color:#063;">
+										   <label class="estmatedpremium">$216.58</label><br><label class="listlabel">(Monthly Cost)</label>
+										   </div>
+										 </td>
+									  </tr>
+									  <tr>
+										<td><div class="col-md-3 pull-left">
+											  <div class="checkbox checkbox-success" style="margin-top: 0px; margin-bottom: 5px;">
+												<input id="planaddtocartcheckbox_46944AL0300001-00" onclick="addPlanToCompare(this)" value="46944AL0300001-00" type="checkbox">
+												<label for="planaddtocartcheckbox_46944AL0300001-00" style="font-weight:500; color:blue">
+												   Compare
+												</label>
+												<input id="planaddtocarthidden_46944AL0300001-00" value="Blue Choice Platinum" type="hidden">
+											</div>
+									   </div>
+										<div class="col-md-3 pull-right">
+											<button type="button" id="enrolbutton_46944AL0300001-00" class="btn btn-info btn-xs enroll" onclick="doenrollment(this)" required="required"><i class="fa fa-check-square-o"></i> Enroll</button>&nbsp;&nbsp;&nbsp;&nbsp;
+											<button type="button" id="detailsbutton_46944AL0300001-00" class="btn btn-info btn-xs plandetail" onclick="fetchplandetail(this)" required="required"><i class="fa fa-check-square-o"></i> Details</button>
+										</div> 
+										</td>
+									  </tr>
+									  <tr id="filter_46944AL0300001-00" style="display: none;"><!-- section for filters -->
+										<td><p class="plan_id_filter">46944AL0300001</p></td>
+										<td><p class="estimatedpremium_filter">216.58</p></td>
+										<td><p class="deductable_individual_filter">$100</p></td>
+										<td><p class="plan_type_filter">PPO</p></td>
+										<td><p class="outofpocket_individual_filter">$4,000</p></td>
+										<td><p class="metal_level_filter">$4,000</p></td>
+									  </tr>
+									  </tbody>
+								</table>
+							</div>
+						</div>
+					
+						<div style="display: none;" class="list-item list_item_6" id="list_item_46944AL0560001-00">
+							<div class="col-md-12" style="border: #5BC0DE thin solid; margin-bottom:15px">
+								<table class="table" style="margin-bottom: 5px;">
+									<thead>
+									  <tr>
+										<th>
+											<div style="clear: both; widht: 100%;">
+												<div class="col-md-9">
+													<span><label class="listlabel">Plan Name</label> : Blue HSA Bronze </span>
+													
+													<span style="margin: -4px 0 0 20px;"><img src="https://sbs-al.naic.org/Lion-Web/images/ExtBanner-AL-logo.jpg" class="planlogo_bdr" alt="Blue HSA Bronze" border="0"></span>
+													
+												</div> 
+												
+												<div class="col-md-3">
+													<span><label class="listlabel">Plan Type</label> : PPO</span>
+												</div> 
+												
+											</div>
+											
+											<div style="clear: both; widht: 100%;">
+											
+												<div class="col-md-9">
+																									</div>
+												 
+												<div class="col-md-3">
+													<label class="listlabel">Plan Level</label> : Bronze
+												</div>
+											</div>
+										</th>
+									  </tr>
+									</thead>
+									
+									<tbody>
+									  <tr>
+										<td><div class="col-md-3"><label>Deductibles</label>
+										<ul class="list-unstyled">
+										 <li><label class="listlabel" style="width:60px">Individual </label> <label>$6,000</label></li>
+											<li><label class="listlabel" style="width:60px">Family </label> <label>$12,000</label></li>
+										</ul>
+										</div> 
+										<div class="col-md-3"><label>Maximum Out-of-Pocket</label>
+										<ul class="list-unstyled">
+											<li><label class="listlabel" style="width:60px">Individual </label> <label>$6,000</label></li>
+											<li><label class="listlabel" style="width:60px">Family </label> <label>$12,000</label></li>
+										</ul>
+										</div>
+										<div class="col-md-3">
+										</div>
+										   <div class="col-md-2" style="color:#063;">
+										   <label class="estmatedpremium">$114.14</label><br><label class="listlabel">(Monthly Cost)</label>
+										   </div>
+										 </td>
+									  </tr>
+									  <tr>
+										<td><div class="col-md-3 pull-left">
+											  <div class="checkbox checkbox-success" style="margin-top: 0px; margin-bottom: 5px;">
+												<input id="planaddtocartcheckbox_46944AL0560001-00" onclick="addPlanToCompare(this)" value="46944AL0560001-00" type="checkbox">
+												<label for="planaddtocartcheckbox_46944AL0560001-00" style="font-weight:500; color:blue">
+												   Compare
+												</label>
+												<input id="planaddtocarthidden_46944AL0560001-00" value="Blue HSA Bronze" type="hidden">
+											</div>
+									   </div>
+										<div class="col-md-3 pull-right">
+											<button type="button" id="enrolbutton_46944AL0560001-00" class="btn btn-info btn-xs enroll" onclick="doenrollment(this)" required="required"><i class="fa fa-check-square-o"></i> Enroll</button>&nbsp;&nbsp;&nbsp;&nbsp;
+											<button type="button" id="detailsbutton_46944AL0560001-00" class="btn btn-info btn-xs plandetail" onclick="fetchplandetail(this)" required="required"><i class="fa fa-check-square-o"></i> Details</button>
+										</div> 
+										</td>
+									  </tr>
+									  <tr id="filter_46944AL0560001-00" style="display: none;"><!-- section for filters -->
+										<td><p class="plan_id_filter">46944AL0560001</p></td>
+										<td><p class="estimatedpremium_filter">114.14</p></td>
+										<td><p class="deductable_individual_filter">$6,000</p></td>
+										<td><p class="plan_type_filter">PPO</p></td>
+										<td><p class="outofpocket_individual_filter">$6,000</p></td>
+										<td><p class="metal_level_filter">$6,000</p></td>
+									  </tr>
+									  </tbody>
+								</table>
+							</div>
+						</div>
+					
+						<div style="display: none;" class="list-item list_item_7" id="list_item_46944AL0470001-00">
+							<div class="col-md-12" style="border: #5BC0DE thin solid; margin-bottom:15px">
+								<table class="table" style="margin-bottom: 5px;">
+									<thead>
+									  <tr>
+										<th>
+											<div style="clear: both; widht: 100%;">
+												<div class="col-md-9">
+													<span><label class="listlabel">Plan Name</label> : Blue Protect </span>
+													
+													<span style="margin: -4px 0 0 20px;"><img src="https://sbs-al.naic.org/Lion-Web/images/ExtBanner-AL-logo.jpg" class="planlogo_bdr" alt="Blue Protect" border="0"></span>
+													
+												</div> 
+												
+												<div class="col-md-3">
+													<span><label class="listlabel">Plan Type</label> : PPO</span>
+												</div> 
+												
+											</div>
+											
+											<div style="clear: both; widht: 100%;">
+											
+												<div class="col-md-9">
+																									</div>
+												 
+												<div class="col-md-3">
+													<label class="listlabel">Plan Level</label> : Catastrophic
+												</div>
+											</div>
+										</th>
+									  </tr>
+									</thead>
+									
+									<tbody>
+									  <tr>
+										<td><div class="col-md-3"><label>Deductibles</label>
+										<ul class="list-unstyled">
+										 <li><label class="listlabel" style="width:60px">Individual </label> <label>$6,600</label></li>
+											<li><label class="listlabel" style="width:60px">Family </label> <label>$13,200</label></li>
+										</ul>
+										</div> 
+										<div class="col-md-3"><label>Maximum Out-of-Pocket</label>
+										<ul class="list-unstyled">
+											<li><label class="listlabel" style="width:60px">Individual </label> <label>$6,600</label></li>
+											<li><label class="listlabel" style="width:60px">Family </label> <label>$13,200</label></li>
+										</ul>
+										</div>
+										<div class="col-md-3">
+										</div>
+										   <div class="col-md-2" style="color:#063;">
+										   <label class="estmatedpremium">$97.03</label><br><label class="listlabel">(Monthly Cost)</label>
+										   </div>
+										 </td>
+									  </tr>
+									  <tr>
+										<td><div class="col-md-3 pull-left">
+											  <div class="checkbox checkbox-success" style="margin-top: 0px; margin-bottom: 5px;">
+												<input id="planaddtocartcheckbox_46944AL0470001-00" onclick="addPlanToCompare(this)" value="46944AL0470001-00" type="checkbox">
+												<label for="planaddtocartcheckbox_46944AL0470001-00" style="font-weight:500; color:blue">
+												   Compare
+												</label>
+												<input id="planaddtocarthidden_46944AL0470001-00" value="Blue Protect" type="hidden">
+											</div>
+									   </div>
+										<div class="col-md-3 pull-right">
+											<button type="button" id="enrolbutton_46944AL0470001-00" class="btn btn-info btn-xs enroll" onclick="doenrollment(this)" required="required"><i class="fa fa-check-square-o"></i> Enroll</button>&nbsp;&nbsp;&nbsp;&nbsp;
+											<button type="button" id="detailsbutton_46944AL0470001-00" class="btn btn-info btn-xs plandetail" onclick="fetchplandetail(this)" required="required"><i class="fa fa-check-square-o"></i> Details</button>
+										</div> 
+										</td>
+									  </tr>
+									  <tr id="filter_46944AL0470001-00" style="display: none;"><!-- section for filters -->
+										<td><p class="plan_id_filter">46944AL0470001</p></td>
+										<td><p class="estimatedpremium_filter">97.03</p></td>
+										<td><p class="deductable_individual_filter">$6,600</p></td>
+										<td><p class="plan_type_filter">PPO</p></td>
+										<td><p class="outofpocket_individual_filter">$6,600</p></td>
+										<td><p class="metal_level_filter">$6,600</p></td>
+									  </tr>
+									  </tbody>
+								</table>
+							</div>
+						</div>
+					
+						<div style="display: none;" class="list-item list_item_8" id="list_item_46944AL0410001-00">
+							<div class="col-md-12" style="border: #5BC0DE thin solid; margin-bottom:15px">
+								<table class="table" style="margin-bottom: 5px;">
+									<thead>
+									  <tr>
+										<th>
+											<div style="clear: both; widht: 100%;">
+												<div class="col-md-9">
+													<span><label class="listlabel">Plan Name</label> : Blue Value Silver </span>
+													
+													<span style="margin: -4px 0 0 20px;"><img src="https://sbs-al.naic.org/Lion-Web/images/ExtBanner-AL-logo.jpg" class="planlogo_bdr" alt="Blue Value Silver" border="0"></span>
+													
+												</div> 
+												
+												<div class="col-md-3">
+													<span><label class="listlabel">Plan Type</label> : PPO</span>
+												</div> 
+												
+											</div>
+											
+											<div style="clear: both; widht: 100%;">
+											
+												<div class="col-md-9">
+																									</div>
+												 
+												<div class="col-md-3">
+													<label class="listlabel">Plan Level</label> : Silver
+												</div>
+											</div>
+										</th>
+									  </tr>
+									</thead>
+									
+									<tbody>
+									  <tr>
+										<td><div class="col-md-3"><label>Deductibles</label>
+										<ul class="list-unstyled">
+										 <li><label class="listlabel" style="width:60px">Individual </label> <label>$2,400</label></li>
+											<li><label class="listlabel" style="width:60px">Family </label> <label>$4,800</label></li>
+										</ul>
+										</div> 
+										<div class="col-md-3"><label>Maximum Out-of-Pocket</label>
+										<ul class="list-unstyled">
+											<li><label class="listlabel" style="width:60px">Individual </label> <label>$6,350</label></li>
+											<li><label class="listlabel" style="width:60px">Family </label> <label>$12,700</label></li>
+										</ul>
+										</div>
+										<div class="col-md-3">
+										</div>
+										   <div class="col-md-2" style="color:#063;">
+										   <label class="estmatedpremium">$139.04</label><br><label class="listlabel">(Monthly Cost)</label>
+										   </div>
+										 </td>
+									  </tr>
+									  <tr>
+										<td><div class="col-md-3 pull-left">
+											  <div class="checkbox checkbox-success" style="margin-top: 0px; margin-bottom: 5px;">
+												<input id="planaddtocartcheckbox_46944AL0410001-00" onclick="addPlanToCompare(this)" value="46944AL0410001-00" type="checkbox">
+												<label for="planaddtocartcheckbox_46944AL0410001-00" style="font-weight:500; color:blue">
+												   Compare
+												</label>
+												<input id="planaddtocarthidden_46944AL0410001-00" value="Blue Value Silver" type="hidden">
+											</div>
+									   </div>
+										<div class="col-md-3 pull-right">
+											<button type="button" id="enrolbutton_46944AL0410001-00" class="btn btn-info btn-xs enroll" onclick="doenrollment(this)" required="required"><i class="fa fa-check-square-o"></i> Enroll</button>&nbsp;&nbsp;&nbsp;&nbsp;
+											<button type="button" id="detailsbutton_46944AL0410001-00" class="btn btn-info btn-xs plandetail" onclick="fetchplandetail(this)" required="required"><i class="fa fa-check-square-o"></i> Details</button>
+										</div> 
+										</td>
+									  </tr>
+									  <tr id="filter_46944AL0410001-00" style="display: none;"><!-- section for filters -->
+										<td><p class="plan_id_filter">46944AL0410001</p></td>
+										<td><p class="estimatedpremium_filter">139.04</p></td>
+										<td><p class="deductable_individual_filter">$2,400</p></td>
+										<td><p class="plan_type_filter">PPO</p></td>
+										<td><p class="outofpocket_individual_filter">$6,350</p></td>
+										<td><p class="metal_level_filter">$6,350</p></td>
+									  </tr>
+									  </tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<!-- TEMPLATE FOR THE PLAN DETAILS -->
+					<script type="text/html" id="list-item-template">
+						<div class="list-item list_item_{{=ITEM_ID_FOR_PAGINATION=}}" id="list_item_{{=Plan_Variant_Id=}}">
+							<div class="col-md-12" style="border: #5BC0DE thin solid; margin-bottom:15px">
+								<table class="table" style="margin-bottom: 5px;">
+									<thead>
+									  <tr>
+										<th>
+											<div style="clear: both; widht: 100%;">
+												<div class="col-md-9">
+													<span><label class="listlabel">Plan Name</label> : {{=Plan_Name=}} </span>
+													
+													<span style="margin: -4px 0 0 20px;"><img border="0" src="{{=Tenant_Logo=}}" class="planlogo_bdr" alt="{{=Plan_Name=}}" /></span>
+													
+												</div> 
+												
+												<div class="col-md-3">
+													<span><label class="listlabel">Plan Type</label> : {{=Plan_Type=}}</span>
+												</div> 
+												
+											</div>
+											
+											<div style="clear: both; widht: 100%;">
+											
+												<div class="col-md-9">
+																									</div>
+												 
+												<div class="col-md-3">
+													<label class="listlabel">Plan Level</label> : {{=Metal_Level=}}
+												</div>
+											</div>
+										</th>
+									  </tr>
+									</thead>
+									
+									<tbody>
+									  <tr>
+										<td><div class="col-md-3"><label>Deductibles</label>
+										<ul class="list-unstyled">
+										 <li><label class="listlabel"  style="width:60px">Individual </label> <label>{{=Deductibles_Individual=}}</label></li>
+											<li><label class="listlabel" style="width:60px">Family </label> <label>{{=Deductibles_Family=}}</label></li>
+										</ul>
+										</div> 
+										<div class="col-md-3"><label>Maximum Out-of-Pocket</label>
+										<ul class="list-unstyled">
+											<li><label class="listlabel"  style="width:60px">Individual </label> <label>{{=Outofpocket_Individual=}}</label></li>
+											<li><label class="listlabel" style="width:60px">Family </label> <label>{{=Outofpocket_Family=}}</label></li>
+										</ul>
+										</div>
+										<div class="col-md-3">
+										</div>
+										   <div class="col-md-2" style="color:#063;">
+										   <label class='estmatedpremium'>${{=Premium=}}</label><br /><label class="listlabel">(Monthly Cost)</label>
+										   </div>
+										 </td>
+									  </tr>
+									  <tr>
+										<td><div class="col-md-3 pull-left">
+											  <div class="checkbox checkbox-success" style="margin-top: 0px; margin-bottom: 5px;">
+												<input id="planaddtocartcheckbox_{{=Plan_Variant_Id=}}" type="checkbox"  onclick="addPlanToCompare(this)" value="{{=Plan_Variant_Id=}}" />
+												<label for="planaddtocartcheckbox_{{=Plan_Variant_Id=}}" style="font-weight:500; color:blue">
+												   Compare
+												</label>
+												<input type="hidden" id="planaddtocarthidden_{{=Plan_Variant_Id=}}"  value="{{=Plan_Name=}}" />
+											</div>
+									   </div>
+										<div class="col-md-3 pull-right">
+											<button type="button" id="enrolbutton_{{=Plan_Variant_Id=}}" class="btn btn-info btn-xs enroll"  onclick= "doenrollment(this)" required="required"><i class="fa fa-check-square-o"></i> Enroll</button>&nbsp;&nbsp;&nbsp;&nbsp;
+											<button type="button" id="detailsbutton_{{=Plan_Variant_Id=}}" class="btn btn-info btn-xs plandetail"  onclick= "fetchplandetail(this)" required="required"><i class="fa fa-check-square-o"></i> Details</button>
+										</div> 
+										</td>
+									  </tr>
+									  <tr id="filter_{{=Plan_Variant_Id=}}" style="display: none;"><!-- section for filters -->
+										<td><p class="plan_id_filter">{{=Plan_Id=}}</p></td>
+										<td><p class="estimatedpremium_filter">{{=Premium=}}</p></td>
+										<td><p class="deductable_individual_filter">{{=Deductibles_Individual=}}</p></td>
+										<td><p class="plan_type_filter">{{=Plan_Type=}}</p></td>
+										<td><p class="outofpocket_individual_filter">{{=Outofpocket_Individual=}}</p></td>
+										<td><p class="metal_level_filter">{{=Outofpocket_Individual=}}</p></td>
+									  </tr>
+									  </tbody>
+								</table>
+							</div>
+						</div>
+					</script>
+				</div>
+			</div>
+		</div><!--/.row-->
+		
+				
+</section>		
+			</div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- end search section -->
+
+  
+  <!-- Start Footer -->    
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="footer-top-area">             
+                <a class="footer-logo" href="#"><img src="assets/images/logo.jpg" alt="Logo"></a>              
+              <div class="footer-social">
+                <a class="facebook" href="#"><span class="fa fa-facebook"></span></a>
+                <a class="twitter" href="#"><span class="fa fa-twitter"></span></a>
+                <a class="google-plus" href="#"><span class="fa fa-google-plus"></span></a>
+                <a class="youtube" href="#"><span class="fa fa-youtube"></span></a>
+                <a class="linkedin" href="#"><span class="fa fa-linkedin"></span></a>
+                <a class="dribbble" href="#"><span class="fa fa-dribbble"></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Designed by <a href="">ramyam labs intelligence</a></p>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- initialize jQuery Library --> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <!-- Bootstrap -->
+  <script src="assets/js/bootstrap.js"></script>
+  <!-- Slick Slider -->
+  <script type="text/javascript" src="assets/js/slick.js"></script>
+  <!-- Counter -->
+  <script type="text/javascript" src="assets/js/waypoints.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.counterup.js"></script>
+  <!-- mixit slider -->
+  <script type="text/javascript" src="assets/js/jquery.mixitup.js"></script>
+  <!-- Add fancyBox -->        
+  <script type="text/javascript" src="assets/js/jquery.fancybox.pack.js"></script>
+  <!-- Wow animation -->
+  <script type="text/javascript" src="assets/js/wow.js"></script> 
+
+  <!-- Custom js -->
+  <script type="text/javascript" src="assets/js/custom.js"></script>
+  
+  
+   <script type="text/javascript" src="assets/js/responsive-menu.min.js"></script>
+   
+   
+   <script>
+        jQuery(function ($) {
+            var menu = $('.rm-nav').rMenu({
+
+                // Optional Settings
+
+                /**
+                 * Minimum width for expanded layout in pixels - String
+                 * The media query in css file should be changed to match this
+                 * Must be in pixels and include px units if not using Modernizr.
+                 * @default '769px'
+                 */
+                minWidth: '960px',
+
+                /**
+                 * The opening and closing speed of the menus in milliseconds
+                 * @default 400
+                 */
+                //transitionSpeed: 400,
+
+                /**
+                 * The jQuery easing function - used with jQuery transitions
+                 * @default 'swing'
+                 * @options 'swing', 'linear'
+                 */
+                //jqueryEasing: 'swing',
+
+                /**
+                 * The CSS3 transitions easing function - used with CSS3 transitions
+                 * @default 'ease'
+                 */
+                //css3Easing: 'ease',
+
+                /**
+                 * Use button as toggle link - instead of text
+                 * @default true
+                 */
+                //toggleBtnBool: true,
+
+                /**
+                 * The Toggle Link selector
+                 * @default '.rm-toggle'
+                 */
+                //toggleSel: '.rm-toggle',
+
+
+                /**
+                 * The menu/sub-menu selector
+                 * @default 'ul'
+                 */
+                //menuSel: 'ul',
+
+                /**
+                 * The menu items selector
+                 * @default 'li'
+                 */
+                //menuItemsSel: 'li',
+
+                /**
+                 * Use CSS3 animation/transitions Boolean
+                 * @default true
+                 * Do not use animation/transitions: false
+                 */
+                //animateBool: false,
+
+                /**
+                 * Force GPU Acceleration Boolean
+                 * @default false
+                 * Do not force: false
+                 */
+                //accelerateBool: true,
+
+                /**
+                 * the setup complete callback function
+                 * @default 'false'
+                 */
+                //setupCallback: false,
+
+                /**
+                 * the tabindex start value - integer
+                 * @default 1
+                 */
+                //tabindexStart: 5,
+
+                /**
+                 * Use development mode - outputs information to console
+                 * @default false
+                 */
+                //developmentMode: false
+
+            });
+        });
+		</script>
+    
+  </body>
+</html>
