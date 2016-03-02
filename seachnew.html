@@ -1,0 +1,588 @@
+<html class="csstransforms no-csstransforms3d csstransitions" lang="en"><head>
+<title>
+Sutherland</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="resource-type" content="document">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<!-- core CSS -->
+<link href="http://52.9.26.136/ramyam_demo/assets/themes/default/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://52.9.26.136/ramyam_demo/assets/themes/default/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://52.9.26.136/ramyam_demo/assets/themes/default/css/animate.min.css" rel="stylesheet">
+<link href="http://52.9.26.136/ramyam_demo/assets/themes/default/css/prettyPhoto.css" rel="stylesheet">
+<link href="http://52.9.26.136/ramyam_demo/assets/themes/default/css/main.css" rel="stylesheet">
+<link href="http://52.9.26.136/ramyam_demo/assets/themes/default/css/responsive.css" rel="stylesheet">
+<link rel="shortcut icon" href="http://52.9.26.136/ramyam_demo/assets/themes/default/images/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://52.9.26.136/ramyam_demo/assets/themes/default/images/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://52.9.26.136/ramyam_demo/assets/themes/default/images/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://52.9.26.136/ramyam_demo/assets/themes/default/images/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="http://52.9.26.136/ramyam_demo/assets/themes/default/images/ico/apple-touch-icon-57-precomposed.png">
+<!--Start of Zopim Live Chat Script-->
+<link rel="stylesheet" type="text/css" href="http://52.9.26.136/ramyam_demo/assets/themes/default/css/dataTables.bootstrap.css">
+<!--[if lt IE 9]>
+    <script src="http://52.9.26.136/ramyam_demo/assets/themes/default/js/html5shiv.js"></script>
+    <script src="http://52.9.26.136/ramyam_demo/assets/themes/default/js/respond.min.js"></script>
+    <![endif]-->
+<script type="text/javascript" src="//v2.zopim.com/?3KpHWFtIifVUpnqreNmNndrk6amZCpxv" charset="utf-8" async=""></script><script src="http://52.9.26.136/ramyam_demo/assets/themes/default/js/jquery.js"></script>
+<script src="http://52.9.26.136/ramyam_demo/assets/themes/default/js/bootstrap.min.js"></script>
+<script src="http://52.9.26.136/ramyam_demo/assets/themes/default/js/jquery.prettyPhoto.js"></script>
+<script src="http://52.9.26.136/ramyam_demo/assets/themes/default/js/jquery.isotope.min.js"></script>
+<script src="http://52.9.26.136/ramyam_demo/assets/themes/default/js/main.js"></script>
+<script src="http://52.9.26.136/ramyam_demo/assets/themes/default/js/wow.min.js"></script>
+<script src="http://52.9.26.136/ramyam_demo/assets/themes/default/js/jplist.core.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="http://52.9.26.136/ramyam_demo/assets/themes/default/css/jquery-ui.css">
+<script src="http://52.9.26.136/ramyam_demo/assets/themes/default/js/jquery-ui.js"></script>
+
+<script type="text/javascript">
+		window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+		d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+		_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+		$.src="//v2.zopim.com/?3KpHWFtIifVUpnqreNmNndrk6amZCpxv";z.t=+new Date;$.
+		type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+	</script>
+<!--End of Zopim Live Chat Script-->
+<style type="text/css">
+	body {
+		background:none repeat scroll 0 0 #f5f7fa !important
+	}
+	.table>thead>tr>th {
+		vertical-align: bottom;
+		border-bottom: 2px solid #ddd;
+	}
+	</style>
+
+		<meta name="keywords" content="">
+
+		<meta name="description" content="">
+
+
+	
+		<link rel="stylesheet" href="http://52.9.26.136/ramyam_demo/assets/themes/default/css/dataTables.bootstrap.css" type="text/css">
+
+	
+		<script src="http://cdn.datatables.net/1.10.3/js/jquery.dataTables.min.js"></script>
+
+		<script src="http://52.9.26.136/ramyam_demo/assets/themes/default/js/dataTables.bootstrap.js"></script>
+
+		<script src="http://52.9.26.136/ramyam_demo/assets/themes/default/js/jquery.validate.min.js"></script>
+
+		<script src="http://52.9.26.136/ramyam_demo/assets/themes/default/js/jquery_progress_dialog_modal.js"></script>
+
+	<script type="text/javascript">
+function showErrorDialog(title, message) {
+	
+	$("#errorMessageModal").dialog({
+		title: title, 
+	    open: function( event, ui ) {
+          $("#errorMessageModal").closest("div[role='dialog']").css({top:'50%', left:'40%'});              
+         }
+	});
+	$("#errorMessageModal").removeClass("fade");
+	$("#errorMessageModalMsg").html(message);
+}
+</script>
+<style type="text/css" __jx__id="___$_2" class="jx_ui_StyleSheet" media="print">.zopim { display: none !important }</style></head>
+<body class="homepage"><div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; padding: 0px; border: 0px none; background: transparent none repeat scroll 0% 0%; overflow: hidden; position: fixed; z-index: 16000002; width: 180px; height: 30px; right: 10px; bottom: 0px;" __jx__id="___$_63 ___$_63" class="zopim"><iframe src="about:blank" style="background-color: transparent; vertical-align: text-bottom; position: relative; width: 100%; height: 100%; margin: 0px; overflow: hidden; display: block;" frameborder="0"></iframe></div><div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; padding: 0px; border: 0px none; background: transparent none repeat scroll 0% 0%; overflow: hidden; position: fixed; z-index: 16000001; right: 10px; bottom: 0px; border-top-left-radius: 5px; border-top-right-radius: 5px; display: none; width: 290px; height: 400px; box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);" __jx__id="___$_4 ___$_4" class="zopim"><iframe src="about:blank" style="background-color: transparent; vertical-align: text-bottom; position: relative; width: 100%; height: 100%; margin: 0px; overflow: hidden; display: block;" frameborder="0"></iframe></div>
+<header id="header">
+  <div class="top-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 col-xs-12">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <a class="navbar-brand h2" style="color:GREEN; font-size:20px; font-weight:400; padding-top:7px;" href="http://52.9.26.136/ramyam_demo/alabama/"><img src="http://52.9.26.136/ramyam_demo/assets/themes/default/images/logo_SGS.png" width="180"></a> </div>
+        </div>
+        <div class="col-sm-4 col-xs-6">
+          <div class="social">
+            <ul class="social-share">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a href="#"><i class="fa fa-skype"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-6">
+          <div class="top-number">
+            <p><i class="fa fa-phone-square"></i> +1 800 388 4557 </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/.container-->
+  </div>
+  <!--/.top-bar-->
+  <nav class="navbar navbar-red fhmm" role="navigation">
+    <div class="container">
+      <div id="redmenu" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle doclickstream">Find Plans <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li class="submenu"> <a href="http://52.9.26.136/ramyam_demo/alabama/plans/individuals-families" data-toggle="dropdown disabled" data-clickstream="[&quot;url&quot;,&quot;Individuals &amp; Families&quot;]" class="dropdown-toggle doclickstream">Individuals &amp; Families</a> </li>
+              <li class="submenu"> <a href="http://52.9.26.136/ramyam_demo/alabama/plans/dental-plans" data-toggle="dropdown disabled" data-clickstream="[&quot;url&quot;,&quot;Dental Plans&quot;]" class="dropdown-toggle doclickstream">Dental Plans </a> </li>
+              <li class="submenu"> <a href="http://52.9.26.136/ramyam_demo/alabama/plans/medical-plans" data-toggle="dropdown disable" data-clickstream="[&quot;url&quot;,&quot;Medical Plans&quot;]" class="dropdown-toggle doclickstream">Medical Plans </a> </li>
+            </ul>
+            <!-- end drop down menu -->
+          </li>
+          <li> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Broker</a> </li>
+          <li> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Provider</a> </li>
+          <li> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Employer</a> </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        Member
+                        <b class="caret"></b> </a>
+                        <ul class="dropdown-menu" style="">
+              <li>
+                <form id="contact4" action="http://52.9.26.136/ramyam_demo/alabama/login/cust_login" name="Loginform" method="post">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div style="clear: both; width: 100%;">
+                     <div style="float: left; font-weight: bold; margin: 15px 6px 0 0;"> Username: </div>
+                      <div style="float: left;  width: 50%;">
+                        <input name="username" id="username" class="form-control" placeholder="Username" style="padding: 6px;" type="text">
+                      </div>
+                    </div>
+                    <div style="clear: both; width: 100%;">
+                     <div style="float: left; font-weight: bold; margin: 15px 10px 0 0;"> Password: </div>
+                      <div style="float: left;  width: 50%;">
+                        <input name="password" id="password" class="form-control" placeholder="Password" style="padding: 6px;" type="password">
+                      </div>
+                    </div>
+                  </div>
+				  
+				  <div class="">
+					<div class="pull-left" style="padding-top:20px; padding-left:10px;">
+					  <a href="http://52.9.26.136/ramyam_demo/alabama/forgot-password" class="forgot_password">Forgot Password?</a>&nbsp;
+					</div>
+				  
+                  </div>
+				  
+                  <div class="col-sm-12 col-xs-12">
+                    <div class="pull-right" style="margin-top:-37px;">
+                      <input name="loginsubmit" value="Login" id="submit4" data-clickstream="[&quot;formsubmit&quot;,&quot;index.php?page=custlogin&quot;]" class="btn btn-info small doclickstream" type="submit">
+                    </div>
+                  </div>
+                </form>
+              </li>
+            </ul>
+                      </li>
+        </ul>
+		
+		
+        <!-- end nav navbar-nav navbar-right -->
+      </div>
+      <!-- end #navbar-collapse-1 -->
+    </div>
+  </nav>
+  <!-- end navbar navbar-default fhmm -->
+</header>
+<!--/header-->
+<!--MIDDLE CONTENT START -->
+	<div class="inner_cont">
+	
+			
+		<script type="text/javascript">
+	$(document).ready(function() {
+		$("#planForm").validate();
+		
+		// Initialize the date picker for the original due date field
+		invokeDOBDatePicker();
+		
+		var max_fields      = '5'; //maximum input boxes allowed
+		var wrapper         = $(".deprowdummy"); //Fields wrapper
+		var add_button      = $(".add_dependent_button"); //Add button ID
+		
+		var x =0; //initlal text box count
+		$(add_button).click(function(e){ //on add input button click
+		
+			e.preventDefault();
+						
+			$(".deptablex").show();
+			if(x < max_fields){ //max input box allowed
+				
+				//add input box
+				$('.deptablex tr:last').after('<tr class="deprow"><td><input style="padding: 4px; font-size: 12px;" type="text" class="form-control" name="DEPENDENTS['+x+'][LASTNAME]"/></td><td><select style="padding: 4px; font-size: 12px;" name="DEPENDENTS['+x+'][Relation]" id="deprelation_'+x+'" class="deprelation_'+x+' required form-control"></select></td><td><select style="padding: 4px; font-size: 12px;" name="DEPENDENTS['+x+'][Gender]" id="depgender_'+x+'" class="required form-control"><option value="">-  Select -</option><option value="Female">Female</option><option value="Male">Male</option><option value="Unknown">Unknown</option><option value="Unspecified">Unspecified</option></select></td></td><td><input style="padding: 4px; font-size: 12px;" class="datePicker required form-control" readonly="readonly" type="text" required="required" name="DEPENDENTS['+x+'][DOB]" ></td><td><select style="padding: 4px; font-size: 12px;" name="DEPENDENTS['+x+'][tobacco]" id="tobacco_'+x+'" class="form-control required"><option value="">-  Select -</option><option value="Yes">Yes</option><option value="No">No</option><option value="No Preference">No Preference</option></select></td><td style="text-align: center"><button class="btn btn-info btn-xs remove_field" type="button">Remove</button></td></tr>'); 
+				assignOptionVals('deprelation_'+x);
+				invokeDOBDatePicker();
+			 x++;
+			}
+			 if(x==max_fields)
+			{
+				showErrorDialog("Error", 'You can not add more than '+max_fields+' dependent.');
+			}		
+		});
+		
+	  
+		$('.deptablex').on("click",".remove_field", function(e){ //user click on remove text
+			e.preventDefault(); 
+			$(this).closest('tr').remove();
+			//$(this).parentsUntil('.deprow').remove(); 
+			x--;
+			
+			if(x <= 0) {
+				
+				$(".deptablex").hide();
+			}
+		});
+	});
+
+	$(document).on('blur','#vzipcode',function(){
+		var txt = $(this).val();
+		if(txt!= '') {
+			
+			var options = '';
+			$.getJSON("http://52.9.26.136/ramyam_demo/alabama/plans/country_detail/"+txt, function(result) {
+				
+				var countyCode = '';
+				for (var i = 0; i < result.length; i++) {
+					
+					if(i == 0) {
+						
+						countyCode = result[i].COUNTYCODE;
+					}
+					options += '<option value="' + result[i].COUNTYCODE + '">'+result[i].COUNTYNAME+'</option>';
+				}
+				$("#vCountyCode").append(options);
+				$("#vCountyCode").val(countyCode);
+				$('#vCountyCodeHid').val(countyCode);
+				if(result.length > 1) {
+					
+					$("#vCountyCode").prop("disabled", false);
+				}
+			});
+			
+			//alert(options);
+			/*
+			$.ajax({
+				url: "http://52.9.26.136/ramyam_demo/alabama//plans/country_detail/"+txt,
+				type: 'post',
+				data: {
+					
+					//csrf_emed: $.cookie('csrf_emed_c')
+				},
+				
+				success: function(json) {
+					
+					if (json['result'] == true) {
+						$('#vCountyCode').val(json['county'])
+						$('#vCountyCodeHid').val(json['county'])
+					}
+					else if(json['result']== false) {
+						$('#vCountyCode').val('0000')	
+						$('#vCountyCodeHid').val('0000')	
+					}								
+				}							
+			});
+			*/
+		}       
+	});
+	
+	function assignOptionVals(objId) {
+		
+		var options = $('#temp_relation option').clone();
+		$('#'+objId).append(options);
+	}
+	
+	function invokeDOBDatePicker(){
+		$('.datePicker').datepicker({
+	
+			dateFormat : 'mm/dd/yy',
+			yearRange : "-100:+0",
+			changeYear: true,
+			changeMonth: true,
+			maxDate : "0"
+		});
+	}
+	
+	function assignCountyCode(countyCode) {
+		
+		$('#vCountyCodeHid').val(countyCode);
+	}
+</script>
+<style type="text/css">
+.form-group {
+	
+	margin-bottom: 0px;
+	min-height: 95px;
+}
+</style>
+
+<section id="contact-page">
+	<div class="container">            
+		<div class="row contact-wrap">             
+            <div style="display: none" class="status alert alert-success"></div>
+				
+            <div class="col-md-2"></div>
+                
+			<div class="col-md-8">
+			 
+				<div class="panel panel-primary" style="background: #fff;">
+	   
+					<!-- MESSAGE SECTION -->
+					<style>
+					.message1{
+						width: 95%; 
+						text-align: left; 
+						border: 1px solid #608341; 
+						background-color: #608341;
+						padding: 10px;
+						-moz-border-radius: 10px; 
+						-webkit-border-radius: 10px; 
+						color: #ffffff;
+						margin: 0 auto;
+						margin-top: 5px;
+						margin-bottom: 0px;
+					}
+					
+					</style>
+					
+										
+					<div class="panel-heading">
+						<h3 class="panel-title">Search Your Plan </h3>					
+					</div>
+					
+					<div class="panel-body">
+						
+						<form novalidate="novalidate" action="http://52.9.26.136/ramyam_demo/alabama/search-plans" class="" id="planForm" method="post" accept-charset="utf-8">
+						
+						<div class="col-lg-6">
+							
+							<div aria-required="true" class="form-group required">
+							
+								<label for="zipcode" class="mand control-label">Zip code</label>								<input aria-invalid="false" aria-required="true" name="zipcode" value="" id="vzipcode" maxlength="10" class="form-control required number valid" placeholder="Zipcode" type="text">
+							</div>
+							
+							<div class="form-group">
+								<label for="lastname" class="mand">Last Name</label>								<input name="lastname" value="" id="vlastname" maxlength="50" class="form-control" placeholder="Last Name" type="text">
+							</div>
+					
+							<div aria-required="true" class="form-group required">
+								<label for="insurancetype" class="mand control-label">Coverage Type</label>								<select aria-required="true" name="insurancetype" class="required form-control" id="vinsurancetype">
+<option value="">- Please Select -</option>
+<option value="Health" selected="selected">Health</option>
+<option value="Dental">Dental</option>
+<option value="Both">Both</option>
+</select>
+																 
+							</div>
+							
+							 <div aria-required="true" class="form-group required">
+								<label for="sex" class="mand control-label">Gender</label>								<select aria-required="true" name="sex" class="required form-control" id="vsex">
+<option value="" selected="selected">- Please Select -</option>
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+<option value="Unknown">Unknown</option>
+<option value="Unspecified">Unspecified</option>
+</select>
+								 
+							</div>
+						</div>
+				
+						<div class="col-lg-6">
+							<div aria-required="true" class="form-group required">
+								<label for="countyCode" class="mand control-label">County</label>								<select aria-required="true" name="countyCodeSelect" class="required form-control " disabled="disabled" id="vCountyCode" onchange="assignCountyCode(this.value);">
+<option value="" selected="selected">- Please Select -</option>
+<option value="01099">Monroe </option></select>
+								<input id="vCountyCodeHid" name="countyCode" value="01099" type="hidden">
+							</div>
+						</div>   
+		
+						<div class="col-lg-6">                        
+							<div aria-required="true" class="form-group required">
+								<label for="dob" class="mand control-label">Date Of Birth (MM/DD/YYYY)</label>								<input aria-required="true" name="dob" value="" id="dob" maxlength="50" class="form-control required datePicker hasDatepicker" placeholder="DOB" readonly="readonly" type="text">
+							</div>
+							<div aria-required="true" class="form-group required">                               
+								<label for="vistobaco" class="mand control-label">Tobacco User?</label>								<select aria-required="true" name="vistobaco" class="required form-control" id="vistobaco">
+<option value="" selected="selected">- Please Select -</option>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+<option value="No Preference">No Preference</option>
+</select>
+									
+							</div>                        
+						</div>
+						
+						<div class="col-lg-6">
+							<div aria-required="true" class="form-group required">							
+								<label for="relation" class="mand control-label">Relation</label>								<select aria-required="true" name="relation" class="required form-control" id="vrelation">
+<option value="Self">Self</option>
+</select>
+							                           
+							</div>                           
+						</div>
+				
+						<div class="col-lg-12 col-sm-12">         										
+							<div class="pull-right">
+								<button class="btn btn-info btn-xs add_dependent_button" type="button"><i class="fa fa-plus"></i> Add Dependents</button>
+							</div>  
+						</div> 
+		  
+						<div class="col-lg-12 col-sm-12 dependents"> 
+							<div class="table-responsive"> 
+								<table style="display:none; margin-bottom: 40px; margin-top: 10px;" class="table-bordered deptablex"> 
+									<thead>
+										<tr>
+										  <th style="width: 20%;" class="form-group"><label class="" style="font-size: 12px">Last Name</label></th>
+										  <th aria-required="true" style="width: 20%" class="form-group required"><label class="control-label" style="font-size: 12px">Relation</label></th>
+										  <th aria-required="true" style="width: 20%" class="form-group required"><label class="control-label" style="font-size: 12px">Gender</label></th>
+										  <th aria-required="true" style="width: 15%" class="form-group required"><label class="control-label" style="font-size: 12px">DOB</label></th>
+										  <th aria-required="true" style="width: 15%" class="form-group required"><label class="control-label" style="font-size: 12px">Tobacco User?</label></th>
+										  <th style="width: 10%">&nbsp;</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr style="display:none">
+											<td>&nbsp;</td>
+											<td>&nbsp;</td>
+											<td>&nbsp;</td>
+											<td>&nbsp;</td>
+											<td>&nbsp;</td>
+											<td>&nbsp;</td>
+										</tr>							   
+									</tbody>
+						
+								</table>
+							</div>
+						</div>
+		  
+						<div style="margin-top: -8px;" class="col-lg-12 col-sm-12">         					
+							<div class="pull-right">
+								
+								<input name="vplansearchsubmit" value="Show Plans" id="vplansearchsubmit" class="btn btn-success" type="submit">
+							</div>  
+						</div>
+						
+						</form>						<div style="display: none;">
+							<select name="temp_relation" id="temp_relation">
+<option value="" selected="selected">- Select -</option>
+<option value="Spouse">Spouse</option>
+<option value="Father or Mother">Father or Mother</option>
+<option value="Grandfather or Grandmother">Grandfather or Grandmother</option>
+<option value="Grandson or Granddaughter">Grandson or Granddaughter</option>
+<option value="Uncle or Aunt">Uncle or Aunt</option>
+<option value="Nephew or Niece">Nephew or Niece</option>
+<option value="Cousin">Cousin</option>
+<option value="Adopted Child">Adopted Child</option>
+<option value="Foster Child">Foster Child</option>
+<option value="Son-in-law or daughter-in-law">Son-in-law or daughter-in-law</option>
+<option value="Brother-in-law or sister-in-law">Brother-in-law or sister-in-law</option>
+<option value="Mother-in-law or father-in law">Mother-in-law or father-in law</option>
+<option value="Brother or sister">Brother or sister</option>
+<option value="Ward">Ward</option>
+<option value="Stepparent">Stepparent</option>
+<option value="Stepson or stepdaughter">Stepson or stepdaughter</option>
+<option value="Child">Child</option>
+<option value="Sponsored dependent">Sponsored dependent</option>
+<option value="Dependent on a Minor Dependent">Dependent on a Minor Dependent</option>
+<option value="Ex-spouse">Ex-spouse</option>
+<option value="Guardian">Guardian</option>
+<option value="Court Appointed Guardian">Court Appointed Guardian</option>
+<option value="Collateral Dependent">Collateral Dependent</option>
+<option value="Annultant">Annultant</option>
+<option value="Trustee">Trustee</option>
+<option value="Other Relationship">Other Relationship</option>
+<option value="Other Relative">Other Relative</option>
+</select>
+						</div>
+					 
+					</div>
+				</div>		  
+
+			</div> 
+            
+			<div class="col-lg-2"></div>
+               
+        </div><!--/.row-->
+    </div><!--/.container-->
+</section>		
+			</div>
+	
+	
+<!--MIDDLE CONTENT END -->
+<section id="bottom">
+  <div class="container">
+    <div class="row">
+       <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="http://52.9.26.136/ramyam_demo/alabama/about-us">About us</a></li>
+							<li><a href="http://52.9.26.136/ramyam_demo/alabama/contact-us">Contact us</a></li>
+                            
+                           
+                        </ul>
+                    </div>    
+                </div>
+     
+    </div>
+  </div>
+</section>
+<!--/#bottom-->
+
+
+<div id="enrollmodal" class="modal fade" role="dialog">
+<div class="modal-dialog">
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
+  <h2 id="myModalLabel"> Enroll</h2>
+  <div id="enrollmsg">sd</div>
+</div>
+<div class="modal-body">
+<!--tabs start -->
+<!--tabs end -->
+<div id="productdetail" class="modal fade" role="dialog" height="500">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
+      <h2 id="myModalLabel"> Plan Details</h2>
+    </div>
+    <div id="productdetaildata" class="modal-body"> </div>
+    <div class="modal-footer">
+      <button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Close</button>
+      <!-- <button class="btn btn-primary" data-dismiss="modal" id="EnrollSubmit">Enroll</button>-->
+    </div>
+  </div>
+</div>
+<!-----product detail end -->
+<!-----showcomparelistdata detail -->
+<div id="showcomparelistmodal" class="modal fade" role="dialog" height="500">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
+      <h2 id="myModalLabel">Compare Plan Details</h2>
+    </div>
+    <div id="showcomparelistdata" class="modal-body"> </div>
+    <div class="modal-footer">
+      <!-- <button id=removecomapreallitem  class='btn btn-warning '><i class="fa fa-trash-o"></i> Empty Compare list </button>-->
+      <button class="btn btn-danger" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i> Close</button>
+      <!-- <button class="btn btn-primary" data-dismiss="modal" id="EnrollSubmit">Enroll</button>-->
+    </div>
+  </div>
+</div>
+<!-----showcomparelistdata detail end -->
+
+<div id="errorMessageModal" class="modal fade">
+	<div role="dialog">
+		<div id="errorMessageModalMsg"></div>
+	</div>
+</div>
+
+<footer id="footer" class="midnight-blue">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6"> © 2016 <a target="_blank" href="#" title=""></a>. All Rights Reserved. </div>
+      <div class="col-sm-6">
+        <ul class="pull-right">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Faq</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--/#footer-->
+
+
+</div></div></div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div></body></html>
