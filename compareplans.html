@@ -47,8 +47,59 @@
 	}
 	</style>
 	<style>
-	@media screen and (max-width: 768px){
-	tr {
+	* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 20px;
+}h1 {
+  text-align: center;
+}
+
+
+
+table {
+  width: 100%;
+}
+
+td,
+th {
+  text-align: center;
+  border: solid 1px #ccc;
+  font-size: 22px;
+  padding: 6px;
+  word-wrap: break-word;
+}
+
+td {
+  color: red;
+  font-weight: bold;
+}
+
+.check {
+  color: limegreen;
+  font-size: 30px;
+}
+
+th:first-child,
+td:first-child {
+  font-weight: bold;
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .check {
+    color: limegreen;
+    font-size: 20px;
+  }
+  tr {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -67,6 +118,12 @@
   th:first-child {
     display: none;
   }
+}
+
+.p {
+  text-align: center;
+  font-size: 13px;
+  padding-top: 130px;
 }
 	
 	
@@ -300,160 +357,71 @@ margin: 0;
 
 
 
-<div class="col-md-12">                  
+<table>
+  <thead>
+    <tr>
+      <th>3palns</th>
+	  
+      <th><td class="">
 			
-			<div class="row" id="comparelist"> 
-			  
-			  <div class="col-md-12 col-xs-12" style="border:#CCC thin solid; margin-bottom:15px; padding:0px;background-color: #fff;padding: 10px;">
-					
-											<table class="table table-bordered table-striped table-hover" id="table-1">
-							
-							<thead class="addtab">
-								
-								<tr class="">
-									<td class=""><label class="compatelistcount" style="font-size:42px;">2</label> plans selected for comparison</td>
-																		
-										<td class="comparethid_46944AL0420001-00">
 											
-											<img alt="Blue Saver Silver" class="planlogo_bdr" src="https://sbs-al.naic.org/Lion-Web/images/ExtBanner-AL-logo.jpg" border="0">
 											
-											<label onclick="deletecompareitem('46944AL0420001-00', '46944AL0420001')" style="font-size:22px;color:red" class="pull-right"><i class="fa fa-times" style="cursor: pointer; "></i></label>
+											<label  style="" class="pull-right"><i class="fa fa-times" style="cursor: pointer; "></i></label>
 											
 											<br>
 											<label style="font-size:22px">$147.49</label> Per Month<br>
 											<label style="font-size:12px">Blue Saver Silver</label><br>
 						
-											<a class="btn btn-sm btn-info" style="margin-bottom:6px;" onclick="doenroll('46944AL0420001-00', '46944AL0420001')" href="#"><span class="glyphicon glyphicon-ok"></span> Enroll</a>
+											<a class="btn btn-sm btn-info" style="margin-bottom:6px;" onclick="" href="#"><span class="glyphicon glyphicon-ok"></span> Enroll</a>
 											
-											<a class="btn btn-sm btn-info" href="http://52.9.26.136/ramyam_demo/alabama/plan-details/46944AL0420001-00/46944AL0420001"><span class="glyphicon glyphicon-list"></span> Details</a>
-											
-										</td>
-						
-																	
-										<td class="comparethid_46944AL0460001-00">
-											
-											<img alt="Blue Saver Bronze" class="planlogo_bdr" src="https://sbs-al.naic.org/Lion-Web/images/ExtBanner-AL-logo.jpg" border="0">
-											
-											<label onclick="deletecompareitem('46944AL0460001-00', '46944AL0460001')" style="font-size:22px;color:red" class="pull-right"><i class="fa fa-times" style="cursor: pointer; "></i></label>
-											
-											<br>
-											<label style="font-size:22px">$112.19</label> Per Month<br>
-											<label style="font-size:12px">Blue Saver Bronze</label><br>
-						
-											<a class="btn btn-sm btn-info" style="margin-bottom:6px;" onclick="doenroll('46944AL0460001-00', '46944AL0460001')" href="#"><span class="glyphicon glyphicon-ok"></span> Enroll</a>
-											
-											<a class="btn btn-sm btn-info" href="http://52.9.26.136/ramyam_demo/alabama/plan-details/46944AL0460001-00/46944AL0460001"><span class="glyphicon glyphicon-list"></span> Details</a>
+											<a class="btn btn-sm btn-info" href=""><span class="glyphicon glyphicon-list"></span> Details</a>
 											
 										</td>
-						
-																</tr>
-							</thead>
-							
-							<tbody class="">
-															<tr class="">
-									<td class="" style="font-weight:bold;">
-										Payer Name									</td>
-																			<td class="comparetbodyid_46944AL0420001-00">
-										Alabama										</td>
-																			<td class="comparetbodyid_46944AL0460001-00">
-										Alabama										</td>
-																	</tr>
-															<tr class="">
-									<td class="" style="font-weight:bold;">
-										Plan Name									</td>
-																			<td class="comparetbodyid_46944AL0420001-00">
-										Blue Saver Silver										</td>
-																			<td class="comparetbodyid_46944AL0460001-00">
-										Blue Saver Bronze										</td>
-																	</tr>
-															<tr class="">
-									<td class="" style="font-weight:bold;">
-										Plan Type									</td>
-																			<td class="comparetbodyid_46944AL0420001-00">
-										PPO										</td>
-																			<td class="comparetbodyid_46944AL0460001-00">
-										PPO										</td>
-																	</tr>
-															<tr class="">
-									<td class="" style="font-weight:bold;">
-										Premium									</td>
-																			<td class="comparetbodyid_46944AL0420001-00">
-										147.49										</td>
-																			<td class="comparetbodyid_46944AL0460001-00">
-										112.19										</td>
-																	</tr>
-															<tr class="">
-									<td class="" style="font-weight:bold;">
-										Metal Level									</td>
-																			<td class="comparetbodyid_46944AL0420001-00">
-										Silver										</td>
-																			<td class="comparetbodyid_46944AL0460001-00">
-										Bronze										</td>
-																	</tr>
-															<tr class="">
-									<td class="" style="font-weight:bold;">
-										Out of pocket Family									</td>
-																			<td class="comparetbodyid_46944AL0420001-00">
-										$12,000										</td>
-																			<td class="comparetbodyid_46944AL0460001-00">
-										$12,700										</td>
-																	</tr>
-															<tr class="">
-									<td class="" style="font-weight:bold;">
-										Out of pocket Individual									</td>
-																			<td class="comparetbodyid_46944AL0420001-00">
-										$6,000										</td>
-																			<td class="comparetbodyid_46944AL0460001-00">
-										$6,350										</td>
-																	</tr>
-															<tr class="">
-									<td class="" style="font-weight:bold;">
-										Deductibles Family									</td>
-																			<td class="comparetbodyid_46944AL0420001-00">
-										$6,000										</td>
-																			<td class="comparetbodyid_46944AL0460001-00">
-										$12,700										</td>
-																	</tr>
-															<tr class="">
-									<td class="" style="font-weight:bold;">
-										Deductibles Individual									</td>
-																			<td class="comparetbodyid_46944AL0420001-00">
-										$3,000										</td>
-																			<td class="comparetbodyid_46944AL0460001-00">
-										$6,350										</td>
-																	</tr>
-															<tr class="">
-									<td class="" style="font-weight:bold;">
-										Plan Brochure									</td>
-																			<td class="comparetbodyid_46944AL0420001-00">
-										<a href="https://www.google.co.in/" title="" target="_blank" style="background: none !important; color: #0000ff;">https://www.google.co.in/</a>										</td>
-																			<td class="comparetbodyid_46944AL0460001-00">
-										https:www.ibcbsal.com2015BlueSaverBronze?frm=Exchange										</td>
-																	</tr>
-															<tr class="">
-									<td class="" style="font-weight:bold;">
-										 Benefits in detail plan									</td>
-																			<td class="comparetbodyid_46944AL0420001-00">
-										<div class="" style="height: 350px; overflow-y: auto;">
-													<div style="clear: both; width: 100%;"><div class="" style="background-color: #dde9f3; font-weight: bold; padding: 4px;">Outpatient Facility Fee (e.g.,  Ambulatory Surgery Center)</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Quantity limit on Svc</b>: No</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay Out Of Net</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins Out Of Net</b>: 100%</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay In Network</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins In Network</b>: 20% Coinsurance after deductible</div><div class="" style="background-color: #dde9f3; font-weight: bold; padding: 4px;">Emergency Room Services</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Quantity limit on Svc</b>: No</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay Out Of Net</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins Out Of Net</b>: 20% Coinsurance after deductible</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay In Network</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins In Network</b>: 20% Coinsurance after deductible</div><div class="" style="background-color: #dde9f3; font-weight: bold; padding: 4px;">Inpatient Hospital Services (e.g., Hospital Stay)</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Quantity limit on Svc</b>: No</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay Out Of Net</b>: $0 Copay per Stay</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins Out Of Net</b>: 100%</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay In Network</b>: $0 Copay per Stay</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins In Network</b>: 20% Coinsurance after deductible</div><div class="" style="background-color: #dde9f3; font-weight: bold; padding: 4px;">Delivery and All Inpatient Services for Maternity Care</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Quantity limit on Svc</b>: No</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay Out Of Net</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins Out Of Net</b>: 100%</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay In Network</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins In Network</b>: 20% Coinsurance after deductible</div><div class="" style="background-color: #dde9f3; font-weight: bold; padding: 4px;">Rehabilitative Speech Therapy</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Quantity limit on Svc</b>: Yes</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay Out Of Net</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins Out Of Net</b>: 100%</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay In Network</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins In Network</b>: 20% Coinsurance after deductible</div><div class="" style="background-color: #dde9f3; font-weight: bold; padding: 4px;">Laboratory Outpatient and Professional Services</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Quantity limit on Svc</b>: No</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay Out Of Net</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins Out Of Net</b>: 100%</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay In Network</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins In Network</b>: 20% Coinsurance after deductible</div><div class="" style="background-color: #dde9f3; font-weight: bold; padding: 4px;">Imaging (CTPET Scans, MRIs)</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Quantity limit on Svc</b>: No</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay Out Of Net</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins Out Of Net</b>: 100%</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay In Network</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins In Network</b>: 20% Coinsurance after deductible</div><div class="" style="background-color: #dde9f3; font-weight: bold; padding: 4px;">Infertility Treatment</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Quantity limit on Svc</b>: No</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay Out Of Net</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins Out Of Net</b>: 100%</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay In Network</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins In Network</b>: 20% Coinsurance after deductible</div><div class="" style="background-color: #dde9f3; font-weight: bold; padding: 4px;">Infusion Therapy</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Quantity limit on Svc</b>: No</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay Out Of Net</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins Out Of Net</b>: 100%</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay In Network</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins In Network</b>: 20% Coinsurance after deductible</div><div class="" style="background-color: #dde9f3; font-weight: bold; padding: 4px;">Inpatient Physician and Surgical Services</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Quantity limit on Svc</b>: No</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay Out Of Net</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins Out Of Net</b>: 100%</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay In Network</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins In Network</b>: 20% Coinsurance after deductible</div></div>											
-													</div>										</td>
-																			<td class="comparetbodyid_46944AL0460001-00">
-										<div class="" style="height: 350px; overflow-y: auto;">
-													<div style="clear: both; width: 100%;"><div class="" style="background-color: #dde9f3; font-weight: bold; padding: 4px;">Outpatient Facility Fee (e.g.,  Ambulatory Surgery Center)</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Quantity limit on Svc</b>: No</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay Out Of Net</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins Out Of Net</b>: 100%</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay In Network</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins In Network</b>: 0% Coinsurance after deductible</div><div class="" style="background-color: #dde9f3; font-weight: bold; padding: 4px;">Emergency Room Services</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Quantity limit on Svc</b>: No</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay Out Of Net</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins Out Of Net</b>: 0% Coinsurance after deductible</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay In Network</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins In Network</b>: 0% Coinsurance after deductible</div><div class="" style="background-color: #dde9f3; font-weight: bold; padding: 4px;">Inpatient Hospital Services (e.g., Hospital Stay)</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Quantity limit on Svc</b>: No</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay Out Of Net</b>: $0 Copay per Stay</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins Out Of Net</b>: 100%</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay In Network</b>: $0 Copay per Day</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins In Network</b>: 0% Coinsurance after deductible</div><div class="" style="background-color: #dde9f3; font-weight: bold; padding: 4px;">Delivery and All Inpatient Services for Maternity Care</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Quantity limit on Svc</b>: No</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay Out Of Net</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins Out Of Net</b>: 100%</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay In Network</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins In Network</b>: 0% Coinsurance after deductible</div><div class="" style="background-color: #dde9f3; font-weight: bold; padding: 4px;">Rehabilitative Speech Therapy</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Quantity limit on Svc</b>: Yes</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay Out Of Net</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins Out Of Net</b>: 100%</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay In Network</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins In Network</b>: 0% Coinsurance after deductible</div><div class="" style="background-color: #dde9f3; font-weight: bold; padding: 4px;">Laboratory Outpatient and Professional Services</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Quantity limit on Svc</b>: No</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay Out Of Net</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins Out Of Net</b>: 100%</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay In Network</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins In Network</b>: 0% Coinsurance after deductible</div><div class="" style="background-color: #dde9f3; font-weight: bold; padding: 4px;">Abortion for Which Public Funding is Prohibited</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Quantity limit on Svc</b>: N/A</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay Out Of Net</b>: N/A</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins Out Of Net</b>: N/A</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay In Network</b>: N/A</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins In Network</b>: N/A</div><div class="" style="background-color: #dde9f3; font-weight: bold; padding: 4px;">Accidental Dental</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Quantity limit on Svc</b>: No</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay Out Of Net</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins Out Of Net</b>: 100%</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay In Network</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins In Network</b>: 0% Coinsurance after deductible</div><div class="" style="background-color: #dde9f3; font-weight: bold; padding: 4px;">Acupuncture</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Quantity limit on Svc</b>: N/A</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay Out Of Net</b>: N/A</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins Out Of Net</b>: N/A</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay In Network</b>: N/A</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins In Network</b>: N/A</div><div class="" style="background-color: #dde9f3; font-weight: bold; padding: 4px;">Allergy Testing</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Quantity limit on Svc</b>: No</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay Out Of Net</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins Out Of Net</b>: 100%</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Copay In Network</b>: $0</div><div class="" style="font-size: 12px; margin-left: 10px; padding: 2px;"><b>Coins In Network</b>: 0% Coinsurance after deductible</div></div>											
-													</div>										</td>
-																	</tr>
-														</tbody>
-						</table>
-								  </div><!--/.list-->
-					 
-				  
-			 <a href="#" class="btn btn-info" onclick="deletecompareproduct('')">Empty</a> 
-			 <a href="http://52.9.26.136/ramyam_demo/alabama/search-plans" class="btn btn-info">Back to Plan Result</a>
-			</div>
-				 
+	  
 
-		</div>
 
+	  </th>
+    
+	
+	
+	
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>payer name</td>
+      <td><b class="check">✔</b>
+	  <i class="fa fa-times" style="cursor: pointer; "></i>
+	  let t be here  for som purpose
+	  
+	  </td>
+      <td><b class="check">✔</b>
+	    <i class="fa fa-times" style="cursor: pointer; "></i>
+	  let t be here  for som purpose
+	  </td>
+     
+    </tr>
+    <tr>
+      <td>plan name</td>
+     
+      <td><b class="check">✔</b></td>
+      <td><b class="check">✔</b></td>
+    </tr>
+    <tr>
+      <td>plan type</td>
+   
+      <td>&mdash;</td>
+      <td><b class="check">✔</b></td>
+    </tr>
+    <tr>
+      <td>extra ffetures</td>
+    
+      <td>&mdash;</td>
+      <td><b class="check">✔</b></td>
+    </tr>
+  </tbody>
+</table>
 
 
 
