@@ -21,15 +21,10 @@
      <!-- Theme color -->
     <link id="switcher" href="assets/css/theme-color/default.css" rel="stylesheet">
 	<!-- datepicker -->
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
-	
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
-
-	
-	
-	<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
-      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-     
+	  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
 	
 	
 	 
@@ -60,8 +55,8 @@
   
   <script>
          $(function() {
-            $( "#datepicker-13" ).datepicker();
-            $( "#datepicker-13" ).datepicker("show");
+            $("#datepicker").datepicker();
+           
          });
       </script>
 
@@ -228,7 +223,8 @@
 		
 						<div class="col-lg-6">                        
 							<div aria-required="true" class="form-group required">
-								<label for="dob" class="mand control-label">Date Of Birth (MM/DD/YYYY)</label>								<input aria-required="true" name="dob" value="" id="datepicker-13" maxlength="50" class="form-control required datePicker hasDatepicker" placeholder="DOB" readonly="readonly" type="text">
+								<label for="dob" class="mand control-label">Date Of Birth (MM/DD/YYYY)</label>								
+								<input aria-required="true" name="dob" value="" id="datepicker" maxlength="50" class="form-control required datePicker hasDatepicker" placeholder="DOB" readonly="readonly" type="text">
 							</div>
 							<div aria-required="true" class="form-group required">                               
 								<label for="vistobaco" class="mand control-label">Tobacco User?</label>								<select aria-required="true" name="vistobaco" class="required form-control" id="vistobaco">
