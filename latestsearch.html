@@ -195,7 +195,7 @@
 							
 							<div aria-required="true" class="form-group required">
 							
-								<label for="zipcode" class="mand control-label">Zip code</label>								<input aria-required="true" name="zipcode" value="" id="vzipcode" maxlength="10" class="form-control required number" placeholder="Zipcode" type="text">
+								<label for="zipcode" class="mand control-label">Zip code</label>								<input aria-required="true" onblur="alertMe();" name="zipcode" value="" id="vzipcode" maxlength="10" class="form-control required number" placeholder="Zipcode" type="text">
 							</div>
 							</div>
 							
@@ -459,6 +459,16 @@
   
    <script type="text/javascript" src="assets/js/responsive-menu.min.js"></script>
    
+   
+   <script>
+	  function alertMe(){
+	 
+	 
+	  $('#vCountyCode').html('<option value="" selected="selected">Montreal</option>');
+	 
+	 
+	  }
+	  </script>
 	  
    </body>
 </html>
