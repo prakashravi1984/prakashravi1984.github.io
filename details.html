@@ -46,6 +46,11 @@
 	display:none;
 	}
 	
+	.foSize{
+  font-size:12px;
+  font-weight:bold;
+  }
+	
 	.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"]{
 	margin-left:0px;
 	}
@@ -258,6 +263,73 @@ margin: 0;
 .accordion-group:hover{
  
 }
+td,th{
+padding:8px;
+}
+
+.table{
+background-image: linear-gradient(to bottom, #f5f5f5, #ddd);
+
+}
+th,td{
+	
+	font-family: Open Sans;
+	}
+	#accordion2{
+	font-family: 'Raleway', sans-serif;
+	}
+	.bth.info{
+	    color: #fff;background-color: #337ab7;border-color: #337ab7;
+}
+
+  td label{
+    font-weight:normal;
+  }
+  #footer{
+  margin-top:6px;
+  }
+  
+  .btn-info{
+  
+  background:#0a4571 !important;
+  border:0;
+  box-shadow:3px 3px 3px grey;
+  }
+  
+  .btn:hover{
+  background:#0a4571;
+  
+  }
+  btn:active{
+  background:#0a4571;
+  }
+  .btn:focus{
+   background:#0a4571 !important;
+  }
+  
+  btn:visited{
+  
+  background:#0a4571;
+  }
+  @media only screen and (max-width:480px){
+  
+  body{
+  
+  }
+  .Plandetailheading td{
+  
+  font-size:12px;
+  
+  }
+  
+  .fosize{
+  font-size:12px;
+ 
+  
+  }
+  
+  }
+  
 </style>
 
 
@@ -291,44 +363,46 @@ margin: 0;
 
 <div style="box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); padding: 15px; background: #fff;    border: 1px solid #ccc;" class="col-md-12">	
 				
-				<ul class="list-inline">
-					<li style="font-size:18px; border-right:#CCCCCC thin solid">Alabama</li>
-					<li style="font-size:18px; padding:10px 20px ; border-right:#CCCCCC thin solid">Blue Saver Bronze</li>  
-					<li style="font-size:22px">$112.19</li>
-					 <li style="font-size:22px"><a class="btn btn-sm btn-info" onclick="doenroll('46944AL0460001-00','46944AL0460001')" href="#"><span class="glyphicon glyphicon-ok"></span> Enroll</a></li>
+				<ul class="list-inline" style="font-family:Open Sans;">
+					<li class="foSize" style="">Alabama</li>
+					<li class="foSize" style="">Blue Saver Bronze</li>  
+					<li class="foSize" style="">$ 112.19</li>
+					 <li style=""><a class="btn btn-sm btn-info" onclick="" href="#"><span class="glyphicon glyphicon-ok"></span> Enroll</a></li>
 					 
-					 <li style="font-size:22px">
-					 						 <a class="btn btn-sm btn-info" href="http://52.9.26.136/ramyam_demo/alabama/search-plans"> Back to list</a>
+					 <li style="">
+					 						 <a class="btn btn-sm btn-info" href=""> Back to list</a>
 										
 					 </li>
 				</ul>
 				
-			    <div id="accordion2" class="accordion list-item">
+			    <div id="accordion2" class="accordion list-item" style="margin-top:10px;">
 					<div class="accordion-group">
 						<div style="clear: both; width: 100%; float:left;border:1px solid #ddd;" class="accordion-heading Plandetailheading">
-							<div style="font-size:18px; color:#428BCA; padding:5px 0px; float: left;">Plan Details</div>
+							<div style="font-size:18px; color:#428BCA; padding:5px 0px; float: left;padding-left:5px;">Plan Details</div>
 							
 							<div style="float: right; font-size: 12px;">
-								<a href="https:www.ibcbsal.com2015BlueSaverBronze?frm=Exchange" title="Plan Brochure" target="_blank">Plan Brochure</a>
+								<a href="" title="Plan Brochure" target="_blank">Plan Brochure</a>
 							</div>
 						</div>
 						
 						<div class="accordion-body collapse in" id="collapseOne">
 							<div class="accordion-inner">	
 
-								<table style="margin-bottom: 5px; border: 1px solid #ddd;" class="table">
-									<thead>
+										<table class="table" style="margin-bottom: 5px;">
+									<thead style="">
 									  <tr>
 										<th>
-											<div style="clear: both; widht: 100%;">
+											<div style="">
 												<div class="col-md-9">
 													<span><label class="listlabel">Plan Name</label> : Blue Saver Bronze </span>
-																											<span style="margin: -4px 0 0 20px;"><img src="https://sbs-al.naic.org/Lion-Web/images/ExtBanner-AL-logo.jpg" class="planlogo_bdr" alt="Blue Saver Bronze" border="0"></span>
-																									</div> 
-
+													
+													
+													
+												</div> 
+												
 												<div class="col-md-3">
 													<span><label class="listlabel">Plan Type</label> : PPO</span>
-												</div> 												
+												</div> 
 												
 											</div>
 											
@@ -336,41 +410,50 @@ margin: 0;
 											
 												<div class="col-md-9">
 																									</div>
-												
+												 
 												<div class="col-md-3">
-													<label class="listlabel">Plan Level</label> : Bronze												</div>
+													<label class="listlabel">Plan Level</label> : Bronze
+												</div>
 											</div>
 										</th>
 									  </tr>
 									</thead>
 									
-									<tbody>
+									<tbody style="">
 									  <tr>
 										<td><div class="col-md-3"><label>Deductibles</label>
 										<ul class="list-unstyled">
-										 <li><label style="width:60px" class="listlabel">Individual</label> <label>$6,350</label></li>
-											<li><label style="width:60px" class="listlabel">Family</label> <label>$12,700</label></li>
+										 <li><label class="listlabel" style="padding-right:15px;">Individual </label> <label>$ 6,350</label></li>
+											<li><label class="listlabel" style="padding-right:38px;">Family </label> <label>$ 12,700</label></li>
 										</ul>
 										</div> 
 										<div class="col-md-3"><label>Maximum Out-of-Pocket</label>
 										<ul class="list-unstyled">
-											<li><label style="width:60px" class="listlabel">Individual</label> <label>$6,350</label></li>
-											<li><label style="width:60px" class="listlabel">Family</label> <label>$12,700</label></li>
+											<li><label class="listlabel" style="padding-right:15px;">Individual </label> <label>$ 6,350</label></li>
+											<li><label class="listlabel" style="padding-right:38px;">Family </label> <label>$ 12,700</label></li>
 										</ul>
 										</div>
 										<div class="col-md-3">
 										</div>
-										   <div style="color:#063;" class="col-md-2">
-										   <label class="estmatedpremium">$112.19</label><br><label class="listlabel">(Monthly Cost)</label>
+										   <div class="col-md-2" style="color:#063;">
+										   <label class="estmatedpremium">$ 152.19</label><br><label class="listlabel">(Monthly Cost)</label>
 										   </div>
 										 </td>
-									  </tr>									  
-									
+									  </tr>
+									  
+									  <tr id="filter_46944AL0460001-00" style="display: none;"><!-- section for filters -->
+										<td><p class="plan_id_filter">46944AL0460001</p></td>
+										<td><p class="estimatedpremium_filter">112.19</p></td>
+										<td><p class="deductable_individual_filter">$ 6,350</p></td>
+										<td><p class="plan_type_filter">PPO</p></td>
+										<td><p class="outofpocket_individual_filter">$ 6,350</p></td>
+										<td><p class="metal_level_filter">$ 6,350</p></td>
+									  </tr>
 									  </tbody>
 								</table>
 															
 																			<table style="width: 100%; border: 1px solid #ccc !important;" class="Plandetailheading">
-											<tbody><tr>
+										<!--	<tbody><tr>
 												<td class="Plandetailheading" style="clear: both; width: 100%; font-size:18px; color:#428BCA;border-color: #ddd; padding:5px 0px;">Benefits</td>
 											</tr>
 											
@@ -651,7 +734,298 @@ margin: 0;
 												</div>
 											</td>
 											</tr>
-									</tbody></table>
+									</tbody> -->
+									<!-- table cmes herre -->
+									
+									
+									
+									<tbody class="">
+									<tr>
+												<td class="Plandetailheading" style="font-size:18px; color:#428BCA;border-color: #ddd;">Benefits</td>
+											</tr>
+															<tr class="">
+									<td class="" style="">
+									<div style="">		
+	
+														
+													<div class="row">		
+														<div style="width:40%; float: left;">&nbsp;</div>
+														<div style="width:30%; float: left; font-weight: bold;">In Network</div>
+														<div style="width:30%; float: left; font-weight: bold;">Out of Network</div>
+													</div>
+													
+												
+												<div style="clear: both; margin: 0 auto; border: 1px solid #dde9f3; height:104%;padding: 5px; margin-bottom: 8px;margin-top: 8px;background-image: linear-gradient(to bottom, #f5f5f5, #ddd)">	
+											
+												<div style="width: 100%; clear: both;">		
+													<div style="float: left;padding-top:5px;padding-bottom:5px;font-weight:bold;background:#ccc;width:100%;">Outpatient Facility Fee (e.g.,  Ambulatory Surgery Center)</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+												</div>												
+											
+												<div style="width: 100%; clear: both;">		
+													<div style="width:40%; float: left; padding-left: 15px; padding-bottom:5px;padding-top:5px;">Copay</div>
+													<div style="width:30%; float: left;padding:5px;">$0</div>
+													<div style="width:30%; float: left;padding:5px;">$0</div>
+												</div>	
+
+												<div style="width: 100%; clear: both;">		
+													<div style="width:40%; float: left; padding-left: 15px;padding-top:5px;">Coinsurance</div>
+													<div style="width:30%; float: left;padding:5px;">0% Coinsurance after deductible</div>
+													<div style="width:30%; float: left;padding:5px;">100%</div>
+												</div>	
+												
+												<div style="width: 100%; clear: both;">		
+													<div style="float: left; padding-left: 15px;padding-top:7px;"><b>Service Quantity Limitations</b>: No</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+												</div>	
+											</div>
+																				<div style="clear: both; margin: 0 auto; border: 1px solid #dde9f3; height:104%;padding: 5px; margin-bottom: 8px;margin-top: 8px;background-image: linear-gradient(to bottom, #f5f5f5, #ddd)">	
+											
+												<div style="width: 100%; clear: both;">		
+													<div style="float: left;  font-weight: bold;padding-top:5px;padding-bottom:5px;padding-top:5px;background:#ccc;width:100%;">Emergency Room Services</div>
+													<div style="width:30%; float: left;padding:5px;">&nbsp;</div>
+													<div style="width:30%; float: left;padding:5px;">&nbsp;</div>
+												</div>												
+											
+												<div style="width: 100%; clear: both;">		
+													<div style="width:40%; float: left; padding-left: 15px; padding-bottom:5px;padding-top:5px;">Copay</div>
+													<div style="width:30%; float: left;padding:5px;">$0</div>
+													<div style="width:30%; float: left;padding:5px;">$0</div>
+												</div>	
+
+												<div style="width: 100%; clear: both;">		
+													<div style="width:40%; float: left; padding-left: 15px;">Coinsurance</div>
+													<div style="width:30%; float: left;">0% Coinsurance after deductible</div>
+													<div style="width:30%; float: left;">0% Coinsurance after deductible</div>
+												</div>	
+												
+												<div style="width: 100%; clear: both;">		
+													<div style="float: left; padding-left: 15px;padding-top:7px;"><b>Service Quantity Limitations</b>: No</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+												</div>	
+											</div>
+																				<div style="clear: both; margin: 0 auto; border: 1px solid #dde9f3; height:104%;padding: 5px; margin-bottom: 8px;margin-top: 8px;background-image: linear-gradient(to bottom, #f5f5f5, #ddd)">	
+											
+												<div style="width: 100%; clear: both;">		
+													<div style="float: left;  font-weight: bold;padding-top:5px;padding-bottom:5px;background:#ccc;width:100%;">Inpatient Hospital Services (e.g., Hospital Stay)</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+												</div>												
+											
+												<div style="width: 100%; clear: both;">		
+													<div style="width:40%; float: left; padding-left: 15px; padding-bottom:5px;">Copay</div>
+													<div style="width:30%; float: left;">$0 Copay per Day</div>
+													<div style="width:30%; float: left;">$0 Copay per Stay</div>
+												</div>	
+
+												<div style="width: 100%; clear: both;">		
+													<div style="width:40%; float: left; padding-left: 15px;">Coinsurance</div>
+													<div style="width:30%; float: left;">0% Coinsurance after deductible</div>
+													<div style="width:30%; float: left;">100%</div>
+												</div>	
+												
+												<div style="width: 100%; clear: both;">		
+													<div style="float: left; padding-left: 15px;padding-top:7px;"><b>Service Quantity Limitations</b>: No</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+												</div>	
+											</div>
+																				<div style="clear: both; margin: 0 auto; border: 1px solid #dde9f3; height:104%;padding: 5px; margin-bottom: 8px;margin-top: 8px;background-image: linear-gradient(to bottom, #f5f5f5, #ddd)">	
+											
+												<div style="width: 100%; clear: both;">		
+													<div style="float: left;  font-weight: bold;padding-top:5px;padding-bottom:5px;background:#ccc;width:100%;">Delivery and All Inpatient Services for Maternity Care</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+												</div>												
+											
+												<div style="width: 100%; clear: both;">		
+													<div style="width:40%; float: left; padding-left: 15px; padding-bottom:5px;">Copay</div>
+													<div style="width:30%; float: left;">$0</div>
+													<div style="width:30%; float: left;">$0</div>
+												</div>	
+
+												<div style="width: 100%; clear: both;">		
+													<div style="width:40%; float: left; padding-left: 15px;">Coinsurance</div>
+													<div style="width:30%; float: left;">0% Coinsurance after deductible</div>
+													<div style="width:30%; float: left;">100%</div>
+												</div>	
+												
+												<div style="width: 100%; clear: both;">		
+													<div style="float: left; padding-left: 15px;padding-top:7px;"><b>Service Quantity Limitations</b>: No</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+												</div>	
+											</div>
+																				<div style="clear: both; margin: 0 auto; border: 1px solid #dde9f3; height:104%;padding: 5px; margin-bottom: 8px;margin-top: 8px;background-image: linear-gradient(to bottom, #f5f5f5, #ddd)">	
+											
+												<div style="width: 100%; clear: both;">		
+													<div style="float: left;  font-weight: bold;padding-top:5px;padding-bottom:5px;background:#ccc;width:100%;">Rehabilitative Speech Therapy</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+												</div>												
+											
+												<div style="width: 100%; clear: both;">		
+													<div style="width:40%; float: left; padding-left: 15px; padding-bottom:5px;">Copay</div>
+													<div style="width:30%; float: left;">$0</div>
+													<div style="width:30%; float: left;">$0</div>
+												</div>	
+
+												<div style="width: 100%; clear: both;">		
+													<div style="width:40%; float: left; padding-left: 15px;">Coinsurance</div>
+													<div style="width:30%; float: left;">0% Coinsurance after deductible</div>
+													<div style="width:30%; float: left;">100%</div>
+												</div>	
+												
+												<div style="width: 100%; clear: both;">		
+													<div style="float: left; padding-left: 15px;padding-top:7px;"><b>Service Quantity Limitations</b>: Yes</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+												</div>	
+											</div>
+																				<div style="clear: both; margin: 0 auto; border: 1px solid #dde9f3; height:104%;padding: 5px; margin-bottom: 8px;margin-top: 8px;background-image: linear-gradient(to bottom, #f5f5f5, #ddd)">	
+											
+												<div style="width: 100%; clear: both;">		
+													<div style="float: left;  font-weight: bold;padding-top:5px;padding-bottom:5px;background:#ccc;width:100%;">Laboratory Outpatient and Professional Services</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+												</div>												
+											
+												<div style="width: 100%; clear: both;">		
+													<div style="width:40%; float: left; padding-left: 15px; padding-bottom:5px;">Copay</div>
+													<div style="width:30%; float: left;">$0</div>
+													<div style="width:30%; float: left;">$0</div>
+												</div>	
+
+												<div style="width: 100%; clear: both;">		
+													<div style="width:40%; float: left; padding-left: 15px;">Coinsurance</div>
+													<div style="width:30%; float: left;">0% Coinsurance after deductible</div>
+													<div style="width:30%; float: left;">100%</div>
+												</div>	
+												
+												<div style="width: 100%; clear: both;">		
+													<div style="float: left; padding-left: 15px;padding-top:7px;"><b>Service Quantity Limitations</b>: No</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+												</div>	
+											</div>
+																				<div style="clear: both; margin: 0 auto; border: 1px solid #dde9f3; height:104%;padding: 5px; margin-bottom: 8px;margin-top: 8px;background-image: linear-gradient(to bottom, #f5f5f5, #ddd)">	
+											
+												<div style="width: 100%; clear: both;">		
+													<div style="float: left;  font-weight: bold;padding-top:5px;padding-bottom:5px;background:#ccc;width:100%;">Abortion for Which Public Funding is Prohibited</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+												</div>												
+											
+												<div style="width: 100%; clear: both;">		
+													<div style="width:40%; float: left; padding-left: 15px; padding-bottom:5px;">Copay</div>
+													<div style="width:30%; float: left;">N/A</div>
+													<div style="width:30%; float: left;">N/A</div>
+												</div>	
+
+												<div style="width: 100%; clear: both;">		
+													<div style="width:40%; float: left; padding-left: 15px;">Coinsurance</div>
+													<div style="width:30%; float: left;">N/A</div>
+													<div style="width:30%; float: left;">N/A</div>
+												</div>	
+												
+												<div style="width: 100%; clear: both;">		
+													<div style="float: left; padding-left: 15px;padding-top:7px;"><b>Service Quantity Limitations</b>: N/A</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+												</div>	
+											</div>
+																				<div style="clear: both; margin: 0 auto; border: 1px solid #dde9f3; height:104%;padding: 5px; margin-bottom: 8px;margin-top: 8px;background-image: linear-gradient(to bottom, #f5f5f5, #ddd)">	
+											
+												<div style="width: 100%; clear: both;">		
+													<div style="float: left;  font-weight: bold;padding-top:5px;padding-bottom:5px;background:#ccc;width:100%;">Accidental Dental</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+												</div>												
+											
+												<div style="width: 100%; clear: both;">		
+													<div style="width:40%; float: left; padding-left: 15px; padding-bottom:5px;">Copay</div>
+													<div style="width:30%; float: left;">$0</div>
+													<div style="width:30%; float: left;">$0</div>
+												</div>	
+
+												<div style="width: 100%; clear: both;">		
+													<div style="width:40%; float: left; padding-left: 15px;">Coinsurance</div>
+													<div style="width:30%; float: left;">0% Coinsurance after deductible</div>
+													<div style="width:30%; float: left;">100%</div>
+												</div>	
+												
+												<div style="width: 100%; clear: both;">		
+													<div style="float: left; padding-left: 15px;padding-top:7px;"><b>Service Quantity Limitations</b>: No</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+												</div>	
+											</div>
+																				<div style="clear: both; margin: 0 auto; border: 1px solid #dde9f3; height:104%;padding: 5px; margin-bottom: 8px;margin-top: 8px;background-image: linear-gradient(to bottom, #f5f5f5, #ddd)">	
+											
+												<div style="width: 100%; clear: both;">		
+													<div style="float: left;  font-weight: bold;padding-top:5px;padding-bottom:5px;background:#ccc;width:100%;">Acupuncture</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+												</div>												
+											
+												<div style="width: 100%; clear: both;">		
+													<div style="width:40%; float: left; padding-left: 15px; padding-bottom:5px;">Copay</div>
+													<div style="width:30%; float: left;">N/A</div>
+													<div style="width:30%; float: left;">N/A</div>
+												</div>	
+
+												<div style="width: 100%; clear: both;">		
+													<div style="width:40%; float: left; padding-left: 15px;">Coinsurance</div>
+													<div style="width:30%; float: left;">N/A</div>
+													<div style="width:30%; float: left;">N/A</div>
+												</div>	
+												
+												<div style="width: 100%; clear: both;">		
+													<div style="float: left; padding-left: 15px;padding-top:7px;"><b>Service Quantity Limitations</b>: N/A</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+												</div>	
+											</div>
+																				<div style="clear: both; margin: 0 auto; border: 1px solid #dde9f3; height:104%;padding: 5px; margin-bottom: 8px;margin-top: 8px;background-image: linear-gradient(to bottom, #f5f5f5, #ddd);">	
+											
+												<div style="width: 100%; clear: both;">		
+													<div style="float: left;  font-weight: bold;padding-top:5px;padding-bottom:5px;background:#ccc;width:100%;">Allergy Testing</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+												</div>												
+											
+												<div style="width: 100%; clear: both;">		
+													<div style="width:40%; float: left; padding-left: 15px; padding-bottom:5px;">Copay</div>
+													<div style="width:30%; float: left;">$0</div>
+													<div style="width:30%; float: left;">$0</div>
+												</div>	
+
+												<div style="width: 100%; clear: both;">		
+													<div style="width:40%; float: left; padding-left: 15px;">Coinsurance</div>
+													<div style="width:30%; float: left;">0% Coinsurance after deductible</div>
+													<div style="width:30%; float: left;">100%</div>
+												</div>	
+												
+												<div style="width: 100%; clear: both;">		
+													<div style="float: left; padding-left: 15px;padding-top:7px;"><b>Service Quantity Limitations</b>: No</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+													<div style="width:30%; float: left;">&nbsp;</div>
+												</div>	
+											</div>
+										
+												</div>	</tr>
+			
+														</tbody>
+									
+									
+									
+									
+									
+									
+									</table>
 																				
 						   </div>
 						</div>					
@@ -698,7 +1072,7 @@ margin: 0;
         <div class="row">
           <div class="col-md-12">
             <div class="footer-top-area">             
-                <a class="footer-logo" href="#"><img src="assets/images/logo.jpg" alt="Logo"></a>              
+                           
               <div class="footer-social">
                 <a class="facebook" href="#"><span class="fa fa-facebook"></span></a>
                 <a class="twitter" href="#"><span class="fa fa-twitter"></span></a>
@@ -722,6 +1096,7 @@ margin: 0;
 
   <!-- initialize jQuery Library --> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery-2.2.0.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <!-- Bootstrap -->
   <script src="assets/js/bootstrap.js"></script>

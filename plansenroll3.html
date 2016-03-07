@@ -243,6 +243,15 @@ margin: 0;
 .accordion-group:hover{
  
 }
+.table{
+    background-image: linear-gradient(to bottom, #f5f5f5, #ddd);
+}
+td label{
+font-weight:normal;
+}
+btn-info{
+background:#0a4571 !important;
+}
 </style>
 
 
@@ -270,75 +279,69 @@ margin: 0;
 
 
 <div class="col-lg-12" style="margin-bottom:10px;">
-						<table style="margin-bottom: 5px;" class="table">
-							<thead>
-							  <tr>
-								<th>
-									<div style="clear: both; widht: 100%;">
-										<div class="col-md-6">
-											<span><label class="listlabel">Plan Name</label> : Blue Value Gold</span>
+						<table class="table" style="margin-bottom: 5px;">
+									<thead style="">
+									  <tr>
+										<th>
+											<div style="clear: both; widht: 100%;">
+												<div class="col-md-9">
+													<span><label class="listlabel">Plan Name</label> : Blue Saver Bronze </span>
+													
+													
+													
+												</div> 
+												
+												<div class="col-md-3">
+													<span><label class="listlabel">Plan Type</label> : PPO</span>
+												</div> 
+												
+											</div>
 											
-																							<span style="margin: -4px 0 0 20px;"><img src="https://sbs-al.naic.org/Lion-Web/images/ExtBanner-AL-logo.jpg" class="planlogo_bdr" alt="Blue Value Gold" border="0"></span>
-																					</div>  
-										
-										<div class="col-md-3">
-											<span><label class="listlabel">Plan Type</label> : PPO</span>
-										</div> 
-										
-									</div>
+											<div style="clear: both; widht: 100%;">
+											
+												<div class="col-md-9">
+																									</div>
+												 
+												<div class="col-md-3">
+													<label class="listlabel">Plan Level</label> : Bronze
+												</div>
+											</div>
+										</th>
+									  </tr>
+									</thead>
 									
-									<div style="clear: both; widht: 100%;">
-									
-										<div class="col-md-6">
-																					</div>
-										
-										<div class="col-md-3">
-											<label class="listlabel">Plan Level</label> : Gold										</div>
-									</div>
-								</th>
-							  </tr>
-							</thead>
-							
-							<tbody>
-							  <tr>
-								<td>
-									<div class="col-md-3"><label>Deductibles</label>
+									<tbody style="">
+									  <tr>
+										<td><div class="col-md-3"><label>Deductibles</label>
 										<ul class="list-unstyled">
-											<li>
-												<label style="width:60px" class="listlabel">Individual </label> 
-												<label>&nbsp;$600</label>
-											</li>
-											<li>
-												<label style="width:60px" class="listlabel">Family </label> 
-												<label>&nbsp;$1,200</label>
-											</li>
+										 <li><label class="listlabel" style="padding-right:15px;">Individual </label> <label>$ 6,350</label></li>
+											<li><label class="listlabel" style="padding-right:38px;">Family </label> <label>$ 12,700</label></li>
 										</ul>
-									</div> 
-									
-									<div class="col-md-3"><label>Maximum Out-of-Pocket</label>
-									<ul class="list-unstyled">
-										<li>
-											<label style="width:60px" class="listlabel">Individual </label> 
-											<label>&nbsp;$5,000</label>
-										</li>
-										<li>
-											<label style="width:60px" class="listlabel">Family </label> 
-											<label>&nbsp;$10,000</label>
-										</li>
-									</ul>
-									</div>
-									
-									<div class="col-md-3"> </div>
-									
-									<div style="color:#063;" class="col-md-2">
-										<label class="estmatedpremium">$179.98</label>
-										<br><label class="listlabel">(Monthly Cost)</label>
-									</div>
-								 </td>
-							  </tr>
-							 
-							  </tbody>
-						</table>
+										</div> 
+										<div class="col-md-3"><label>Maximum Out-of-Pocket</label>
+										<ul class="list-unstyled">
+											<li><label class="listlabel" style="padding-right:15px;">Individual </label> <label>$ 6,350</label></li>
+											<li><label class="listlabel" style="padding-right:38px;">Family </label> <label>$ 12,700</label></li>
+										</ul>
+										</div>
+										<div class="col-md-3">
+										</div>
+										   <div class="col-md-2" style="color:#063;">
+										   <label class="estmatedpremium">$ 152.19</label><br><label class="listlabel">(Monthly Cost)</label>
+										   </div>
+										 </td>
+									  </tr>
+									  
+									  <tr id="filter_46944AL0460001-00" style="display: none;"><!-- section for filters -->
+										<td><p class="plan_id_filter">46944AL0460001</p></td>
+										<td><p class="estimatedpremium_filter">112.19</p></td>
+										<td><p class="deductable_individual_filter">$ 6,350</p></td>
+										<td><p class="plan_type_filter">PPO</p></td>
+										<td><p class="outofpocket_individual_filter">$6,350</p></td>
+										<td><p class="metal_level_filter">$ 6,350</p></td>
+									  </tr>
+									  </tbody>
+								</table>
 					</div>
 
 
@@ -638,7 +641,7 @@ margin: 0;
 							
 								<div class="col-lg-12">         
 									<div class="pull-right">
-										<a class="btn btn-info btn-xl remove-confirm" style="cursor: pointer;" onclick="javascript: validateSection(4);">Next &gt;&gt;</a>
+										<a class="btn btn-info btn-xl remove-confirm" style="cursor: pointer;background:#0a4571;" onclick="javascript: validateSection(4);">Next &gt;&gt;</a>
 									</div>  
 								</div>
 							</div>
@@ -742,7 +745,7 @@ margin: 0;
 								
 
 							<!--<div class="col-sm-4"> <div class="form-group"><label for="enroll_pcpid" class="control-label">PCP ID </label>--><input aria-invalid="false" value="" placeholder=" " name="enroll_pcpid" id="enroll_pcpid" class="form-control" type="hidden"><!--</div></div>-->
-							<div align="center">
+							<div align="center" style="clear:both !important;">
 										<h4>COB Information</h4>
 									</div>
 							
@@ -792,7 +795,7 @@ margin: 0;
 							
 							<div class="col-lg-12">                                     
 								<div class="pull-right">
-									<a style="cursor: pointer;" onclick="javascript: validateSection(5);" class="btn btn-info btn-xl remove-confirm">Next &gt;&gt;</a>
+									<a style="cursor: pointer;background:#0a4571;" onclick="javascript: validateSection(5);" class="btn btn-info btn-xl remove-confirm">Next &gt;&gt;</a>
 								</div>  
 							</div>	
 						</div>
@@ -1188,7 +1191,7 @@ margin: 0;
 								
 
 							<!--<div class="col-sm-4"> <div class="form-group"><label for="enroll_pcpid" class="control-label">PCP ID </label>--><input style="background: rgb(236, 236, 236) none repeat scroll 0% 0%;" disabled="disabled" readonly="readonly" aria-invalid="false" value="" placeholder=" " name="" id="enroll_pcpid_cloned" class="form-control" type="hidden"><!--</div></div>-->
-							<div align="center">
+							<div align="center" style="clear:both;">
 										<h4>COB Information</h4>
 									</div>
 							
@@ -1246,13 +1249,13 @@ margin: 0;
 						<div class="clearfix"></div>
 						
 					</div><div id="temp_submit_row" style="display: block;">
-						<div class="clearrow" style="float: right; margin-top:-23px;">
+						<div class="clearrow" style="">
 							<div style="margin-right: 15px;" class="pull-right">                                     
-							  <button name="vEnrollSubmit" id="vEnrollSubmit" class="btn btn-info btn-xl" type="submit"><i class="fa fa-plus"></i> Enroll</button>
+							  <button name="vEnrollSubmit" id="vEnrollSubmit" class="btn btn-info btn-xl" type="submit" style="background:#0a4571;box-shadow:3px 3px 3px grey;border:0;"><i class="fa fa-plus"></i> Enroll</button>
 							</div>
 							
-							<div class="pull-right" style="margin-right: 5px;">
-								<a href="javascript: editData();" class="btn btn-info btn-xl">Back</a>
+							<div class="pull-right" style="margin-right: 5px;border-radius:4px;">
+								<a href="" class="btn btn-info btn-xl" style="background:#0a4571;box-shadow:3px 3px 3px grey;border:0;">Back  </a>
 							</div> 
 							
 						</div>
@@ -1264,11 +1267,11 @@ margin: 0;
 					<div id="temp_submit_row" style="display: none;">
 						<div class="clearrow" style="float: right; margin-top:-23px;">
 							<div style="margin-right: 15px;" class="pull-right">                                     
-							  <button name="vEnrollSubmit" id="vEnrollSubmit" class="btn btn-info btn-xl" type="submit"><i class="fa fa-plus"></i> Enroll</button>
+							  <button name="vEnrollSubmit" id="vEnrollSubmit" class="btn btn-info btn-xl" type="submit" style="background:#0a4571;box-shadow:3px 3px 3px grey;border:0;"><i class="fa fa-plus"></i> Enroll</button>
 							</div>
 							
 							<div class="pull-right" style="margin-right: 5px;">
-								<a href="javascript: editData();" class="btn btn-info btn-xl">Back</a>
+								<a href="" class="btn btn-info btn-xl">Back</a>
 							</div> 
 							
 						</div>
@@ -1309,7 +1312,7 @@ margin: 0;
         <div class="row">
           <div class="col-md-12">
             <div class="footer-top-area">             
-                <a class="footer-logo" href="#"><img src="assets/images/logo.jpg" alt="Logo"></a>              
+                         
               <div class="footer-social">
                 <a class="facebook" href="#"><span class="fa fa-facebook"></span></a>
                 <a class="twitter" href="#"><span class="fa fa-twitter"></span></a>

@@ -1,15 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Sutherland : Home of health care</title>
-    <!-- Favicon -->
-   
-    <!-- Font Awesome -->
-    <link href="assets/css/font-awesome.css" rel="stylesheet">
+   <head>
+      <meta charset="utf-8">
+      <title>search</title>
+	    <link href="assets/css/font-awesome.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!-- Slick slider -->
@@ -32,19 +26,21 @@
     <link rel="stylesheet" type="text/css" href="assets/css/animate.css"/>  
      <!-- Theme color -->
     <link id="switcher" href="assets/css/theme-color/default.css" rel="stylesheet">
-	<!-- datepicker -->
-	  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
- 
-  <link rel="stylesheet" href="/resources/demos/style.css">
-	
-	
-	 
-	
-	
-	
-
-    <!-- Main Style -->
-    <link href="style.css" rel="stylesheet">
+	  
+	  
+	  
+	  
+	  
+	  
+      <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <!-- Javascript -->
+	  
+	  
+	  
+	  
+	   <link href="style.css" rel="stylesheet">
 <link href="assets/css/responsive-menu.css" rel="stylesheet"/>
     <!-- Fonts -->
     <!-- Open Sans for body font -->
@@ -61,30 +57,16 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
-  
-  <script>
+      <script>
          $(function() {
-            $("#datepicker").datepicker();
-           
+            $( "#datepicker-13" ).datepicker();
+          
          });
       </script>
-
-  <!-- BEGAIN PRELOADER -->
-  <div id="preloader">
-    <div class="loader">&nbsp;</div>
-  </div>
-  <!-- END PRELOADER -->
-
-  <!-- SCROLL TOP BUTTON -->
-    <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
-  <!-- END SCROLL TOP BUTTON -->
-
-  
-
-  <!-- Start menu section -->
-  <section id="menu-area">
+   </head>
+   <body>
+      <!-- HTML --> 
+      <section id="menu-area">
     <nav class="navbar navbar-default main-navbar" role="navigation">  
       <div class="container">
         <div class="navbar-header">
@@ -181,7 +163,9 @@
 					
 					</style>
 					
-										
+	  
+	  
+	  										
 					<div class="panel-heading" style="background:#0f5183;">
 						<h3 class="panel-title">Search Your Plan </h3>					
 					</div>
@@ -234,8 +218,8 @@
 		
 						<div class="col-lg-6">                        
 							<div aria-required="true" class="form-group required">
-								<label for="dob" class="mand control-label">Date Of Birth (MM/DD/YYYY)</label>								
-								<input aria-required="true" name="dob" value="" id="datepicker" maxlength="50" class="form-control required datePicker hasDatepicker" placeholder="DOB" readonly="readonly" type="text">
+							<label for="datepicker-13" class="mand control-label">DOB</label>
+								 <p style=""> <input type="text" id="datepicker-13" style="width:100%;height:35px;"></p>
 							</div>
 							<div aria-required="true" class="form-group required">                               
 								<label for="vistobaco" class="mand control-label">Tobacco User?</label>								<select aria-required="true" name="vistobaco" class="required form-control" id="vistobaco">
@@ -295,7 +279,7 @@
 							<div class="pull-right">
 								
 							
-								 <a href="showplans.html" style="background: green none repeat scroll 0% 0%; color: rgb(255, 255, 255); padding: 6px; font-size: 12px;
+								 <a href="showplans.html" style="box-shadow:3px 3px 3px grey; border:0;background: #0a4571 none repeat scroll 0% 0%; color: rgb(255, 255, 255); padding: 6px; font-size: 12px;
     text-decoration: none;">Show Plans  </a> 
 							</div>  
 						</div>
@@ -334,83 +318,9 @@
 						</div>
 					 
 					</div>
-				</div>		  
-
-			</div> 
-            
-			<div class="col-lg-2"></div>
-               
-        </div><!--/.row-->
-    </div><!--/.container-->
-</section>
-  
-  
-  
-  
-  
-  <!-- end search section -->
-
-  
-  <!-- Start Footer -->    
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="footer-top-area">             
-                <a class="footer-logo" href="#"><img src="assets/images/logo.jpg" alt="Logo"></a>              
-              <div class="footer-social">
-                <a class="facebook" href="#"><span class="fa fa-facebook"></span></a>
-                <a class="twitter" href="#"><span class="fa fa-twitter"></span></a>
-                <a class="google-plus" href="#"><span class="fa fa-google-plus"></span></a>
-                <a class="youtube" href="#"><span class="fa fa-youtube"></span></a>
-                <a class="linkedin" href="#"><span class="fa fa-linkedin"></span></a>
-                <a class="dribbble" href="#"><span class="fa fa-dribbble"></span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>Designed by <a href="">ramyam labs intelligence</a></p>
-    </div>
-  </footer>
-  <!-- End Footer -->
-
-  <!-- initialize jQuery Library --> 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <!-- Bootstrap -->
-  <script src="assets/js/bootstrap.js"></script>
-  <!-- Slick Slider -->
-  <script type="text/javascript" src="assets/js/slick.js"></script>
-  <!-- Counter -->
-  <script type="text/javascript" src="assets/js/waypoints.js"></script>
-  <script type="text/javascript" src="assets/js/jquery.counterup.js"></script>
-  <!-- mixit slider -->
-  <script type="text/javascript" src="assets/js/jquery.mixitup.js"></script>
-  <!-- Add fancyBox -->        
-  <script type="text/javascript" src="assets/js/jquery.fancybox.pack.js"></script>
-  <!-- Wow animation -->
-  <script type="text/javascript" src="assets/js/wow.js"></script> 
-
-  <!-- Custom js -->
-  <script type="text/javascript" src="assets/js/custom.js"></script>
-  
-  
-   <script type="text/javascript" src="assets/js/responsive-menu.min.js"></script>
-   
-   
-   
-   
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-   
-   
-   
-   
-   <script>
+	  
+	  
+	  <script>
         jQuery(function ($) {
             var menu = $('.rm-nav').rMenu({
 
@@ -503,13 +413,7 @@
             });
         });
 		</script>
-		
-		
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <!-- Bootstrap -->
-  <script src="assets/js/bootstrap.js"></script>
+		<script src="assets/js/bootstrap.js"></script>
   <!-- Slick Slider -->
   <script type="text/javascript" src="assets/js/slick.js"></script>
   <!-- Counter -->
@@ -528,9 +432,6 @@
   
    <script type="text/javascript" src="assets/js/responsive-menu.min.js"></script>
    
-		
-		
-		
-    
-  </body>
+	  
+   </body>
 </html>
