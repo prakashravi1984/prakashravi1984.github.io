@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+   
     <title>Sutherland : Home of health care</title>
     <!-- Favicon -->
    
@@ -285,6 +285,16 @@ margin: 0;
 .accordion-group:hover{
  
 }
+.shad{
+border: thin solid rgb(192, 195, 197); 
+margin-bottom:15px;
+margin-top:34px;
+padding-left:0px; 
+padding-right:0px;
+
+
+}
+
 .shad:hover{
 
 box-shadow: 1px 1px 1px grey;
@@ -301,6 +311,82 @@ padding:6px;
 .btn-info:hover{
 background:#0a4571;
 }
+
+#searchPlanContainerId{
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.panSty{
+margin-left:-15px;  margin-right: -15px;border: 1px solid #ccc;border-bottom: none;
+}
+.panel-title{
+font-weight:bold;
+}
+
+.panel-headingC{
+padding: 10px 15px;
+background:#0a4571;
+color:#fff;
+}
+.leftcol{
+margin-left:-15px; 
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.panel-primary{
+border:#ccc thin solid;
+}
+.compBut{
+color: #fff;
+background-color: #0a4571 !important;
+border-color: #0a4571;
+}
+#planlist{
+padding: 15px; 
+background: rgb(255, 255, 255) none repeat scroll 0% 0%; 
+border: 1px solid rgb(204, 204, 204);
+}
+.page{
+float:right;
+background: rgb(255, 255, 255) none repeat scroll 0% 0%; 
+
+}
+.pagelist{
+float: left; 
+margin: -19px 10px 0 0;
+}
+.pagebutt{
+color: #fff;
+background-color:  #0a4571;
+border-color: #337ab7;
+}
+.pagebutt:hover{
+background: #0a4571;
+}
+.pagebutt:active{
+background: #0a4571 !important;
+}
+.pagebutt:visited{
+background: #0a4571;
+}
+
+.wid{
+width:54%;
+}
+.labColor{
+color:#063;
+}
+#enrollButt{
+box-shadow:3px 3px 3px grey; 
+border:0;color: #fff;
+background-color:#0a4571;
+border:0;
+}
+.table{
+margin-bottom:5px;
+}
+
+.bgword{
+font-size:22px;
+}
 </style>
 
 
@@ -314,8 +400,7 @@ background:#0a4571;
 	</ul>
 		
 	<div id="notification"></div>
-        
-	 
+ 	 
 		
 			
 												
@@ -328,11 +413,11 @@ background:#0a4571;
 
 <div class="col-md-3" style="">
 			
-			<div class="leftcol" style="margin-left:-15px; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);">
+			<div class="leftcol" style="">
 				
-				<div class="panel panel-primary" style="border:#ccc thin solid;">
+				<div class="panel panel-primary" style="">
 
-					<div class="panel-heading" style="background:#21699f;">
+					<div class="panel-headingC" style="">
 						<h3 class="panel-title"><center>Customize Search Result</center></h3>
 					</div>
 					
@@ -342,21 +427,21 @@ background:#0a4571;
 															<div class="accordion-group">
 									<div class="accordion-heading panel-heading">
 										<a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse_estimated_premium" 
-										style="text-decoration:none;">
+										style="">
 											Estimated Premium 
 										</a>
 									</div>
 									
-									<div style="height: 0px;" aria-expanded="false" id="collapse_estimated_premium" class="accordion-body collapse">
+									<div style="" aria-expanded="false" id="collapse_estimated_premium" class="accordion-body collapse">
 										
 										<div class="accordion-inner">
 											
 											<ul>
 											
 																										<li>
-															<span id="estimated_premium_amount_disp" style="margin-left:10px;">$0 - $11632</span>
+															<span id="estimated_premium_amount_disp" style="">$0 - $11632</span>
 															<br>
-															<input value="0_11632" name="estimated_premium" id="estimated_premium_amount" readonly="" style="border:0;" type="hidden">
+															<input value="0_11632" name="estimated_premium" id="estimated_premium_amount" readonly="" style="" type="hidden">
 															<!-- <div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="estimated_premium_slider_range" style="width: 230px;margin-left:10px;margin-top:15px;"><div style="left: 0%; width: 58.16%;" class="ui-slider-range ui-widget-header ui-corner-all"></div><span style="left: 0%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span><span style="left: 58.16%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span></div>-->
 															<input type="range" min="10" max="1000" step="10" />
 														</li>
@@ -366,7 +451,7 @@ background:#0a4571;
 								</div>
 															<div class="accordion-group">
 									<div class="accordion-heading panel-heading ">
-										<a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse_plan_type" style="text-decoration:none;">
+										<a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse_plan_type" style="">
 											Plan Type 
 										</a>
 									</div>
@@ -379,7 +464,7 @@ background:#0a4571;
 											
 																										<li>
 															<div class="checkbox  checkbox-primary">
-															<input class="pfilter" data-filtertype="or" data-filtervalue="" data-filtername="plan_type" name="plan_type" id="plan_typePPO" value="PPO" type="checkbox" style="margin-left:0px;">
+															<input class="pfilter" data-filtertype="or" data-filtervalue="" data-filtername="plan_type" name="plan_type" id="plan_typePPO" value="PPO" type="checkbox" style="">
 															<label for="plan_typePPO">
 															   PPO 
 															</label>
@@ -387,7 +472,7 @@ background:#0a4571;
 														</li>
 																											<li>
 															<div class="checkbox  checkbox-primary">
-															<input class="pfilter" data-filtertype="or" data-filtervalue="" data-filtername="plan_type" name="plan_type" id="plan_typeHMO" value="HMO" type="checkbox" style="margin-left:0px;">
+															<input class="pfilter" data-filtertype="or" data-filtervalue="" data-filtername="plan_type" name="plan_type" id="plan_typeHMO" value="HMO" type="checkbox" style="">
 															<label for="plan_typeHMO">
 															   HMO 
 															</label>
@@ -399,7 +484,7 @@ background:#0a4571;
 								</div>
 															<div class="accordion-group">
 									<div class="accordion-heading panel-heading ">
-										<a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse_deductibles_individual" style="text-decoration:none;">
+										<a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse_deductibles_individual" style="">
 											Deductibles-Individual 
 										</a>
 									</div>
@@ -413,7 +498,7 @@ background:#0a4571;
 																										<li>
 															<span id="deductibles_individual_amount_disp">$0 - $20000</span>
 															<br>
-															<input name="deductibles_individual" id="deductibles_individual_amount" readonly="" style="border:0;" type="hidden">
+															<input name="deductibles_individual" id="deductibles_individual_amount" readonly="" style="" type="hidden">
 															<!-- <div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="deductibles_individual_slider_range" style="width: 230px;margin-left:7px;margin-top:15px; "><div style="left: 0%; width: 100%;" class="ui-slider-range ui-widget-header ui-corner-all"></div><span style="left: 0%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span><span style="left: 100%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span></div>-->
 															<input type="range" min="10" max="1000" step="10" />
 														</li>
@@ -423,7 +508,7 @@ background:#0a4571;
 								</div>
 															<div class="accordion-group">
 									<div class="accordion-heading panel-heading ">
-										<a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse_deductibles_family" style="text-decoration:none;">
+										<a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse_deductibles_family" style="">
 											Deductibles-Family 
 										</a>
 									</div>
@@ -437,8 +522,9 @@ background:#0a4571;
 																										<li>
 															<span id="deductibles_family_amount_disp">$0 - $20000</span>
 															<br>
-															<input name="deductibles_family" id="deductibles_family_amount" readonly="" style="border:0;" type="hidden">
+															<input name="deductibles_family" id="deductibles_family_amount" readonly="" style="" type="hidden">
 															<!-- <div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="deductibles_family_slider_range" style="width: 230px;margin-left:7px; margin-top:15px;"><div style="left: 0%; width: 100%;" class="ui-slider-range ui-widget-header ui-corner-all"></div><span style="left: 0%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span><span style="left: 100%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span></div>-->
+														    <input type="range" min="10" max="1000" step="10" />
 														</li>
 																								</ul>
 										</div>
@@ -446,7 +532,7 @@ background:#0a4571;
 								</div>
 															<div class="accordion-group">
 									<div class="accordion-heading panel-heading ">
-										<a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse_maximum_out_of_pocket_individual" style="text-decoration:none;">
+										<a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse_maximum_out_of_pocket_individual" style="">
 											Maximum Out-of-Pocket-Individual 
 										</a>
 									</div>
@@ -460,7 +546,7 @@ background:#0a4571;
 																										<li>
 															<span id="maximum_out_of_pocket_individual_amount_disp">$0 - $20000</span>
 															<br>
-															<input name="maximum_out_of_pocket_individual" id="maximum_out_of_pocket_individual_amount" readonly="" style="border:0;" type="hidden">
+															<input name="maximum_out_of_pocket_individual" id="maximum_out_of_pocket_individual_amount" readonly="" style="" type="hidden">
 															<!-- <div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="maximum_out_of_pocket_individual_slider_range" style="width: 230px; margin-left:7px; margin-top:15px;"><div style="left: 0%; width: 100%;" class="ui-slider-range ui-widget-header ui-corner-all"></div><span style="left: 0%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span><span style="left: 100%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span></div> -->
 															<input type="range" min="10" max="1000" step="10" />
 														</li>
@@ -470,7 +556,7 @@ background:#0a4571;
 								</div>
 															<div class="accordion-group">
 									<div class="accordion-heading panel-heading ">
-										<a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse_maximum_out_of_pocket_family" style="text-decoration:none;">
+										<a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse_maximum_out_of_pocket_family" style="">
 											Maximum Out-of-Pocket-Family 
 										</a>
 									</div>
@@ -494,7 +580,7 @@ background:#0a4571;
 								</div>
 															<div class="accordion-group">
 									<div class="accordion-heading panel-heading ">
-										<a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse_plan_level" style="text-decoration:none;">
+										<a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse_plan_level" style="">
 											Plan Level
 										</a>
 									</div>
@@ -567,30 +653,7 @@ background:#0a4571;
 								</div>
 														
 						</div>
-						
-						<!-- <div class="accordion-group">
-							<div class="accordion-heading panel-heading">
-								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_plan_name">
-									Plan Name<i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" style="color:#0CF;background:none;"></i> 
-								</a>
-							</div>
-							<div id="collapse_plan_name"  class="accordion-body collapse">
-								<div class="accordion-inner">
-									<ul>
-										<li>
-											<div class="form-group">
-												<input type="text" class="form-control pfilter" name="plan_name" id="plan_name" />
-												<script>
-													searchCriteriaArr.push({'type': 'textbox', 'name': 'plan_name', 'resName': 'Plan_Name'});
-												</script>
-											</div>
-											<br/>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div> -->
-				  
+					
 					</div>
 
 				</div>
@@ -599,24 +662,18 @@ background:#0a4571;
              			
         </div>
 
-<div class="col-md-9" id="searchPlanContainerId" style="box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);">
+<div class="col-md-9" id="searchPlanContainerId" style="">
 		
 						
-			<div class="panel-heading clearfix" style="margin-left:-15px;  margin-right: -15px;border: 1px solid #ccc;border-bottom: none;">				
-				<h3 class="panel-title pull-left" style="font-weight:bold;"><center>List of Plans</center></h3>
+			<div class="panel-heading clearfix panSty" style="">				
+				<h3 class="panel-title pull-left" style=""><center>List of Plans</center></h3>
 				
 				<div class="btn-group col-md-7 compare_btn_group"></div>
 				<div class="btn-group text-center">
-					<button id="compareItemsButtonId" class="btn btn-info btn-xs disabled" onclick="" style="color: #fff;background-color: #0a4571;border-color: #0a4571;">Compare</button>
+					<button id="compareItemsButtonId" class="btn btn-info btn-xs disabled compBut" onclick="" style="">Compare</button>
 				</div>
 				
-				<!--<div class="form-group pull-right" style="width: 60%; ">
-                  <div class="tokenfield form-control">
-					<div class="token"><span class="token-label" style="max-width: 15%;">red</span><a href="#" class="close" tabindex="-1">×</a></div>
-					<div class="token"><span class="token-label" style="max-width: 15%;">green</span><a href="#" class="close" tabindex="-1">×</a></div>
-					<div class="token"><span class="token-label" style="max-width: 15%;">blue</span><a href="#" class="close" tabindex="-1">×</a></div>
-				</div>
-                </div>-->
+				
 				
 			</div>
 			<div class="nothingtodisplay" id="nothingtodisplay" style="margin-left:-15px; margin-right: -15px;border: 1px solid #ccc;display: none;">
@@ -624,16 +681,16 @@ background:#0a4571;
 				<div class="alert alert-warning">No Records found, Please refine your search</div> 
 			</div>
 						
-			<div class="row" id="planlist" style="padding: 15px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 1px solid rgb(204, 204, 204);"> 
-				<!-- Pagination Logic -->
-				<div style=" margin: 10px 0; height: 30px; float: right;">
-					<!-- Pagination Links -->
-					<div style="float: left; margin: -19px 10px 0 0;"><ul class="pagination pull-left pagination_links" data-range="4"><li class="jplist-first disabled" data-number="0" data-type="first"><a href="#"><span aria-hidden="true">«</span><span class="sr-only">First</span></a></li><li class="jplist-prev disabled" data-type="prev" data-number="-1"><a href="#"><span aria-hidden="true">‹</span><span class="sr-only">Previous</span></a></li><li data-type="page" class=" jplist-page active" data-number="0"><a href="#">1</a></li><li data-type="page" class=" jplist-page " data-number="1"><a href="#">2</a></li><li class="jplist-next " data-type="next" data-number="1"><a href="#"><span aria-hidden="true">›</span><span class="sr-only">Next</span></a></li><li class="jplist-last disabled" data-type="last" data-number="1"><a href="#"><span aria-hidden="true">»</span><span class="sr-only">Last</span></a></li></ul></div>
+			<div class="row" id="planlist" style=""> 
+			
+				<div class="page" style="">
 				
-					<!-- items per page dropdown -->
+					<div class="pagelist" style=""><ul class="pagination pull-left pagination_links" data-range="4"><li class="jplist-first disabled" data-number="0" data-type="first"><a href="#"><span aria-hidden="true">«</span><span class="sr-only">First</span></a></li><li class="jplist-prev disabled" data-type="prev" data-number="-1"><a href="#"><span aria-hidden="true">‹</span><span class="sr-only">Previous</span></a></li><li data-type="page" class=" jplist-page active" data-number="0"><a href="#">1</a></li><li data-type="page" class=" jplist-page " data-number="1"><a href="#">2</a></li><li class="jplist-next " data-type="next" data-number="1"><a href="#"><span aria-hidden="true">›</span><span class="sr-only">Next</span></a></li><li class="jplist-last disabled" data-type="last" data-number="1"><a href="#"><span aria-hidden="true">»</span><span class="sr-only">Last</span></a></li></ul></div>
+				
+				
 					<div class="dropdown pull-right jplist-items-per-page" data-control-type="boot-items-per-page-dropdown" data-control-name="paging" data-control-action="paging" style="float: left;">
 
-						 <button class="btn btn-info dropdown-toggle" style="color: #fff;background-color: #337ab7;border-color: #337ab7;" type="button" data-toggle="dropdown" id="dropdown-menu-1" aria-expanded="true">					
+						 <button class="btn btn-info dropdown-toggle pagebutt" style="" type="button" data-toggle="dropdown" id="dropdown-menu-1" aria-expanded="true">					
 							<span data-type="selected-text">5 per page</span>
 							<span class="caret"></span>						
 						 </button>
@@ -661,202 +718,16 @@ background:#0a4571;
 					</div>
 				</div>
 				
-				<!-- panel -->   				
-				<!-- HTML data -->   
 				<div class="list">         
-					<!-- ITERATING OVER THE PLAN DETAILS -->
+				
 					<div class="list-item-container">
-						<div style="display: block;" class="list-item list_item_1" id="list_item_46944AL0460001-00">
-							<div class="shad col-md-12" style="border: thin solid rgb(192, 195, 197); margin-bottom:15px;margin-top:20px;padding-left:0px; padding-right:0px;">
-								<table class="table" style="margin-bottom: 5px;">
-									<thead style="">
-									  <tr>
-										<th>
-											<div style="clear: both; widht: 100%;">
-												<div class="col-md-9">
-													<span><label class="listlabel">Plan Name</label> : Blue Saver Bronze </span>
-													
-													
-													
-												</div> 
-												
-												<div class="col-md-3">
-													<span><label class="listlabel">Plan Type</label> : PPO</span>
-												</div> 
-												
-											</div>
-											
-											<div style="clear: both; widht: 100%;">
-											
-												<div class="col-md-9">
-																									</div>
-												 
-												<div class="col-md-3">
-													<label class="listlabel">Plan Level</label> : Bronze
-												</div>
-											</div>
-										</th>
-									  </tr>
-									</thead>
-									
-									<tbody style="">
-									  <tr>
-										<td><div class="col-md-3"><label>Deductibles</label>
-										<ul class="list-unstyled">
-										 <li><label class="listlabel" style="padding-right:15px;">Individual </label> <label>$ 6,350</label></li>
-											<li><label class="listlabel" style="padding-right:38px;">Family </label> <label>$ 12,700</label></li>
-										</ul>
-										</div> 
-										<div class="col-md-3"><label>Maximum Out-of-Pocket</label>
-										<ul class="list-unstyled">
-											<li><label class="listlabel" style="padding-right:15px;">Individual </label> <label>$ 6,350</label></li>
-											<li><label class="listlabel" style="padding-right:38px;">Family </label> <label>$ 12,700</label></li>
-										</ul>
-										</div>
-										<div class="col-md-3">
-										</div>
-										   <div class="col-md-2" style="color:#063;">
-										   <label class="estmatedpremium">$ 152.19</label><br><label class="listlabel">(Monthly Cost)</label>
-										   </div>
-										 </td>
-									  </tr>
-									  <tr>
-										<td><div class="col-md-3 pull-left">
-											  <div class="checkbox checkbox-success" style="margin-top: 0px; margin-bottom: 5px;">
-												<input id="planaddtocartcheckbox_46944AL0460001-08" onclick="" value="46944AL0460001-00" type="checkbox">
-												<label for="planaddtocartcheckbox_46944AL0460001-08" style="font-weight:500; color:#0a4571">
-												   Compare
-												</label>
-												<input id="planaddtocarthidden_46944AL0460001-00" value="Blue Saver Bronze" type="hidden">
-											</div>
-									   </div>
-										<div class="col-md-3 pull-right">
-											<button type="button" id="enrolbutton_46944AL0460001-00" class="btn btn-info btn-xs enroll" onclick="window.location.href='plansenroll.html'" required="required" style="box-shadow:3px 3px 3px grey; border:0;color: #fff;background-color: #337ab7;border:0;"><i class="fa fa-check-square-o"></i> Enroll</button>&nbsp;&nbsp;&nbsp;&nbsp;
-											<button type="button" id="detailsbutton_46944AL0460001-00" class="btn btn-info btn-xs plandetail" onclick="window.location.href='details.html'" required="required" style="color: #fff;background-color: #337ab7;border:0;box-shadow:3px 3px 3px grey;"><i class="fa fa-check-square-o"></i> Details</button>
-										</div> 
-										</td>
-									  </tr>
-									  <tr id="filter_46944AL0460001-00" style="display: none;"><!-- section for filters -->
-										<td><p class="plan_id_filter">46944AL0460001</p></td>
-										<td><p class="estimatedpremium_filter">112.19</p></td>
-										<td><p class="deductable_individual_filter">$ 6,350</p></td>
-										<td><p class="plan_type_filter">PPO</p></td>
-										<td><p class="outofpocket_individual_filter">$6,350</p></td>
-										<td><p class="metal_level_filter">$ 6,350</p></td>
-									  </tr>
-									  </tbody>
-								</table>
-							</div>
-						</div>
-						
-						
-						
-						<div style="display: block;" class="list-item list_item_1" id="list_item_46944AL0460001-00">
-							<div class="shad col-md-12" style="border: thin solid rgb(192, 195, 197); margin-bottom:15px;margin-top:20px;padding-left:0px; padding-right:0px;">
-								<table class="table" style="margin-bottom: 5px;">
+						<div style="" class="list-items" id="">
+							<div class="shad col-md-12" style="">
+								<table class="table" style="">
 									<thead style="">
 									  <tr>
 										<th>
 											<div style="">
-												<div class="col-md-9">
-													<span><label class="listlabel">Plan Name</label> : Blue Saver Bronze </span>
-													
-													
-													
-												</div> 
-												
-												<div class="col-md-3">
-													<span><label class="listlabel">Plan Type</label> : PPO</span>
-												</div> 
-												
-											</div>
-											
-											<div style="clear: both; widht: 100%;">
-											
-												<div class="col-md-9">
-																									</div>
-												 
-												<div class="col-md-3">
-													<label class="listlabel">Plan Level</label> : Bronze
-												</div>
-											</div>
-										</th>
-									  </tr>
-									</thead>
-									
-									<tbody style="">
-									  <tr>
-										<td><div class="col-md-3"><label>Deductibles</label>
-										<ul class="list-unstyled">
-										 <li><label class="listlabel" style="padding-right:15px;">Individual </label> <label>$ 6,350</label></li>
-											<li><label class="listlabel" style="padding-right:38px;">Family </label> <label>$ 12,700</label></li>
-										</ul>
-										</div> 
-										<div class="col-md-3"><label>Maximum Out-of-Pocket</label>
-										<ul class="list-unstyled">
-											<li><label class="listlabel" style="padding-right:15px;">Individual </label> <label>$ 6,350</label></li>
-											<li><label class="listlabel" style="padding-right:38px;">Family </label> <label>$ 12,700</label></li>
-										</ul>
-										</div>
-										<div class="col-md-3">
-										</div>
-										   <div class="col-md-2" style="color:#063;">
-										   <label class="estmatedpremium">$ 152.19</label><br><label class="listlabel">(Monthly Cost)</label>
-										   </div>
-										 </td>
-									  </tr>
-									  <tr>
-										<td><div class="col-md-3 pull-left">
-											  <div class="checkbox checkbox-success" style="margin-top: 0px; margin-bottom: 5px;">
-												<input id="planaddtocartcheckbox_46944AL0460001-02" onclick="" value="46944AL0460001-00" type="checkbox">
-												<label for="planaddtocartcheckbox_46944AL0460001-02" style="font-weight:500; color:#0a4571">
-												   Compare
-												</label>
-												<input id="planaddtocarthidden_46944AL0460001-00" value="Blue Saver Bronze" type="hidden">
-											</div>
-									   </div>
-										<div class="col-md-3 pull-right">
-											<button type="button" id="enrolbutton_46944AL0460001-00" class="btn btn-info btn-xs enroll" onclick="window.location.href='plansenroll.html'" required="required" style="color: #fff;background-color: #337ab7;border:0;box-shadow:3px 3px 3px grey;"><i class="fa fa-check-square-o"></i> Enroll</button>&nbsp;&nbsp;&nbsp;&nbsp;
-											<button type="button" id="detailsbutton_46944AL0460001-00" class="btn btn-info btn-xs plandetail" onclick="window.location.href='details.html'" required="required" style="color: #fff;background-color: #337ab7;border:0;box-shadow:3px 3px 3px grey;"><i class="fa fa-check-square-o"></i> Details</button>
-										</div> 
-										</td>
-									  </tr>
-									  <tr id="filter_46944AL0460001-00" style="display: none;"><!-- section for filters -->
-										<td><p class="plan_id_filter">46944AL0460001</p></td>
-										<td><p class="estimatedpremium_filter">112.19</p></td>
-										<td><p class="deductable_individual_filter">$ 6,350</p></td>
-										<td><p class="plan_type_filter">PPO</p></td>
-										<td><p class="outofpocket_individual_filter">$ 6,350</p></td>
-										<td><p class="metal_level_filter">$ 6,350</p></td>
-									  </tr>
-									  </tbody>
-								</table>
-							</div>
-						</div>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<div style="display: block;" class="list-item list_item_1" id="list_item_46944AL0460001-00">
-							<div class="shad col-md-12" style="border:thin solid rgb(192, 195, 197); margin-bottom:15px;margin-top:20px;padding-left:0px; padding-right:0px;">
-								<table class="table" style="margin-bottom: 5px;">
-									<thead style="">
-									  <tr>
-										<th>
-											<div style="clear: both; widht: 100%;">
 												<div class="col-md-9">
 													<span><label class="listlabel">Plan Name</label> : Blue Saver Bronze </span>
 													
@@ -887,46 +758,239 @@ background:#0a4571;
 									  <tr>
 										<td><div class="col-md-3"><label>Deductibles</label>
 										<ul class="list-unstyled">
-										 <li><label class="listlabel" style="padding-right:15px;">Individual </label> <label>$ 6,350</label></li>
-											<li><label class="listlabel" style="padding-right:38px;">Family </label> <label>$ 12,700</label></li>
+										 <li><label class="listlabel  wid" style="">Individual </label> <label>$ 6,350</label></li>
+											<li><label class="listlabel wid" style="padding-right:38px;">Family </label> <label>$ 12,700</label></li>
 										</ul>
 										</div> 
 										<div class="col-md-3"><label>Maximum Out-of-Pocket</label>
 										<ul class="list-unstyled">
-											<li><label class="listlabel" style="padding-right:15px;">Individual </label> <label>$ 6,350</label></li>
-											<li><label class="listlabel" style="padding-right:38px;">Family </label> <label>$ 12,700</label></li>
+											<li><label class="listlabel wid" style="">Individual </label> <label>$ 6,350</label></li>
+											<li><label class="listlabel wid" style="">Family </label> <label>$ 12,700</label></li>
 										</ul>
 										</div>
 										<div class="col-md-3">
 										</div>
-										   <div class="col-md-2" style="color:#063;">
-										   <label class="estmatedpremium">$ 112.19</label><br><label class="listlabel">(Monthly Cost)</label>
+										   <div class="col-md-2 labColor" style="">
+										      <img src="assets/images/Logo_Cigna.png" style="width:79%;"/><br>
+										   <label class="estmatedpremium bgword">$ 152.19</label><br>
+										 
+										   <label class="listlabel">(Monthly Cost)</label>
 										   </div>
 										 </td>
 									  </tr>
 									  <tr>
 										<td><div class="col-md-3 pull-left">
-											  <div class="checkbox checkbox-success" style="margin-top: 0px; margin-bottom: 5px;">
-												<input id="planaddtocartcheckbox_46944AL0460001-06" onclick="addPlanToCompare(this)" value="46944AL0460001-00" type="checkbox">
-												<label for="planaddtocartcheckbox_46944AL0460001-06" style="font-weight:500; color:#0a4571">
+											  <div class="checkbox checkbox-success" style="">
+												<input id="input1" onclick="" value="" type="checkbox">
+												<label id="compa"for="input1" style="">
 												   Compare
 												</label>
-												<input id="planaddtocarthidden_46944AL0460001-00" value="Blue Saver Bronze" type="hidden">
+												<input id="" value="Blue Saver Bronze" type="hidden">
 											</div>
 									   </div>
 										<div class="col-md-3 pull-right">
-											<button type="button" id="enrolbutton_46944AL0460001-00" class="btn btn-info btn-xs enroll" onclick="window.location.href='plansenroll.html'" required="required" style="color: #fff;background-color: #337ab7;border:0;;box-shadow:3px 3px 3px grey;"><i class="fa fa-check-square-o"></i> Enroll</button>&nbsp;&nbsp;&nbsp;&nbsp;
-											<button type="button" id="detailsbutton_46944AL0460001-00" class="btn btn-info btn-xs plandetail" onclick="window.location.href='details.html'" required="required" style="color: #fff;background-color: #337ab7;border:0;box-shadow:3px 3px 3px grey;"><i class="fa fa-check-square-o"></i> Details</button>
+											<button type="button" id="enrollButt" class="btn btn-info btn-xs enroll" onclick="window.location.href='plansenroll.html'" required="required" style=""><i class="fa fa-check-square-o"></i> Enroll</button>&nbsp;&nbsp;&nbsp;&nbsp;
+											<button type="button" id="enrollButt" class="btn btn-info btn-xs plandetail" onclick="window.location.href='details.html'" required="required" style=""><i class="fa fa-check-square-o"></i> Details</button>
 										</div> 
 										</td>
 									  </tr>
 									  <tr id="filter_46944AL0460001-00" style="display: none;"><!-- section for filters -->
-										<td><p class="plan_id_filter">46944AL0460001</p></td>
-										<td><p class="estimatedpremium_filter">112.19</p></td>
-										<td><p class="deductable_individual_filter">$ 6,350</p></td>
-										<td><p class="plan_type_filter">PPO</p></td>
-										<td><p class="outofpocket_individual_filter">$ 6,350</p></td>
-										<td><p class="metal_level_filter">$ 6,350</p></td>
+										<td><p>46944AL0460001</p></td>
+										<td><p>112.19</p></td>
+										<td><p>$ 6,350</p></td>
+										<td><p>PPO</p></td>
+										<td><p>$6,350</p></td>
+										<td><p>$ 6,350</p></td>
+									  </tr>
+									  </tbody>
+								</table>
+							</div>
+						</div>
+						
+						
+						
+						<div style="" class="list-items" id="">
+							<div class="shad col-md-12" style="">
+								<table class="table" style="">
+									<thead style="">
+									  <tr>
+										<th>
+											<div style="">
+												<div class="col-md-9">
+													<span><label class="listlabel">Plan Name</label> : Blue Saver Bronze </span>
+													
+													
+													
+												</div> 
+												
+												<div class="col-md-3">
+													<span><label class="listlabel">Plan Type</label> : PPO</span>
+												</div> 
+												
+											</div>
+											
+											<div style="">
+											
+												<div class="col-md-9">
+																									</div>
+												 
+												<div class="col-md-3">
+													<label class="listlabel">Plan Level</label> : Bronze
+												</div>
+											</div>
+										</th>
+									  </tr>
+									</thead>
+									
+									<tbody style="">
+									  <tr>
+										<td><div class="col-md-3"><label>Deductibles</label>
+										<ul class="list-unstyled">
+										 <li><label class="listlabel  wid" style="">Individual </label> <label>$ 6,350</label></li>
+											<li><label class="listlabel wid" style="padding-right:38px;">Family </label> <label>$ 12,700</label></li>
+										</ul>
+										</div> 
+										<div class="col-md-3"><label>Maximum Out-of-Pocket</label>
+										<ul class="list-unstyled">
+											<li><label class="listlabel wid" style="">Individual </label> <label>$ 6,350</label></li>
+											<li><label class="listlabel wid" style="">Family </label> <label>$ 12,700</label></li>
+										</ul>
+										</div>
+										<div class="col-md-3">
+										</div>
+										   <div class="col-md-2 labColor" style="">
+										     <img src="assets/images/Logo_Humana.png" style="width:79%;"/><br>
+										   <label class="estmatedpremium bgword">$ 152.19</label><br>
+										  
+										   <label class="listlabel">(Monthly Cost)</label>
+										   </div>
+										 </td>
+									  </tr>
+									  <tr>
+										<td><div class="col-md-3 pull-left">
+											  <div class="checkbox checkbox-success" style="">
+												<input id="input1" onclick="" value="" type="checkbox">
+												<label id="compa"for="input1" style="">
+												   Compare
+												</label>
+												<input id="" value="Blue Saver Bronze" type="hidden">
+											</div>
+									   </div>
+										<div class="col-md-3 pull-right">
+											<button type="button" id="enrollButt" class="btn btn-info btn-xs enroll" onclick="window.location.href='plansenroll.html'" required="required" style=""><i class="fa fa-check-square-o"></i> Enroll</button>&nbsp;&nbsp;&nbsp;&nbsp;
+											<button type="button" id="enrollButt" class="btn btn-info btn-xs plandetail" onclick="window.location.href='details1.html'" required="required" style=""><i class="fa fa-check-square-o"></i> Details</button>
+										</div> 
+										</td>
+									  </tr>
+									  <tr id="filter_46944AL0460001-00" style="display: none;"><!-- section for filters -->
+										<td><p>46944AL0460001</p></td>
+										<td><p>112.19</p></td>
+										<td><p>$ 6,350</p></td>
+										<td><p>PPO</p></td>
+										<td><p>$6,350</p></td>
+										<td><p>$ 6,350</p></td>
+									  </tr>
+									  </tbody>
+								</table>
+							</div>
+						</div>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<div style="" class="list-items" id="">
+							<div class="shad col-md-12" style="">
+								<table class="table" style="">
+									<thead style="">
+									  <tr>
+										<th>
+											<div style="">
+												<div class="col-md-9">
+													<span><label class="listlabel">Plan Name</label> : Blue Saver Bronze </span>
+													
+													
+													
+												</div> 
+												
+												<div class="col-md-3">
+													<span><label class="listlabel">Plan Type</label> : PPO</span>
+												</div> 
+												
+											</div>
+											
+											<div style="">
+											
+												<div class="col-md-9">
+																									</div>
+												 
+												<div class="col-md-3">
+													<label class="listlabel">Plan Level</label> : Bronze
+												</div>
+											</div>
+										</th>
+									  </tr>
+									</thead>
+									
+									<tbody style="">
+									  <tr>
+										<td><div class="col-md-3"><label>Deductibles</label>
+										<ul class="list-unstyled">
+										 <li><label class="listlabel  wid" style="">Individual </label> <label>$ 6,350</label></li>
+											<li><label class="listlabel wid" style="padding-right:38px;">Family </label> <label>$ 12,700</label></li>
+										</ul>
+										</div> 
+										<div class="col-md-3"><label>Maximum Out-of-Pocket</label>
+										<ul class="list-unstyled">
+											<li><label class="listlabel wid" style="">Individual </label> <label>$ 6,350</label></li>
+											<li><label class="listlabel wid" style="">Family </label> <label>$ 12,700</label></li>
+										</ul>
+										</div>
+										<div class="col-md-3">
+										</div>
+										   <div class="col-md-2 labColor" style="">
+										    <img src="assets/images/Logo_United.png" style="width:100%;"/><br>
+										   <label class="estmatedpremium bgword">$ 152.19</label><br>
+										   
+										   <label class="listlabel">(Monthly Cost)</label>
+										   </div>
+										 </td>
+									  </tr>
+									  <tr>
+										<td><div class="col-md-3 pull-left">
+											  <div class="checkbox checkbox-success" style="">
+												<input id="input1" onclick="" value="" type="checkbox">
+												<label id="compa"for="input1" style="">
+												   Compare
+												</label>
+												<input id="" value="Blue Saver Bronze" type="hidden">
+											</div>
+									   </div>
+										<div class="col-md-3 pull-right">
+											<button type="button" id="enrollButt" class="btn btn-info btn-xs enroll" onclick="window.location.href='plansenroll.html'" required="required" style=""><i class="fa fa-check-square-o"></i> Enroll</button>&nbsp;&nbsp;&nbsp;&nbsp;
+											<button type="button" id="enrollButt" class="btn btn-info btn-xs plandetail" onclick="window.location.href='details2.html'" required="required" style=""><i class="fa fa-check-square-o"></i> Details</button>
+										</div> 
+										</td>
+									  </tr>
+									  <tr id="filter_46944AL0460001-00" style="display: none;"><!-- section for filters -->
+										<td><p>46944AL0460001</p></td>
+										<td><p>112.19</p></td>
+										<td><p>$ 6,350</p></td>
+										<td><p>PPO</p></td>
+										<td><p>$6,350</p></td>
+										<td><p>$ 6,350</p></td>
 									  </tr>
 									  </tbody>
 								</table>
@@ -941,15 +1005,15 @@ background:#0a4571;
 						
 						
 					
-						<div style="display: block;" class="list-item list_item_2" id="list_item_46944AL0420001-00">
-							<div class="shad col-md-12" style="border:thin solid rgb(192, 195, 197); margin-bottom:15px;padding-left:0px;padding-right:0px;">
-								<table class="table" style="margin-bottom: 5px;">
+						<div style="" class="list-items" id="">
+							<div class="shad col-md-12" style="">
+								<table class="table" style="">
 									<thead style="">
 									  <tr>
 										<th>
 											<div style="">
 												<div class="col-md-9">
-													<span><label class="listlabel">Plan Name</label> : Blue Saver Silver </span>
+													<span><label class="listlabel">Plan Name</label> : Blue Saver Bronze </span>
 													
 													
 													
@@ -961,13 +1025,13 @@ background:#0a4571;
 												
 											</div>
 											
-											<div style="clear: both; widht: 100%;">
+											<div style="">
 											
 												<div class="col-md-9">
 																									</div>
 												 
 												<div class="col-md-3">
-													<label class="listlabel">Plan Level</label> : Silver
+													<label class="listlabel">Plan Level</label> : Bronze
 												</div>
 											</div>
 										</th>
@@ -978,46 +1042,49 @@ background:#0a4571;
 									  <tr>
 										<td><div class="col-md-3"><label>Deductibles</label>
 										<ul class="list-unstyled">
-										 <li><label class="listlabel" style="padding-right:15px;">Individual </label> <label>$ 3,000</label></li>
-											<li><label class="listlabel" style="padding-right:38px;">Family </label> <label>$ 6,000</label></li>
+										 <li><label class="listlabel  wid" style="">Individual </label> <label>$ 6,350</label></li>
+											<li><label class="listlabel wid" style="padding-right:38px;">Family </label> <label>$ 12,700</label></li>
 										</ul>
 										</div> 
 										<div class="col-md-3"><label>Maximum Out-of-Pocket</label>
 										<ul class="list-unstyled">
-											<li><label class="listlabel" style="padding-right:15px;">Individual </label> <label>$ 6,000</label></li>
-											<li><label class="listlabel" style="padding-right:38px;">Family </label> <label>$ 12,000</label></li>
+											<li><label class="listlabel wid" style="">Individual </label> <label>$ 6,350</label></li>
+											<li><label class="listlabel wid" style="">Family </label> <label>$ 12,700</label></li>
 										</ul>
 										</div>
 										<div class="col-md-3">
 										</div>
-										   <div class="col-md-2" style="color:#063;">
-										   <label class="estmatedpremium">$ 147.49</label><br><label class="listlabel">(Monthly Cost)</label>
+										   <div class="col-md-2 labColor" style="">
+										     <img src="assets/images/Logo_ELEVATE_DHMP.png" style="width:79%;"/><br>
+										   <label class="estmatedpremium bgword">$ 152.19</label><br>
+										  
+										   <label class="listlabel">(Monthly Cost)</label>
 										   </div>
 										 </td>
 									  </tr>
 									  <tr>
 										<td><div class="col-md-3 pull-left">
-											  <div class="checkbox checkbox-success" style="margin-top: 0px; margin-bottom: 5px;">
-												<input id="planaddtocartcheckbox_46944AL0420001-00" onclick="" value="46944AL0420001-00" type="checkbox">
-												<label for="planaddtocartcheckbox_46944AL0420001-00" style="font-weight:500; color:#0a4571">
+											  <div class="checkbox checkbox-success" style="">
+												<input id="input1" onclick="" value="" type="checkbox">
+												<label id="compa"for="input1" style="">
 												   Compare
 												</label>
-												<input id="planaddtocarthidden_46944AL0420001-00" value="Blue Saver Silver" type="hidden">
+												<input id="" value="Blue Saver Bronze" type="hidden">
 											</div>
 									   </div>
 										<div class="col-md-3 pull-right">
-											<button type="button" id="enrolbutton_46944AL0420001-00" class="btn btn-info btn-xs enroll" onclick="window.location.href='plansenroll.html'" required="required" style="color: #fff;background-color: #337ab7;border-color: #337ab7;box-shadow:2px 2px 2px grey;"><i class="fa fa-check-square-o"></i> Enroll</button>&nbsp;&nbsp;&nbsp;&nbsp;
-											<button type="button" id="detailsbutton_46944AL0420001-00" class="btn btn-info btn-xs plandetail" onclick="window.location.href='details.html'" required="required" style="color: #fff;background-color: #337ab7;border-color: #337ab7;box-shadow:2px 2px 2px grey;"><i class="fa fa-check-square-o"></i> Details</button>
+											<button type="button" id="enrollButt" class="btn btn-info btn-xs enroll" onclick="window.location.href='plansenroll.html'" required="required" style=""><i class="fa fa-check-square-o"></i> Enroll</button>&nbsp;&nbsp;&nbsp;&nbsp;
+											<button type="button" id="enrollButt" class="btn btn-info btn-xs plandetail" onclick="window.location.href='details3.html'" required="required" style=""><i class="fa fa-check-square-o"></i> Details</button>
 										</div> 
 										</td>
 									  </tr>
-									  <tr id="filter_46944AL0420001-00" style="display: none;"><!-- section for filters -->
-										<td><p class="plan_id_filter">46944AL0420001</p></td>
-										<td><p class="estimatedpremium_filter">147.49</p></td>
-										<td><p class="deductable_individual_filter">$ 3,000</p></td>
-										<td><p class="plan_type_filter">PPO</p></td>
-										<td><p class="outofpocket_individual_filter">$ 6,000</p></td>
-										<td><p class="metal_level_filter">$ 6,000</p></td>
+									  <tr id="filter_46944AL0460001-00" style="display: none;"><!-- section for filters -->
+										<td><p>46944AL0460001</p></td>
+										<td><p>112.19</p></td>
+										<td><p>$ 6,350</p></td>
+										<td><p>PPO</p></td>
+										<td><p>$6,350</p></td>
+										<td><p>$ 6,350</p></td>
 									  </tr>
 									  </tbody>
 								</table>
@@ -1028,17 +1095,17 @@ background:#0a4571;
 						
 						
 						
-						<div style="display: none;" class="list-item list_item_8" id="list_item_46944AL0410001-00">
-							<div class="shad col-md-12" style="thin solid rgb(192, 195, 197); margin-bottom:15px">
-								<table class="table" style="margin-bottom: 5px;">
-									<thead>
+			<div style="" class="list-items" id="">
+							<div class="shad col-md-12" style="">
+								<table class="table" style="">
+									<thead style="">
 									  <tr>
 										<th>
 											<div style="">
 												<div class="col-md-9">
-													<span><label class="listlabel">Plan Name</label> : Blue Value Silver </span>
+													<span><label class="listlabel">Plan Name</label> : Blue Saver Bronze </span>
 													
-													<span style="margin: -4px 0 0 20px;"><img src="" class="planlogo_bdr" alt="Blue Value Silver" border="0"></span>
+													
 													
 												</div> 
 												
@@ -1048,63 +1115,66 @@ background:#0a4571;
 												
 											</div>
 											
-											<div style="clear: both; widht: 100%;">
+											<div style="">
 											
 												<div class="col-md-9">
 																									</div>
 												 
 												<div class="col-md-3">
-													<label class="listlabel">Plan Level</label> : Silver
+													<label class="listlabel">Plan Level</label> : Bronze
 												</div>
 											</div>
 										</th>
 									  </tr>
 									</thead>
 									
-									<tbody>
+									<tbody style="">
 									  <tr>
 										<td><div class="col-md-3"><label>Deductibles</label>
 										<ul class="list-unstyled">
-										 <li><label class="listlabel" style="padding-right:15px;">Individual </label> <label>$ 2,400</label></li>
-											<li><label class="listlabel" style="padding-right:38px;]">Family </label> <label>$ 4,800</label></li>
+										 <li><label class="listlabel  wid" style="">Individual </label> <label>$ 6,350</label></li>
+											<li><label class="listlabel wid" style="padding-right:38px;">Family </label> <label>$ 12,700</label></li>
 										</ul>
 										</div> 
 										<div class="col-md-3"><label>Maximum Out-of-Pocket</label>
 										<ul class="list-unstyled">
-											<li><label class="listlabel" style="">Individual </label> <label>$ 6,350</label></li>
-											<li><label class="listlabel" style="">Family </label> <label>$ 12,700</label></li>
+											<li><label class="listlabel wid" style="">Individual </label> <label>$ 6,350</label></li>
+											<li><label class="listlabel wid" style="">Family </label> <label>$ 12,700</label></li>
 										</ul>
 										</div>
 										<div class="col-md-3">
 										</div>
-										   <div class="col-md-2" style="color:#063;">
-										   <label class="estmatedpremium">$ 139.04</label><br><label class="listlabel">(Monthly Cost)</label>
+										   <div class="col-md-2 labColor" style="">
+										   	   <img src="assets/images/Logo_Humana.png" style="width:79%;"/><br>
+										   <label class="estmatedpremium bgword">$ 152.19</label><br>
+									
+										   <label class="listlabel">(Monthly Cost)</label>
 										   </div>
 										 </td>
 									  </tr>
 									  <tr>
 										<td><div class="col-md-3 pull-left">
-											  <div class="checkbox checkbox-success" style="margin-top: 0px; margin-bottom: 5px;">
-												<input id="planaddtocartcheckbox_46944AL0410001-00" onclick="" value="46944AL0410001-00" type="checkbox">
-												<label for="planaddtocartcheckbox_46944AL0410001-00" style="font-weight:500; color:#0a4571">
+											  <div class="checkbox checkbox-success" style="">
+												<input id="input1" onclick="" value="" type="checkbox">
+												<label id="compa"for="input1" style="">
 												   Compare
 												</label>
-												<input id="planaddtocarthidden_46944AL0410001-00" value="Blue Value Silver" type="hidden">
+												<input id="" value="Blue Saver Bronze" type="hidden">
 											</div>
 									   </div>
 										<div class="col-md-3 pull-right">
-											<button type="button" id="enrolbutton_46944AL0410001-00" class="btn btn-info btn-xs enroll" onclick="window.location.href='plansenroll.html'" required="required" style="color: #fff;background-color: #337ab7;border-color: #337ab7;box-shadow:2px 2px 2px grey;"><i class="fa fa-check-square-o"></i> Enroll</button>&nbsp;&nbsp;&nbsp;&nbsp;
-											<button type="button" id="detailsbutton_46944AL0410001-00" class="btn btn-info btn-xs plandetail" onclick="" required="required" style="color: #fff;background-color: #337ab7;border-color: #337ab7;box-shadow:2px 2px 2px grey;"><i class="fa fa-check-square-o"></i> Details</button>
+											<button type="button" id="enrollButt" class="btn btn-info btn-xs enroll" onclick="window.location.href='plansenroll.html'" required="required" style=""><i class="fa fa-check-square-o"></i> Enroll</button>&nbsp;&nbsp;&nbsp;&nbsp;
+											<button type="button" id="enrollButt" class="btn btn-info btn-xs plandetail" onclick="window.location.href='details1.html'" required="required" style=""><i class="fa fa-check-square-o"></i> Details</button>
 										</div> 
 										</td>
 									  </tr>
-									  <tr id="filter_46944AL0410001-00" style="display: none;"><!-- section for filters -->
-										<td><p class="plan_id_filter">46944AL0410001</p></td>
-										<td><p class="estimatedpremium_filter">139.04</p></td>
-										<td><p class="deductable_individual_filter">$ 2,400</p></td>
-										<td><p class="plan_type_filter">PPO</p></td>
-										<td><p class="outofpocket_individual_filter">$ 6,350</p></td>
-										<td><p class="metal_level_filter">$ 6,350</p></td>
+									  <tr id="filter_46944AL0460001-00" style="display: none;"><!-- section for filters -->
+										<td><p>46944AL0460001</p></td>
+										<td><p>112.19</p></td>
+										<td><p>$ 6,350</p></td>
+										<td><p>PPO</p></td>
+										<td><p>$6,350</p></td>
+										<td><p>$ 6,350</p></td>
 									  </tr>
 									  </tbody>
 								</table>
@@ -1112,7 +1182,7 @@ background:#0a4571;
 						</div>
 					</div>
 
-					<!-- TEMPLATE FOR THE PLAN DETAILS -->
+					
 					
 				</div>
 			</div>
@@ -1148,8 +1218,7 @@ background:#0a4571;
   
   
   
-  <!-- end search section -->
-
+  
   
   <!-- Start Footer -->    
   <footer id="footer" style="margin-top:5px;">
